@@ -1,0 +1,1001 @@
+Applicant_ID,Applicant_Income,Coapplicant_Income,Employment_Status,Age,Marital_Status,Dependents,Credit_Score,Existing_Loans,DTI_Ratio,Savings,Collateral_Value,Loan_Amount,Loan_Term,Loan_Purpose,Property_Area,Education_Level,Gender,Employer_Category,Loan_Approved
+1,17795,1387,Salaried,51,Married,0,637,4,0.53,19403,45638,16619,84,Personal,Urban,Not Graduate,Female,Private,No
+2,2860,2679,Salaried,46,Married,3,621,2,0.3,2580,49272,38687,,Car,Semiurban,Graduate,,Private,No
+3,7390,2106,Salaried,25,Single,2,674,4,0.2,13844,6908,27943,72,,Urban,,Female,Government,Yes
+4,13964,8173,Salaried,40,Married,2,579,3,0.31,9553,10844,27819,60,Business,Rural,Graduate,Female,Government,No
+5,13284,4223,Self-employed,31,Single,2,721,1,0.29,9386,37629,12741,72,Car,,Graduate,Male,Private,Yes
+6,8265,4831,Salaried,53,Single,1,602,1,0.56,19522,2911,9798,36,Home,Semiurban,Graduate,Male,Unemployed,No
+7,18850,2768,Salaried,58,Married,0,687,0,0.48,14635,8991,26143,24,Home,Rural,Graduate,Male,Private,No
+8,6426,3186,Salaried,47,Married,2,636,4,,671,11572,33747,84,Personal,Rural,Graduate,Female,,No
+9,16423,,Salaried,54,Married,1,729,0,0.59,777,43066,34651,36,Home,Semiurban,Graduate,Male,Private,No
+10,13363,2599,Contract,35,Single,3,726,1,,3022,29693,22182,60,Personal,Rural,Graduate,Female,Government,Yes
+11,18023,4033,Salaried,52,Married,2,688,1,0.13,18244,40004,10415,12,Education,Urban,Not Graduate,Female,MNC,Yes
+12,10322,8428,Self-employed,41,,1,743,4,0.23,,38333,12085,84,Car,Semiurban,Graduate,Male,Government,Yes
+13,3685,1304,Contract,25,Married,2,735,3,0.32,13817,17493,16008,36,Business,Rural,Graduate,Male,Private,No
+14,2769,7368,Self-employed,26,Single,0,767,3,0.18,14260,39697,23102,72,Personal,Semiurban,Graduate,Male,Private,No
+15,4433,5877,Contract,58,Single,0,713,4,0.57,1074,,19452,84,,Semiurban,,Male,MNC,No
+16,7311,1301,Salaried,42,Married,3,710,4,0.48,9908,24561,9120,72,Personal,Urban,Not Graduate,Female,Private,
+17,7051,2541,Unemployed,38,,2,724,0,0.23,9475,18033,8820,48,Personal,Urban,Graduate,Female,Private,Yes
+18,8420,2051,Salaried,34,Married,1,562,4,0.4,12878,7351,19170,48,Home,Urban,Graduate,Male,Private,No
+19,19568,6809,Salaried,30,Married,3,589,3,0.46,15120,25921,17259,48,Home,Rural,Not Graduate,Female,Private,No
+20,8396,8633,,33,Single,2,638,,0.57,1986,19340,23099,84,Car,Urban,Graduate,Male,Private,No
+21,10666,8996,Unemployed,51,Married,3,617,0,0.54,10825,14901,10649,12,Business,Rural,Graduate,Male,MNC,No
+22,4747,74,Contract,50,Married,1,591,0,0.36,9193,,31255,60,Car,Urban,Graduate,Male,Business,No
+23,2189,6981,Salaried,23,Married,3,696,0,0.49,17430,38596,12805,84,,Urban,Graduate,Male,Government,No
+24,5005,5475,Salaried,50,Single,3,759,0,0.38,2176,21378,9744,24,Home,Urban,,Female,Private,Yes
+,3899,8232,Unemployed,26,Single,3,778,,0.38,18722,44324,33305,72,Home,Urban,Graduate,Female,Government,No
+26,3267,,Salaried,49,,2,643,4,0.16,10047,22820,26857,72,Business,Rural,,Male,Government,No
+27,19912,5796,Contract,28,Single,1,568,1,0.16,16884,25060,11679,84,Personal,Urban,Graduate,Male,Government,
+28,13394,7141,,53,Married,0,735,4,0.36,18617,32642,30829,84,Car,Urban,Not Graduate,Male,Private,Yes
+29,5556,1622,Salaried,37,Married,,572,2,0.23,4608,25378,11985,60,Business,Urban,Not Graduate,Male,Unemployed,No
+30,5890,8041,Salaried,31,Married,0,603,0,0.11,11906,8150,29287,12,Car,Rural,Not Graduate,Female,Government,No
+31,10838,341,Salaried,33,Married,,757,2,0.46,7234,,13391,84,Personal,Semiurban,Graduate,Female,Unemployed,No
+,16502,2074,Salaried,31,Married,2,614,3,0.12,6610,24059,5861,48,Car,Urban,Graduate,Female,,No
+33,12627,,Contract,51,Single,2,689,3,0.4,10524,34525,35364,60,Education,Rural,Not Graduate,Male,Private,No
+34,10792,645,Salaried,48,Married,1,573,4,0.37,16984,18193,17863,24,Business,Urban,Graduate,Male,,No
+35,12555,4263,Contract,26,Married,1,583,4,0.58,13411,43967,32499,48,Home,Urban,Not Graduate,Male,MNC,No
+36,12253,8801,Salaried,36,Married,3,602,1,0.34,9180,27801,28794,24,Car,Rural,Graduate,Male,Private,No
+37,10433,6136,Unemployed,24,Married,0,798,1,0.13,15225,49063,8919,36,Business,Urban,Graduate,Male,MNC,Yes
+38,12233,8646,Salaried,55,Single,1,685,3,0.38,10073,26246,21282,24,Business,Rural,Graduate,Male,MNC,Yes
+39,13016,9900,Salaried,46,Married,3,567,0,0.52,4483,12807,,48,Car,,Not Graduate,Male,Business,No
+,4612,2969,Salaried,32,Married,1,606,2,0.6,5901,17535,6624,36,Home,Semiurban,Not Graduate,Female,Business,No
+41,17787,3028,Contract,31,Single,2,661,1,0.32,,5492,34706,48,Home,Urban,Graduate,Female,Business,Yes
+42,19159,7643,Self-employed,57,Married,1,554,1,0.26,18138,31357,9176,72,Car,Rural,Graduate,Male,Business,No
+43,14206,2681,Contract,45,Married,0,703,0,0.55,18848,6302,34529,48,Business,Semiurban,Not Graduate,Female,Private,No
+44,,3629,Salaried,38,Married,1,707,0,0.2,10415,32314,13941,36,Home,Urban,Graduate,Male,Business,Yes
+45,16541,4225,Salaried,39,Married,0,731,4,,4482,,2669,,Car,,Not Graduate,,MNC,No
+46,5152,3067,Self-employed,43,Single,2,562,2,,9686,4747,21246,,Car,Urban,Graduate,Female,Private,No
+47,3585,5941,Salaried,58,Single,0,632,,0.12,7400,47006,21323,12,Car,Rural,Graduate,Male,Unemployed,No
+48,5943,1386,Salaried,38,Married,1,578,1,0.27,6806,41170,34894,12,Business,Urban,Graduate,Female,Private,No
+49,3021,2866,Unemployed,46,Single,3,552,1,0.23,10516,10686,7021,12,Home,Urban,Graduate,Male,Private,No
+50,13653,4788,Unemployed,26,Married,2,639,,0.44,7396,37449,37903,12,Business,Rural,Graduate,Male,Private,No
+51,12805,5490,Unemployed,24,Married,1,653,0,0.57,7338,18891,9711,60,Education,Urban,Graduate,Male,Private,No
+52,15417,4124,Contract,49,Married,2,672,4,0.23,9950,36196,8904,12,Home,Rural,Graduate,Female,MNC,Yes
+53,9989,8340,Salaried,54,Married,2,735,2,0.51,12500,29928,36051,36,Business,Urban,Graduate,Female,Unemployed,No
+54,11692,3850,Salaried,37,Married,1,799,4,,11545,7494,21942,84,Home,Urban,Graduate,Female,MNC,Yes
+55,14990,5415,Self-employed,36,Single,1,625,1,0.37,5241,36723,25251,12,Education,Rural,Not Graduate,Female,Unemployed,No
+56,,7679,Contract,22,Single,3,679,4,0.14,4695,29877,26058,48,Personal,Rural,Graduate,Male,Private,Yes
+57,7675,6819,Salaried,54,Married,,752,1,0.57,11530,27981,36245,84,Car,Urban,Graduate,Male,Private,No
+58,2161,9328,Salaried,,Married,2,657,1,0.48,14312,14026,4093,12,Business,Urban,Graduate,Female,Government,No
+59,6297,8378,Salaried,33,Married,1,705,1,0.43,18972,20422,25918,84,Education,Urban,Graduate,Male,MNC,No
+60,2995,9442,Self-employed,28,Married,0,631,1,0.51,14318,9244,8207,24,Education,Urban,Not Graduate,Female,Private,No
+61,13534,1333,Contract,50,Married,1,,1,0.42,18166,33481,,,Home,Urban,Graduate,Male,Unemployed,No
+62,9629,4150,Contract,52,Married,2,778,3,0.58,19904,23644,27974,36,Home,Urban,Not Graduate,Male,Business,No
+63,3016,6766,Salaried,56,Single,1,763,4,0.46,11324,43848,29172,84,Car,Rural,Graduate,Male,,No
+64,10529,2711,Unemployed,50,Married,3,753,3,0.56,3218,8521,33283,72,Home,Rural,,Female,Private,No
+65,19262,4853,,21,Married,0,551,3,0.36,4016,1746,39995,60,Business,Urban,Graduate,Female,Government,No
+66,11268,6212,Salaried,59,Married,1,676,0,0.16,2837,17591,14280,48,Business,,Not Graduate,Male,MNC,Yes
+67,14185,7479,Salaried,37,Married,3,778,0,0.36,16312,26718,37303,,Business,Urban,Not Graduate,Male,MNC,Yes
+68,8331,5408,Salaried,40,Married,2,684,0,0.16,7034,49936,28453,36,Personal,,Graduate,Male,Private,Yes
+69,10571,9977,Salaried,44,Single,1,575,2,0.4,,2696,3913,24,Business,Semiurban,Not Graduate,Male,Unemployed,No
+70,9208,7715,Unemployed,42,Married,2,767,,0.34,14379,12012,26765,12,Home,Rural,Graduate,Female,MNC,Yes
+71,7276,8942,Salaried,49,Single,3,637,4,0.41,4239,14688,3340,,Home,Rural,Not Graduate,Male,Private,No
+72,18448,1762,Contract,42,Married,2,753,3,0.11,12128,23457,27179,24,Business,Semiurban,Graduate,Male,Private,Yes
+73,18216,7101,Salaried,29,Married,3,565,4,0.2,15856,,28873,12,Education,Urban,Graduate,Male,Government,No
+74,10006,7674,Salaried,,Married,3,700,0,0.35,9611,39895,39057,60,Education,,Graduate,Male,Government,Yes
+75,4568,6122,Salaried,30,Single,3,717,2,0.58,4150,29960,1597,36,Education,Rural,Not Graduate,Female,Business,No
+76,4027,481,Salaried,56,Married,1,737,2,0.29,11109,36486,30119,36,,Urban,Not Graduate,Male,Private,No
+77,4695,153,Salaried,57,Single,2,622,3,0.31,1446,22159,16025,84,Personal,Rural,Not Graduate,Male,Business,No
+,17422,7617,Unemployed,48,Married,2,581,4,0.46,11936,7910,8145,84,Business,Rural,Not Graduate,Female,Business,No
+79,7258,1524,Self-employed,48,Single,0,564,1,0.4,11036,2693,36670,24,Car,Rural,Graduate,Male,Private,No
+80,8736,2120,Self-employed,41,Married,0,778,4,0.25,6468,49777,8694,72,Education,Urban,,Female,Government,Yes
+81,,2343,Salaried,44,Single,0,690,0,0.31,,15858,5830,84,Business,Rural,Not Graduate,Male,Private,No
+,15986,5136,Salaried,22,Married,0,554,1,0.21,4175,28810,24930,48,Car,Rural,Graduate,Male,Private,No
+83,14666,5760,Salaried,28,Single,2,752,2,0.58,15390,20092,24752,60,Home,Semiurban,Graduate,Male,Government,No
+84,7892,1240,Self-employed,47,Married,3,623,3,0.17,5080,23243,11489,,Education,Rural,Graduate,Male,Unemployed,No
+85,5561,60,Salaried,42,Married,3,601,3,0.29,15471,48700,33692,36,,Semiurban,Not Graduate,Male,Private,No
+86,8184,9130,,57,Married,1,626,2,0.11,14893,,16768,48,Home,Urban,Not Graduate,Male,Private,No
+87,10392,1639,Self-employed,47,Single,3,718,0,0.21,17248,,3160,12,Education,Urban,Not Graduate,Male,Private,Yes
+88,15067,6185,Salaried,49,Married,2,730,2,0.49,16009,28555,21133,60,Personal,Urban,Not Graduate,Male,Private,No
+89,17265,7970,Salaried,23,Single,2,659,0,0.2,6217,6398,36690,48,Education,Urban,Not Graduate,Female,Government,Yes
+90,4454,,Salaried,33,Married,,727,1,0.14,5672,7252,23870,12,Personal,Semiurban,Not Graduate,Female,Business,No
+91,13837,4203,Unemployed,30,Married,1,692,2,0.34,1502,11721,25496,24,,Semiurban,Not Graduate,Male,Private,Yes
+92,16039,8363,Self-employed,56,Married,0,655,0,0.1,1410,17939,37572,48,Personal,Urban,,Male,Unemployed,Yes
+93,12965,9650,Salaried,29,Single,3,797,1,0.14,3770,11825,3368,60,Business,Urban,Graduate,Female,Private,Yes
+94,11762,3549,Salaried,47,Single,2,676,2,0.5,10097,25251,37700,12,Business,Urban,Graduate,Female,MNC,No
+95,7056,4197,Unemployed,54,Single,,556,3,0.49,4001,36955,30203,48,Personal,Semiurban,Not Graduate,Male,MNC,No
+96,16948,7009,Self-employed,21,Married,0,589,2,0.56,19867,,12552,24,Home,Urban,Graduate,,Government,No
+97,10110,6667,Salaried,52,Single,2,705,4,0.53,598,36,6608,48,Personal,Urban,Graduate,Male,Private,No
+98,15773,2322,Contract,45,Single,3,709,2,0.44,,28412,23485,12,Car,Urban,Graduate,Male,Government,No
+99,,,Salaried,49,Married,1,,4,0.13,19425,18171,10862,,Personal,Urban,Graduate,Female,Business,No
+100,2502,4090,Self-employed,27,Single,2,692,1,0.49,6391,39051,39299,60,Business,Semiurban,Graduate,,MNC,No
+101,8910,6960,Self-employed,23,Single,3,789,2,0.52,16450,32761,11412,36,Business,Urban,Graduate,Female,Government,
+102,14685,3004,Salaried,40,Single,2,777,1,0.5,14908,15202,22354,12,Car,Urban,Graduate,Male,Government,No
+103,2206,5136,Unemployed,40,Single,0,634,1,0.35,11590,8060,7344,12,Car,Urban,Graduate,Male,MNC,No
+104,19868,329,Contract,50,Married,2,747,0,0.22,16279,8065,18993,12,Education,Urban,Graduate,Female,Unemployed,Yes
+105,17934,3640,Self-employed,55,Married,2,614,1,0.52,2750,29873,29682,12,Home,Rural,Graduate,Male,Business,No
+106,19247,7982,Salaried,55,Single,1,681,1,0.46,9916,36648,29415,48,Home,Urban,Graduate,Male,MNC,No
+107,10755,4107,Salaried,59,Married,0,560,2,,6806,5932,20323,60,Home,Urban,Graduate,,Government,No
+108,14383,1341,Salaried,47,Single,0,657,2,0.18,6429,26470,18997,24,Business,Semiurban,Graduate,Male,Business,Yes
+,16820,8407,Contract,46,Single,1,,3,0.21,8123,8328,4679,60,Home,Urban,Graduate,Male,,No
+110,9574,338,Salaried,34,Single,2,738,0,0.21,18015,6333,30489,12,Education,Rural,Not Graduate,Male,Business,Yes
+111,8374,5895,Self-employed,37,Single,3,714,1,0.5,6452,46638,10488,72,Education,Urban,Graduate,Female,,No
+112,3678,2708,Contract,38,Married,0,700,0,0.19,17158,11268,4996,48,Home,Urban,Graduate,Female,Government,Yes
+113,3059,1750,Salaried,49,Married,0,770,4,0.13,15456,5067,6695,72,Car,Rural,Graduate,Male,Government,No
+114,18198,5604,Self-employed,40,Married,2,634,1,0.6,4019,48384,31204,48,Education,Semiurban,Graduate,Female,Private,No
+115,11914,2421,Salaried,47,Married,,789,0,0.11,12419,,,12,Car,Rural,Graduate,Male,Private,Yes
+116,12817,7119,Unemployed,38,Married,0,786,3,0.52,929,17045,15235,48,Business,Urban,Graduate,Male,MNC,No
+117,12921,8901,Salaried,24,Married,2,786,3,0.28,19396,,3366,12,Education,Urban,Graduate,Female,Government,Yes
+118,11789,5319,Salaried,21,Single,3,790,1,0.52,6264,22770,28467,60,Car,Urban,Graduate,Male,Private,No
+119,18312,6609,Salaried,21,Single,0,768,4,0.38,7973,42770,7764,84,Home,Rural,Graduate,Male,MNC,Yes
+120,13252,5387,Salaried,46,,3,780,3,0.55,9697,7887,,36,Business,Rural,,Female,MNC,No
+121,4693,3993,Contract,40,Married,3,,3,0.56,11136,33182,32923,48,Personal,Urban,Graduate,Female,Government,No
+,15931,8680,Contract,43,Single,2,754,4,,19203,32370,31175,12,Personal,Rural,Not Graduate,Male,Private,Yes
+123,5627,8044,Self-employed,30,Married,3,700,0,0.14,1184,39618,17292,72,Home,Rural,Graduate,Male,,
+124,18157,8238,Salaried,31,Married,2,672,3,0.23,16911,24918,2614,12,Business,Urban,Graduate,Male,MNC,Yes
+125,12173,4873,,25,Married,1,,2,0.43,916,35497,21939,72,Business,,Graduate,Male,Private,No
+126,12230,4806,Salaried,21,Married,2,771,3,0.54,3574,28026,,48,Business,Urban,Not Graduate,Male,Private,No
+127,17707,8592,Self-employed,,Married,3,738,0,0.33,3319,11929,24246,24,Business,Urban,Graduate,Male,Government,Yes
+128,13494,5913,Contract,42,Single,1,617,0,0.4,17790,47756,32688,72,Personal,Semiurban,Graduate,Female,Business,No
+129,3306,7124,Salaried,54,Married,2,653,1,0.19,17625,36665,28962,12,,Urban,Graduate,Male,Private,No
+130,8776,3157,Salaried,49,Married,3,629,2,0.5,5206,34937,30764,48,Business,Urban,Graduate,Male,Government,No
+131,11474,390,Self-employed,24,Married,0,708,,0.58,19517,13563,33470,12,Car,Rural,Not Graduate,Male,Government,No
+132,9526,,Contract,25,Married,0,602,4,0.23,17182,28546,39501,24,Business,Semiurban,Graduate,Male,MNC,No
+133,7530,8820,Contract,31,Single,2,,2,,17907,12888,,36,Education,Semiurban,Graduate,Female,Government,Yes
+134,5748,7686,Contract,41,Single,2,702,2,0.14,4928,37338,23072,,Education,Rural,,Male,Government,Yes
+,15545,4232,Salaried,55,Single,0,593,4,0.38,16105,34283,29242,84,Education,Urban,Graduate,Female,Unemployed,No
+136,2663,8007,Salaried,32,Married,3,689,3,0.35,2888,16958,38132,24,Business,Semiurban,Graduate,Female,Private,No
+137,3998,1521,Contract,46,Single,3,639,4,0.17,2690,12634,18861,60,Car,Rural,Graduate,Female,Private,No
+138,9994,9018,Self-employed,39,Single,3,,4,0.32,4091,19251,5960,48,,Urban,Graduate,Male,MNC,No
+139,19879,1500,,27,Single,2,789,3,0.27,13960,46566,19781,24,Home,Semiurban,Not Graduate,Female,Private,Yes
+140,5304,6737,Contract,27,Married,1,646,3,0.36,690,19928,32126,36,Personal,Urban,Graduate,Male,MNC,No
+141,15808,3294,Contract,46,Married,1,769,3,0.39,1495,37245,23578,12,Business,Urban,Not Graduate,Male,Private,Yes
+142,8585,,,25,Married,1,558,3,0.1,11085,16455,18883,48,Education,Semiurban,Graduate,Male,,No
+143,19675,2419,Self-employed,41,Single,1,561,3,0.48,17276,27144,30782,72,Education,Rural,Graduate,Male,Unemployed,No
+144,13649,9126,Salaried,,Married,1,618,4,0.46,10720,28013,17979,24,Car,Urban,Graduate,Male,Government,No
+145,3636,3042,Self-employed,24,Married,2,731,1,0.28,5873,21876,34746,36,Business,Urban,Not Graduate,Male,Business,No
+146,19082,4497,Self-employed,43,Single,2,793,1,0.13,4503,26962,1730,24,Personal,Rural,Graduate,Male,Private,Yes
+147,6737,1466,Contract,40,Single,1,731,0,0.48,11720,28084,1056,60,Business,Urban,Graduate,Female,Private,No
+148,16555,3561,Contract,35,Single,2,577,1,0.58,13964,42319,32457,84,Business,Urban,Graduate,Male,MNC,No
+149,15877,,Contract,49,Married,2,605,1,0.22,897,21143,,84,Education,Rural,Not Graduate,Male,Private,No
+150,2854,5392,Salaried,28,Single,1,648,4,0.26,17094,26091,2701,48,Personal,Semiurban,Graduate,Female,Government,No
+151,7855,7693,Contract,39,,3,746,3,0.19,3695,14179,,12,,Rural,Graduate,Male,Private,Yes
+152,9392,9374,Contract,59,Married,2,,3,,2686,32807,16100,36,Education,Rural,Graduate,Female,Private,Yes
+153,15949,3223,Self-employed,48,Married,3,659,4,0.18,5778,10222,1947,24,Personal,Rural,Not Graduate,Female,MNC,Yes
+154,7791,7138,Contract,47,Married,2,775,1,0.28,,23949,21505,48,,Rural,Not Graduate,Male,MNC,Yes
+155,6931,2667,Contract,24,Married,2,626,4,0.45,16799,16116,7553,24,Education,Urban,Graduate,Male,Business,No
+156,2202,7980,Salaried,35,Single,1,652,0,0.38,9663,48817,34525,48,Car,,,Female,Business,No
+157,13447,130,Self-employed,55,Married,2,655,3,0.29,4180,37564,15866,84,Education,Urban,Not Graduate,Female,Government,Yes
+158,14688,2983,Salaried,57,Single,0,658,,0.31,4262,37374,31472,60,Business,Urban,Not Graduate,Female,Government,Yes
+159,6389,,Salaried,,Married,0,661,0,0.38,2515,17667,6651,24,Personal,Urban,Graduate,Male,Business,Yes
+160,4327,7126,Self-employed,23,Married,1,607,0,0.1,11236,8775,8273,60,Car,Rural,Not Graduate,Female,Private,No
+161,10004,8230,Contract,44,Married,3,627,4,0.14,14104,29655,11033,72,Education,Urban,Graduate,Male,Private,No
+162,9777,7694,Salaried,47,Married,3,624,1,0.54,6616,47632,4535,72,Car,Urban,Graduate,Male,Unemployed,No
+163,2197,6640,Salaried,56,Married,3,,,0.14,17376,14193,19677,84,Education,Rural,Not Graduate,Male,Private,No
+164,3930,5468,Self-employed,54,Married,0,715,2,0.45,4370,14676,18488,36,Education,Semiurban,Graduate,Male,Private,No
+165,13774,920,Salaried,49,Married,3,617,0,0.56,18157,30776,1908,60,Home,Rural,Not Graduate,Female,Government,No
+166,17087,7564,Salaried,44,Married,3,,2,0.24,19945,43225,5617,48,Home,Urban,Graduate,Female,Business,Yes
+,11339,8684,Salaried,44,Married,1,582,1,0.29,3816,17199,31431,36,Home,Urban,Graduate,Female,Government,No
+168,13589,9323,Salaried,24,Single,3,620,1,0.38,1756,48812,24453,24,Car,Rural,Not Graduate,Male,Private,No
+169,17708,8502,Salaried,23,Married,0,605,2,0.54,2373,15066,36079,24,Business,Urban,Graduate,Male,Unemployed,No
+170,19043,8930,Salaried,54,Single,0,654,3,,2576,18895,17020,,Education,Rural,Graduate,Female,Business,No
+171,4811,3241,Salaried,43,Single,0,749,1,0.47,4184,246,27562,12,Personal,Urban,Not Graduate,Male,MNC,No
+172,16243,545,Contract,43,,1,650,2,0.14,2397,21209,25373,12,Home,Semiurban,Graduate,Female,Private,No
+173,8546,4346,Self-employed,25,Single,,600,0,0.43,12674,39284,31164,24,Car,Urban,Graduate,Female,Private,No
+174,3986,9996,Contract,51,Married,2,623,2,0.31,10326,16800,2885,84,Car,Urban,Not Graduate,Female,Private,No
+175,10338,3810,Salaried,26,Single,3,720,2,0.34,10546,46110,2049,84,Car,Semiurban,Graduate,Male,Private,Yes
+176,13411,7206,Salaried,57,Single,1,670,4,0.12,4535,,2161,48,Personal,Urban,Not Graduate,Female,Private,Yes
+177,4911,9005,Contract,30,Married,0,692,1,0.2,14599,20101,1815,12,Personal,Urban,Not Graduate,Female,Private,Yes
+178,3734,,Salaried,27,Married,0,715,3,0.5,,16491,37534,60,Home,Semiurban,Graduate,Male,Government,No
+179,10680,,Salaried,59,Married,1,692,3,,17118,27207,28498,24,Personal,Urban,,Female,Business,Yes
+180,7759,271,Self-employed,58,Single,1,554,4,0.25,632,41798,26037,72,Home,Urban,Not Graduate,Male,MNC,No
+181,4385,3511,Self-employed,41,Single,1,770,,0.29,13280,20897,37007,60,Personal,Urban,Graduate,Male,Private,No
+182,13111,1771,Salaried,40,Married,,632,2,0.53,14746,29492,14942,48,Personal,Urban,Graduate,Female,Government,No
+183,6736,9454,Salaried,,Married,0,731,4,0.47,4268,1421,28278,72,Personal,Urban,Graduate,Female,Private,No
+184,3802,4361,,42,Married,2,600,0,0.24,19285,32015,9272,60,Home,Rural,Graduate,Female,Government,No
+185,10155,7069,Salaried,,,2,559,1,0.16,18047,12970,34637,12,Education,Rural,Graduate,Male,Government,No
+186,10120,920,Self-employed,48,Single,3,689,1,0.23,15321,7283,39294,84,Home,Urban,Not Graduate,Male,Government,Yes
+187,8616,8190,Contract,32,Married,0,795,1,0.56,10207,28488,8741,12,Education,Urban,Not Graduate,Female,MNC,No
+188,16257,3430,,58,Married,0,,2,0.39,5591,15945,5694,72,Car,Semiurban,Graduate,Male,MNC,No
+189,16486,4435,Salaried,56,Married,1,644,0,0.37,16226,255,31306,36,Car,Semiurban,Graduate,Male,Business,No
+190,18646,3760,Contract,25,Single,1,695,4,0.4,,11019,2934,84,,Urban,Graduate,,MNC,No
+191,16075,2050,Self-employed,33,Married,3,629,4,0.28,8572,15487,22556,24,Education,Semiurban,Graduate,Male,Business,No
+,11208,1165,Salaried,43,Single,2,781,1,0.5,13579,41797,19907,72,Education,Rural,Not Graduate,Female,MNC,
+193,18371,8567,Salaried,50,Married,1,585,0,0.36,19466,19346,,48,Education,Urban,Not Graduate,Female,Government,No
+194,13835,2033,Contract,57,Married,1,574,0,0.16,,35050,30158,24,Car,Urban,Not Graduate,Male,Government,No
+195,,6467,Salaried,45,Married,0,764,0,0.16,8007,8744,21293,,Home,,Graduate,Male,Business,Yes
+196,4049,145,Salaried,47,Married,0,753,3,0.37,15903,24756,34932,84,Business,Semiurban,Graduate,Male,Private,
+,7423,4388,Salaried,,Married,1,647,3,0.57,,17861,34387,48,Education,Rural,Graduate,Male,Business,No
+198,16589,7832,Contract,56,Single,0,713,1,0.25,4261,25146,4066,48,Education,Rural,Graduate,Male,Unemployed,Yes
+199,9158,8623,Contract,59,Single,3,650,0,0.53,2389,42687,22256,12,Business,Urban,Graduate,,Business,No
+200,12248,8896,Contract,36,Single,1,744,0,0.48,19937,46103,36105,60,Home,Rural,Not Graduate,Female,Private,No
+201,9400,8173,Salaried,42,Married,0,558,4,0.22,13939,21976,,12,Education,Rural,Not Graduate,Female,Private,No
+202,11874,2632,Salaried,41,Single,3,,4,0.12,,591,3460,12,Home,Semiurban,Not Graduate,Male,MNC,No
+203,17151,4494,Self-employed,41,Married,0,602,1,0.15,9399,6277,7820,84,Education,Urban,Not Graduate,Female,Unemployed,No
+,3154,8056,Salaried,28,Married,0,695,0,0.46,544,2260,37210,36,Personal,Rural,Graduate,,,No
+205,6499,7511,Salaried,36,Married,0,,1,0.2,2239,43907,17191,12,Education,,Graduate,Male,MNC,Yes
+206,8295,9155,Self-employed,51,Married,1,712,4,0.29,10559,347,20095,24,Personal,Rural,Graduate,,MNC,Yes
+207,14183,1828,Unemployed,30,Single,2,612,4,,2627,24741,11529,48,Home,Rural,Graduate,Male,Private,No
+208,14874,9130,Contract,,Married,0,670,3,0.46,6618,37211,33175,84,Education,Urban,Graduate,Male,MNC,No
+209,7539,4805,Contract,54,Married,3,796,1,0.16,12123,43856,18675,12,Car,Rural,,Female,Private,Yes
+210,11637,806,Unemployed,29,Single,1,775,1,0.3,,41542,6374,72,Car,Urban,Graduate,Female,Government,Yes
+211,17586,9655,Salaried,37,Married,1,654,0,0.34,8015,6869,26976,,Business,Semiurban,Graduate,Male,Government,Yes
+212,4557,7486,Self-employed,31,Married,3,755,0,0.37,3130,28082,14142,60,Car,Urban,Graduate,Female,Business,Yes
+213,7592,8202,Unemployed,52,Married,,553,3,0.51,16480,22080,13204,48,Personal,Rural,Graduate,Female,,No
+214,18482,1868,Salaried,30,Single,2,642,2,0.19,14831,28979,8394,84,Car,Semiurban,Graduate,Male,Government,No
+215,4200,7878,Contract,,Single,0,718,2,0.5,2708,19422,34593,72,Car,Urban,Graduate,Male,MNC,No
+216,16172,5690,Self-employed,37,Married,3,722,2,0.45,5397,35613,12652,84,Car,Rural,Graduate,Female,MNC,No
+217,4961,7827,Self-employed,24,Married,1,727,1,0.38,11528,22993,34740,84,Education,Urban,Not Graduate,Female,,No
+218,16207,,Self-employed,45,Married,2,,1,0.45,16840,12386,1443,72,Business,Urban,Graduate,Female,Government,No
+219,13969,9076,Unemployed,41,Single,1,577,4,0.31,,34033,24903,60,Home,Rural,Graduate,Female,Private,No
+220,4869,3564,Contract,57,Married,3,719,1,0.17,4368,45213,34522,72,Business,Rural,Graduate,Male,Government,No
+221,19340,1389,Salaried,58,Married,0,629,1,0.43,11179,12938,29180,24,Personal,Semiurban,Not Graduate,Male,MNC,No
+222,15992,,Contract,21,Married,2,625,1,0.36,12076,11159,22119,84,Education,Semiurban,Graduate,Male,Private,No
+223,7699,824,Salaried,45,Married,1,665,3,0.42,18321,2274,11363,,Education,Rural,Not Graduate,Male,Unemployed,No
+224,5987,,Salaried,56,,1,618,1,0.27,13948,18854,39164,84,Car,Rural,Not Graduate,Female,MNC,No
+225,15446,936,Salaried,37,Single,1,647,0,0.55,17530,31815,32541,72,Car,Semiurban,Not Graduate,Female,Business,No
+226,3218,6402,Salaried,44,Married,,783,,0.39,13824,10482,4465,60,Personal,Urban,Graduate,Female,Business,Yes
+227,,3845,Salaried,22,Married,2,550,4,0.14,4299,18961,3711,60,Education,Urban,Graduate,Male,Government,No
+228,13296,1796,Unemployed,,Single,0,716,3,0.32,14120,20044,26198,12,Home,Urban,Graduate,Male,Business,Yes
+229,6555,,Contract,52,Single,0,645,0,0.48,8118,33836,23488,12,Business,Semiurban,Graduate,Male,Government,No
+230,11146,7214,Self-employed,59,Married,0,767,3,0.5,10756,21975,39515,12,Education,Rural,Graduate,Male,MNC,No
+231,10050,726,Salaried,,Married,,566,3,0.35,7953,14706,24608,72,Home,Rural,Not Graduate,Female,Business,No
+232,14757,2736,Unemployed,21,Married,3,661,4,0.55,4784,5974,28898,48,Home,Urban,Not Graduate,Male,MNC,No
+233,19429,1913,Unemployed,43,Single,3,640,3,0.23,15185,10928,2919,24,Business,Semiurban,Graduate,Female,MNC,No
+234,8893,9788,Contract,59,Married,,637,1,,9024,21213,32171,72,Home,Urban,Graduate,Female,Private,No
+235,16373,7657,Salaried,37,Single,,712,3,0.55,14674,1950,21599,84,Personal,Rural,Not Graduate,,Private,No
+236,16565,2466,Salaried,54,Single,0,723,4,0.55,17845,19477,17965,12,Home,Urban,Graduate,Male,MNC,No
+237,5436,9041,Salaried,49,Married,3,719,4,0.44,11708,10411,15434,60,Personal,Urban,Graduate,Female,Private,No
+238,10754,7312,Salaried,29,Married,0,795,,0.53,1159,21695,37649,72,Home,Rural,Graduate,,Government,No
+239,12677,8194,Salaried,33,Married,0,716,0,0.14,386,46156,2999,60,Car,Semiurban,Not Graduate,Female,Government,Yes
+240,7895,7906,Unemployed,26,,1,639,1,0.53,7192,17771,15849,84,,Urban,Graduate,Male,Private,No
+241,18609,4876,Salaried,26,Married,,598,0,0.26,10745,4274,11903,60,Personal,Urban,Not Graduate,Male,Private,No
+242,17636,7287,Salaried,40,Single,1,739,2,0.19,9910,35053,6445,60,Home,Urban,Graduate,Male,MNC,Yes
+243,,892,Salaried,23,Single,0,587,,0.22,3409,7045,36396,36,Home,Urban,Graduate,Male,Business,No
+244,11151,,,37,Married,2,700,3,0.31,17073,29714,19040,48,Home,Urban,Graduate,Female,Government,Yes
+245,7600,1933,Salaried,32,Single,3,699,4,0.23,13180,34386,1246,24,Personal,Rural,Graduate,Male,Unemployed,Yes
+246,9996,1380,Salaried,21,Married,1,681,2,0.26,17336,43747,32153,,Home,Semiurban,Graduate,Female,Private,Yes
+247,11007,1290,Salaried,37,Married,3,726,1,0.17,6142,8562,6212,12,Business,Urban,Graduate,Female,Private,Yes
+248,14946,1640,Contract,23,Married,1,608,0,0.25,5967,27759,4339,36,Business,Rural,Not Graduate,Female,MNC,No
+249,6642,7490,Unemployed,46,Single,1,750,4,0.39,7205,12026,24142,72,Personal,Urban,Graduate,Male,MNC,Yes
+250,13312,9179,Salaried,35,Single,1,617,0,0.32,16006,,20394,72,Car,Urban,Not Graduate,Female,Government,No
+251,9679,1218,Salaried,56,Single,2,748,1,0.27,12109,31589,36136,24,Business,Urban,Not Graduate,,Unemployed,Yes
+252,10208,5016,Contract,52,Married,0,764,1,0.47,13034,42663,13186,48,Education,Rural,Not Graduate,Male,,No
+253,12716,6881,Salaried,52,Married,1,679,2,0.55,2484,,,60,Business,Urban,Not Graduate,Female,Private,No
+254,19453,9547,,24,Married,2,598,3,0.48,1854,26844,39973,84,Education,Urban,,Male,Private,No
+255,5444,9752,Contract,38,Married,,,0,0.27,11631,23447,5395,12,Personal,Urban,Graduate,Female,MNC,Yes
+256,12757,9610,Salaried,39,Single,0,781,2,0.47,19615,24879,16290,48,Car,Urban,Not Graduate,Male,Private,No
+257,16434,954,Self-employed,55,Single,1,796,4,0.18,2597,11966,23151,24,Education,,Not Graduate,Female,Private,Yes
+258,3060,9175,Self-employed,34,Single,2,675,3,0.17,7829,17732,4691,36,Education,Semiurban,Not Graduate,Male,MNC,Yes
+259,5420,7291,Salaried,53,Married,0,,2,0.27,8186,5289,8470,12,Business,Rural,Graduate,Female,Government,Yes
+260,2301,974,Salaried,34,Married,2,788,0,0.5,3983,20012,4841,24,Education,,Graduate,Female,Government,No
+261,14468,4133,Contract,54,Married,0,708,1,0.22,6684,18812,38116,72,Personal,Urban,Graduate,Male,Private,Yes
+262,18990,5370,Salaried,24,Married,0,660,4,0.13,10383,35801,18776,12,Personal,Urban,Not Graduate,Male,Business,Yes
+263,,3972,Salaried,44,Married,3,717,0,0.17,17040,41628,7060,24,Personal,Urban,Graduate,Female,Government,Yes
+264,2190,5295,Contract,49,Single,3,597,3,0.53,12004,40581,28584,72,Business,Urban,Graduate,,Private,
+265,12492,9105,Self-employed,39,,3,600,,0.42,12103,46628,5300,84,Car,Rural,Graduate,Male,Private,No
+266,19364,8228,Salaried,26,Married,0,592,1,0.23,6312,23092,4338,72,Business,Urban,Graduate,Male,Government,No
+267,4975,9903,Contract,53,Married,,647,1,0.38,7938,25105,6487,,Personal,Urban,Graduate,Female,Unemployed,No
+268,8102,3020,Salaried,39,Married,2,732,4,0.36,9954,14294,,36,Business,Rural,Not Graduate,,Unemployed,Yes
+269,19568,8987,,21,Married,2,765,4,0.43,19669,3621,30529,60,Personal,Urban,Not Graduate,Female,Private,No
+270,3816,4036,Contract,25,Single,,726,1,0.22,9777,32442,31262,24,Home,,,Female,Business,No
+271,2569,5068,Self-employed,,Married,,673,1,0.53,3563,21699,12280,84,Home,Urban,Graduate,Female,MNC,No
+,,5233,Salaried,36,Married,0,767,3,0.25,5041,49906,29804,48,Education,Rural,Not Graduate,Male,MNC,Yes
+,3895,9516,Unemployed,26,Married,3,629,1,0.45,11292,2347,10915,84,Car,Urban,Graduate,Male,,No
+274,5863,317,Salaried,33,Single,1,734,2,0.11,8026,29486,12158,84,Home,Semiurban,Not Graduate,Male,Private,Yes
+275,14913,2396,Contract,55,,0,660,0,0.29,13923,47650,9621,84,Personal,Urban,Graduate,Female,MNC,Yes
+276,9455,,Salaried,39,Married,2,754,1,0.28,19628,17110,11547,,,Rural,Graduate,Female,Private,Yes
+277,6014,2745,Salaried,32,Married,3,692,4,0.37,17424,4923,24177,48,Business,Urban,Graduate,,Private,Yes
+278,13093,1591,Salaried,36,Single,3,576,2,0.14,18657,15611,3459,72,Education,Rural,Not Graduate,Female,Business,No
+,5009,6183,Unemployed,30,Single,1,745,4,0.5,3629,48135,29768,24,Business,Urban,Graduate,Male,Unemployed,No
+280,18538,3930,Unemployed,45,Married,1,757,2,0.21,2114,19199,39041,,Home,Urban,Graduate,,Private,Yes
+281,12729,1312,Salaried,40,Single,3,741,1,0.44,1677,9066,39191,48,Business,Semiurban,Graduate,Male,Business,No
+282,3409,9477,Salaried,51,Single,1,771,0,0.5,3094,36047,18434,24,Home,Semiurban,Graduate,Male,Private,No
+283,14249,4311,Contract,24,Single,2,785,4,0.38,2284,26754,39247,48,Home,Urban,Graduate,Female,MNC,Yes
+284,,7314,Salaried,43,Single,1,707,2,0.47,5052,36575,16419,60,Car,Semiurban,Graduate,Female,Government,No
+285,10096,2383,Salaried,22,Single,1,713,3,0.43,17973,24260,36017,24,Education,Urban,Graduate,Male,Private,No
+286,9560,,,42,Married,3,744,1,0.28,18904,46733,36577,60,Personal,Semiurban,Graduate,Male,Private,Yes
+287,14533,2139,Self-employed,57,Single,3,763,0,0.5,12047,48891,3921,12,Home,Rural,Graduate,,Government,No
+288,9343,1704,Unemployed,28,Married,0,662,1,0.25,694,16991,5676,24,Education,Urban,Graduate,Female,Private,Yes
+289,9206,6924,Salaried,27,Single,0,635,3,0.39,15588,22553,21425,48,Personal,Semiurban,Graduate,Female,Private,No
+290,7801,362,Salaried,34,Married,3,663,0,0.47,13055,24174,36185,,Business,,Graduate,Male,Business,No
+291,18921,2604,Self-employed,23,Single,1,798,3,0.29,16080,21957,,60,Education,Urban,Graduate,Female,Government,
+292,7986,9908,Contract,36,Single,1,791,1,0.25,6704,634,26474,,Education,Rural,Graduate,Female,Business,Yes
+293,12647,4286,Self-employed,39,Married,0,796,2,0.33,7368,29881,2469,48,Education,Urban,Graduate,Female,Private,Yes
+294,10716,3738,Self-employed,38,Single,0,673,1,0.51,1971,12771,8292,,Business,Semiurban,,Female,Business,
+295,14323,2469,Salaried,36,Married,0,598,1,0.56,14593,18298,26409,84,Business,Rural,Graduate,Male,,No
+296,6780,4795,Contract,28,Single,2,625,1,0.37,8055,14340,24526,72,Education,Urban,Graduate,Male,Private,No
+297,4368,6150,Salaried,53,,2,604,4,0.43,11441,33356,24465,36,Car,Rural,Graduate,Female,Government,No
+298,14039,556,Salaried,,Married,0,762,3,0.55,14677,35999,31955,48,Home,Rural,Not Graduate,,Private,No
+299,8655,,,31,Single,1,605,3,0.15,1868,6351,27785,60,Business,Rural,Not Graduate,Female,MNC,No
+300,10173,2808,Salaried,25,Married,0,745,3,0.22,18055,3838,22033,24,Car,Urban,Graduate,Male,Business,Yes
+301,6495,5150,Salaried,47,Single,2,644,4,0.45,1728,1973,7931,12,Business,Urban,Graduate,Male,Government,No
+302,12893,7561,Contract,32,Married,1,593,2,0.51,7632,47114,2091,72,Education,Rural,Not Graduate,Male,Private,No
+,15403,2719,Salaried,37,Married,2,708,1,,12043,37812,26772,36,Car,Urban,Not Graduate,Female,Private,No
+304,15121,6506,Contract,26,Married,1,735,2,0.31,6403,10247,17363,24,Personal,Urban,Graduate,Male,Government,Yes
+305,12966,3741,Salaried,53,Married,2,636,4,0.14,15732,44440,29490,,Home,Rural,Graduate,Female,Business,No
+306,2853,9766,Contract,25,Married,1,795,3,0.32,18526,31655,,72,Home,Urban,Graduate,Male,Private,Yes
+307,,3998,Salaried,48,Married,1,730,1,0.22,9340,43039,11456,48,Business,Rural,Graduate,Female,Private,Yes
+308,19532,2403,Salaried,34,,1,633,0,0.25,6184,6683,23320,72,Home,Rural,Graduate,,Private,No
+309,11907,8780,Unemployed,25,Married,1,756,0,0.49,253,11244,14435,,Personal,Rural,Graduate,Male,Government,No
+310,6777,9739,Contract,53,Single,3,700,2,0.14,4102,29058,28025,84,Car,Urban,Not Graduate,Female,Private,Yes
+311,,294,Salaried,39,Single,2,705,3,,3542,39551,29109,12,Car,Urban,Graduate,Male,Government,
+312,4491,,Salaried,,,2,565,0,0.31,19159,38362,21754,72,Education,Urban,Graduate,Male,Private,No
+313,,9882,Contract,25,Single,,714,2,0.4,6212,28371,5301,36,Car,Semiurban,Graduate,Female,Government,
+314,16599,1136,Self-employed,22,Married,1,698,4,0.14,4637,3822,8207,72,Business,Urban,Graduate,Male,,Yes
+315,5051,2064,Contract,50,Single,1,756,2,,11525,28878,28920,12,Personal,Semiurban,Graduate,Male,Business,
+316,17979,7009,Contract,59,Single,2,694,2,0.14,11471,36157,23203,24,Education,Rural,Graduate,Male,Private,Yes
+317,18388,4543,Salaried,24,Single,3,791,2,0.58,12500,5914,22545,24,Business,Semiurban,Graduate,Male,Private,No
+318,2876,1007,Salaried,53,Married,1,586,1,0.5,15247,18164,25016,72,Business,Urban,Graduate,Male,Government,No
+319,6142,5445,Self-employed,33,Single,1,,2,0.33,10532,27180,32098,72,,Urban,Not Graduate,Male,Private,No
+320,17202,5352,Salaried,40,Married,,696,2,0.21,13518,3688,9556,48,Home,Semiurban,Graduate,Female,Private,Yes
+321,,9439,Salaried,27,Single,0,707,1,0.57,6476,14683,21102,12,,Urban,Graduate,Male,MNC,No
+322,9079,1435,Unemployed,35,Married,3,594,1,0.27,19532,13080,39893,48,Home,Urban,Graduate,Female,MNC,No
+323,9987,571,Self-employed,43,Single,1,695,4,0.18,19743,30953,2924,36,Car,Urban,Graduate,Male,Private,Yes
+324,,2382,Contract,34,Single,0,755,3,0.38,1004,9916,20479,84,,Semiurban,Graduate,Male,MNC,Yes
+325,6465,9437,,43,Single,3,611,0,0.57,10286,29677,19922,24,Business,Rural,Graduate,Male,Government,
+326,19019,5084,Self-employed,39,Married,1,713,0,0.1,4717,27360,19660,60,Personal,Rural,Graduate,Female,Private,Yes
+327,15417,277,Salaried,49,Single,2,649,2,0.22,3271,37805,10945,60,,Rural,Graduate,Female,Unemployed,No
+328,10311,7059,Salaried,40,Married,0,761,4,0.57,12714,13453,1306,12,Car,Urban,Not Graduate,Female,MNC,No
+329,19214,1887,Salaried,49,,0,,2,0.19,209,22703,23959,12,Business,Rural,Graduate,Male,Unemployed,No
+330,16098,1265,,44,Married,1,568,0,0.16,5539,8640,5231,60,Home,Urban,Graduate,Female,Private,No
+331,7177,7491,Contract,38,,1,,1,0.39,16537,29263,39796,,Personal,Semiurban,Graduate,Female,Private,No
+332,16262,1040,Salaried,30,Married,0,593,3,0.53,19977,32849,13207,24,Education,Urban,Not Graduate,Male,Government,No
+333,10308,9109,Salaried,28,Married,2,556,4,0.34,8606,,7336,36,Business,Urban,Graduate,Male,Business,No
+334,7949,8073,Salaried,46,Married,2,798,,0.6,11616,16078,10630,36,Business,,Graduate,Male,Private,No
+335,3150,9077,Salaried,49,Married,3,721,,0.44,1284,23383,18256,48,Education,Urban,Not Graduate,Female,MNC,No
+336,3931,2752,Salaried,30,Married,1,666,4,0.14,3148,15536,34909,24,Personal,Rural,,Male,Government,No
+337,11204,8213,Salaried,37,Single,2,617,4,0.6,768,7410,34719,84,,Urban,Graduate,Female,Government,No
+338,3081,4569,Salaried,22,Single,3,583,,0.3,5607,15926,31013,12,Car,Urban,Graduate,Male,Business,No
+339,18896,6353,Salaried,26,Married,2,743,1,0.24,19586,48268,15455,12,Home,Urban,,Male,Business,Yes
+340,15407,2353,Salaried,25,Married,1,618,4,0.38,19171,34248,5722,84,Home,Rural,Not Graduate,Male,Private,No
+341,9805,7437,Contract,48,Married,3,604,,0.25,18594,31159,13812,48,Personal,Urban,Not Graduate,Male,Unemployed,No
+342,7237,4799,Salaried,25,Married,3,559,3,0.14,7399,,31276,48,Education,Rural,Not Graduate,Male,Private,No
+343,18943,686,Salaried,38,Single,3,773,0,0.1,358,36366,37776,12,Business,,Not Graduate,Male,Private,Yes
+344,14775,8476,Self-employed,46,Single,2,591,2,0.32,849,47800,11060,12,Business,Urban,Graduate,Female,MNC,No
+345,18244,4811,Salaried,40,Married,,590,0,0.52,7498,40761,14056,84,Business,Urban,Not Graduate,Male,Unemployed,No
+346,15184,8954,Contract,47,Married,3,754,2,0.39,4522,29090,7655,24,Car,Semiurban,Graduate,Male,MNC,
+347,5343,5346,,32,Married,0,780,1,,18928,20567,23574,84,Car,Rural,Graduate,Male,MNC,No
+348,15500,5043,Salaried,27,Single,1,746,1,0.24,12773,43663,14027,48,Business,Urban,Graduate,Male,Business,Yes
+349,11662,2428,Self-employed,23,Single,0,,,0.24,18215,15367,5030,84,Personal,Rural,Graduate,Male,Unemployed,Yes
+350,,5126,Salaried,30,Married,0,687,1,0.18,,40412,25243,84,,Semiurban,Not Graduate,Male,Private,Yes
+351,17125,8220,Self-employed,54,Married,3,559,4,0.18,9628,44716,34289,,Car,Urban,Graduate,Male,MNC,
+352,10130,9098,Salaried,45,Single,3,651,0,,329,35367,20739,24,Home,Semiurban,Graduate,Male,Business,Yes
+353,3679,7813,Contract,55,Single,2,768,1,0.5,5851,5813,35168,72,Home,Urban,Graduate,Female,Private,No
+354,5506,9645,Salaried,36,Married,2,737,0,,7032,36621,37491,12,Personal,Semiurban,Not Graduate,Male,Government,No
+355,15284,3356,Self-employed,22,Married,2,677,0,0.59,15326,,31013,60,Car,Rural,Graduate,Male,Government,No
+,9253,,Self-employed,44,Married,1,728,1,0.22,5266,41190,7579,,Car,Urban,Graduate,Male,,Yes
+357,11435,7266,Salaried,30,Married,2,698,0,0.54,4354,40318,19242,60,Education,Urban,Graduate,Male,Private,No
+358,13310,6540,Salaried,58,Married,0,685,1,0.26,15082,37018,5781,72,Personal,Semiurban,Graduate,Female,MNC,Yes
+359,15296,38,Contract,,Married,2,742,1,0.16,4722,39759,21448,12,Personal,Rural,Graduate,Male,Private,Yes
+360,15245,3342,Contract,46,Married,3,641,1,0.54,17772,16498,,48,Education,Rural,Graduate,Male,Government,No
+361,,9078,Salaried,,Married,2,662,2,0.42,8911,25989,12043,60,Education,Urban,Not Graduate,Female,MNC,No
+362,12457,2844,Contract,47,Single,1,780,0,0.18,3235,37174,20853,48,Home,Urban,Graduate,,Government,Yes
+363,4479,1098,Unemployed,49,Married,,627,3,0.31,,25568,21079,60,Personal,Urban,Graduate,Female,Private,No
+364,6452,7027,Contract,58,Married,0,634,1,0.24,1100,1041,18101,48,Personal,Urban,Graduate,Female,Private,
+365,7881,1823,Salaried,40,Married,1,579,0,0.47,8864,39695,,84,Education,Rural,Graduate,Male,Business,No
+366,16069,3155,Contract,47,Married,2,762,4,,8708,49163,29016,60,Business,Semiurban,Graduate,Male,Unemployed,Yes
+367,4849,3093,Salaried,40,Single,3,598,1,0.59,18916,30099,19932,48,Business,Rural,Graduate,Male,Unemployed,No
+368,9390,5658,Unemployed,39,Married,1,558,1,0.13,17165,24364,,72,Home,Urban,Graduate,Male,Business,No
+369,13922,3778,Salaried,40,Married,0,694,3,0.28,14439,40639,8549,24,Business,Rural,Not Graduate,Male,Private,Yes
+370,4489,2896,,55,Single,2,618,2,0.34,19907,39143,14397,,Business,Semiurban,Graduate,Male,Private,No
+371,11823,988,Contract,22,Married,,607,2,0.35,11750,23482,26362,24,Business,Rural,Graduate,Female,Private,
+,,4116,Salaried,50,Single,1,734,1,0.26,9781,3676,34717,24,Car,Rural,Graduate,Male,Private,Yes
+373,11540,6446,Unemployed,54,Married,1,611,0,0.46,,45785,24016,12,Home,Semiurban,Graduate,Female,Private,No
+374,18364,4179,Unemployed,42,Married,0,772,4,0.54,17885,21781,15732,84,Education,Rural,Graduate,Female,,No
+375,6611,1682,Self-employed,23,Married,2,601,4,,11986,,27911,72,Business,Urban,Graduate,Female,Business,No
+376,7878,5626,Salaried,26,Married,1,738,0,0.5,12510,3065,18866,24,Car,Urban,Not Graduate,Male,Private,No
+377,18347,7424,Self-employed,35,Single,3,589,1,0.53,19464,2036,28621,36,Business,Semiurban,,Male,Business,No
+378,2851,933,Salaried,47,Single,1,715,4,0.38,9268,35814,13823,84,Car,,,Female,Unemployed,No
+379,8833,3598,Salaried,30,Married,2,720,2,0.51,502,16924,30986,24,Home,Urban,Not Graduate,Female,Business,No
+380,13938,1980,Contract,29,Married,1,612,0,0.25,9531,32844,15690,48,Business,Urban,Graduate,Female,,No
+381,4427,3056,Salaried,53,Single,0,696,3,0.3,8009,48648,,24,Car,,Not Graduate,,MNC,Yes
+382,6000,8984,Salaried,52,Single,1,777,1,0.26,17007,16407,22303,48,Personal,Semiurban,Graduate,Male,Private,Yes
+383,7052,791,Unemployed,26,Married,1,599,0,0.33,11542,21518,37533,48,Personal,Urban,Graduate,Male,Private,No
+,4738,5390,Salaried,56,Married,2,710,4,0.24,17434,17059,30674,36,Car,Rural,Graduate,Male,Private,No
+385,,6635,Salaried,22,Married,0,690,1,0.58,,23052,36595,24,Business,Semiurban,Not Graduate,Female,Private,No
+386,10002,2255,Unemployed,49,Single,2,627,2,0.26,13435,4267,3058,24,Business,,Not Graduate,Male,Business,No
+387,7536,3610,Salaried,24,Married,1,797,1,0.15,4114,5988,12519,60,Home,Urban,Graduate,,Unemployed,Yes
+388,,1607,Contract,21,Married,3,646,1,0.36,13568,27974,32115,84,Home,Semiurban,Graduate,Female,Unemployed,No
+389,5913,5179,Unemployed,39,Single,1,739,2,0.13,3367,24036,1730,60,Education,Urban,Graduate,Female,Private,Yes
+390,19450,6573,Unemployed,46,Married,2,770,2,0.16,8095,8680,2832,12,Home,Rural,Graduate,Male,Unemployed,Yes
+391,12636,984,Self-employed,45,Married,3,592,1,0.21,5141,1485,23889,48,Business,Rural,Graduate,Male,Private,No
+392,7726,5776,Salaried,30,Married,2,726,2,0.33,3951,14713,5179,36,Education,Urban,Graduate,Female,,Yes
+393,5373,3676,Salaried,35,Married,,585,0,0.32,14887,20043,7299,60,Home,Semiurban,Graduate,Male,Private,No
+394,14161,3380,Contract,42,Married,0,671,2,0.5,1573,2419,8830,24,Car,Urban,Graduate,Male,Private,No
+395,4082,8711,Contract,41,Married,3,657,2,0.47,13359,48080,38570,12,Personal,Urban,Graduate,Male,Private,No
+396,18281,8782,Self-employed,42,Married,1,559,1,0.31,19018,36263,23441,36,Home,Urban,Not Graduate,Male,MNC,No
+397,17305,1050,Salaried,56,Married,2,644,0,0.27,2768,17140,7615,72,Home,Urban,Not Graduate,Male,Private,No
+398,11817,,Salaried,54,Single,1,555,3,0.26,5302,43484,7762,24,Car,Semiurban,Graduate,Female,Private,No
+399,13261,6342,Salaried,50,Single,0,606,3,0.49,13746,45210,39311,24,Business,Rural,,Female,Unemployed,No
+400,2417,959,Contract,45,Married,0,678,4,0.13,1211,12961,25709,72,Car,Semiurban,Graduate,Female,,No
+401,10808,6059,Salaried,48,Married,3,620,2,0.11,15445,43075,,48,Home,Urban,Not Graduate,Male,,
+402,5267,,Unemployed,21,Married,0,735,,0.5,15815,6487,24434,48,Business,Rural,Graduate,Female,Business,No
+403,19209,5655,Contract,,Married,0,768,0,0.34,1160,31110,22343,60,Education,Rural,Graduate,Female,Private,Yes
+404,,4473,Salaried,27,Married,1,570,3,0.17,7041,42432,16739,60,Home,Semiurban,Not Graduate,Female,Private,No
+405,13338,2946,Self-employed,,Single,0,641,4,0.22,18767,16360,1666,24,Car,Rural,Graduate,Female,Government,No
+406,2412,7725,Salaried,56,Married,0,676,0,0.57,10846,49410,34044,84,Education,Urban,Not Graduate,Female,Government,No
+407,9543,526,Self-employed,39,Married,2,629,2,0.53,5876,36843,28883,24,,Urban,Not Graduate,,Government,No
+408,9587,3224,Contract,21,Married,0,605,3,0.45,19924,24882,15063,60,,Urban,Not Graduate,Female,Government,No
+409,2728,1875,Contract,30,Single,2,787,4,0.34,12889,17502,34649,72,Car,Rural,Graduate,Male,Government,No
+410,13657,1763,Contract,56,Married,0,764,1,0.36,13882,48053,35828,60,Education,Semiurban,Graduate,Male,Business,Yes
+411,7988,,Salaried,29,Single,0,665,3,0.59,14738,7631,10429,24,Car,Urban,Graduate,Female,Business,No
+412,4967,5797,Salaried,,Married,3,697,4,0.58,1095,3017,33926,36,Home,Urban,Not Graduate,Male,Government,No
+413,16527,9208,Contract,52,Single,3,779,0,0.21,5901,20725,38997,24,Business,,Graduate,Male,Private,Yes
+414,18048,7099,Salaried,26,Single,2,731,1,0.51,8215,24762,33269,36,Personal,Rural,Graduate,Female,Business,No
+415,19506,5109,Salaried,58,Married,0,574,4,0.2,12911,784,32704,36,Business,Urban,Graduate,,MNC,No
+416,19955,6644,Salaried,37,Married,1,705,4,0.21,14123,28020,,24,Business,Urban,Graduate,Male,Business,Yes
+417,7073,116,Self-employed,,Married,3,554,2,0.44,1079,38459,25187,84,Business,Urban,Graduate,Female,Government,No
+418,7104,2433,Salaried,47,Married,1,669,3,0.3,12510,15765,3526,84,Car,Rural,Graduate,Male,Private,Yes
+419,4143,5463,Self-employed,55,Single,3,,,0.57,19231,31127,25686,12,Car,Rural,Not Graduate,Male,Business,No
+,9357,583,Unemployed,41,Single,3,567,1,0.14,18344,3196,8803,60,Personal,Rural,Graduate,Male,Private,No
+421,14043,8586,Salaried,45,Single,0,724,4,0.36,1473,9552,33668,84,,Urban,Not Graduate,Male,Unemployed,Yes
+422,5440,3788,Salaried,48,Single,3,747,2,0.56,4888,41300,7574,48,Car,Urban,Graduate,Male,,No
+423,7644,4167,Salaried,35,Married,1,606,3,0.55,4979,49714,9733,24,Car,Urban,Graduate,Male,Private,No
+424,12518,8465,Contract,24,Married,3,642,,0.18,1212,31921,8257,36,Car,Urban,Graduate,Female,Government,No
+425,16552,1389,,49,Single,2,568,0,0.28,9001,4746,37051,24,Home,Urban,Graduate,Female,MNC,No
+426,4914,8357,Salaried,29,,0,677,2,0.41,13248,2999,16909,60,Personal,,Graduate,Female,Private,No
+427,15584,9759,Salaried,47,Single,0,646,1,0.18,419,44070,25146,72,Car,Rural,Not Graduate,Female,Government,No
+428,14144,6154,Contract,46,Married,2,742,0,0.58,15608,49220,12802,84,Personal,Urban,Graduate,Male,Business,No
+429,16397,5420,Salaried,39,Married,2,786,2,0.56,3659,15595,8896,84,Education,Urban,Graduate,Female,MNC,No
+430,10787,8920,Contract,48,Single,2,680,1,0.18,5283,,29133,84,Home,Semiurban,Graduate,,Private,Yes
+431,16191,2043,Unemployed,37,Married,3,719,1,0.16,10715,6200,14526,36,,Rural,Not Graduate,,Government,Yes
+432,2728,4197,Salaried,40,Single,0,570,,0.14,16165,38164,12278,48,Home,Rural,Graduate,Male,Unemployed,No
+433,19749,3496,Contract,59,Single,2,776,1,0.55,1340,23377,26551,48,Home,Semiurban,Graduate,Female,,No
+434,2698,778,Salaried,43,Single,3,782,4,0.2,14805,13410,26298,84,Education,Urban,Graduate,Female,Business,No
+435,9186,213,Contract,52,Single,2,,2,0.31,10584,45971,36338,,Personal,Rural,Not Graduate,Female,Unemployed,No
+,16512,3762,Self-employed,53,Married,1,616,1,0.32,14780,3598,23191,72,Home,Rural,Graduate,Male,Government,No
+437,15923,9768,Contract,25,Single,1,702,0,0.4,5137,10564,34092,84,Business,Urban,,Male,Government,No
+438,18779,6731,Salaried,54,Married,0,676,0,0.14,17745,45516,24871,12,Education,Urban,Graduate,Male,Government,Yes
+439,9400,3117,Salaried,31,Married,3,786,,0.21,591,30898,10721,36,Business,Urban,Not Graduate,Female,Private,Yes
+440,6171,5791,Salaried,23,Single,1,779,2,0.57,526,49725,39413,72,Education,Urban,Graduate,Male,Government,No
+441,6360,8783,Salaried,53,Married,1,786,1,,7855,20598,31279,36,Business,Urban,Not Graduate,Male,Government,No
+442,4502,2720,Salaried,31,Married,3,604,,0.49,10695,40404,15404,84,Business,Urban,Graduate,Male,MNC,No
+443,19101,8905,Salaried,36,Married,2,761,0,0.11,,17862,5486,72,Home,Urban,Graduate,Female,MNC,Yes
+444,7486,9127,Salaried,38,Married,3,729,4,0.26,,10265,36198,84,Home,,Graduate,Male,Business,Yes
+445,10335,6047,Salaried,50,Single,2,721,0,0.41,16571,9705,29687,72,Education,Urban,Not Graduate,Male,Private,No
+446,6491,8032,Contract,30,Married,1,658,0,0.24,19142,25544,14156,84,Personal,Urban,Graduate,Female,Private,Yes
+447,13130,,Salaried,38,Single,1,647,4,0.55,8625,14298,1567,12,Home,Urban,Not Graduate,Female,Private,No
+448,9651,6368,Salaried,,Single,1,762,2,0.42,6431,32670,3179,36,Home,Rural,Graduate,Male,Business,No
+449,3167,1949,Salaried,39,Single,0,733,1,0.14,15926,42471,3019,,Car,Urban,Not Graduate,Male,Private,Yes
+450,3062,6732,Salaried,56,,0,732,2,0.55,11704,46104,16919,12,Home,Semiurban,Graduate,Female,Government,No
+451,13174,7833,Unemployed,33,Single,0,661,3,0.58,437,40934,20703,24,Personal,Semiurban,Graduate,Male,Private,No
+452,6729,917,Salaried,23,Married,3,764,3,0.14,10780,48884,19704,84,Car,Rural,Graduate,Female,MNC,Yes
+453,11348,3174,Contract,30,Single,1,747,3,0.37,17216,6050,19030,60,Business,Rural,Graduate,Female,MNC,Yes
+454,7334,7014,Unemployed,58,Married,1,664,4,0.25,8988,43952,4909,72,Business,Urban,Graduate,Male,Business,Yes
+455,10924,89,Contract,21,Single,3,666,0,0.3,,21034,9015,48,Car,Urban,Graduate,Female,Private,Yes
+456,6330,1709,Self-employed,47,Single,0,754,2,0.19,5794,45480,4420,12,,Semiurban,Graduate,Female,Government,Yes
+457,8801,3041,Contract,28,Married,3,790,1,0.39,,8484,17740,12,Car,Urban,Graduate,Male,Private,Yes
+458,6846,105,Unemployed,,,0,,3,0.58,16301,31323,,72,Education,Semiurban,Graduate,Male,Private,No
+459,8731,9078,Self-employed,29,Single,1,750,2,0.35,684,20796,20465,12,Personal,Rural,Graduate,Female,Private,Yes
+460,17368,8619,Self-employed,26,Married,2,630,3,,4233,,5131,24,Personal,Urban,Graduate,Male,Private,No
+461,19337,1895,Self-employed,45,Single,0,615,3,0.41,16961,21827,11652,12,Business,Urban,Graduate,Female,Private,No
+462,,6090,Self-employed,,Married,1,568,1,0.27,12997,35361,22507,60,Business,,Graduate,Female,Private,No
+463,9056,8508,Self-employed,48,Married,1,760,4,0.53,8007,10315,24806,60,Business,Urban,Graduate,Male,Private,No
+464,13516,,Salaried,53,,2,797,0,0.32,16611,47968,20171,84,Home,Urban,,Female,Business,Yes
+465,13493,634,Salaried,57,,1,684,4,0.2,2328,26519,21593,84,Business,Rural,Not Graduate,Female,Unemployed,Yes
+466,3542,1925,Salaried,29,Single,1,,2,0.2,19115,9107,10470,,Car,Rural,Graduate,Male,MNC,Yes
+467,15964,2056,Salaried,38,Married,0,740,4,0.48,9019,3869,22326,24,Business,Urban,Graduate,Male,Private,No
+,19575,6917,Salaried,,Single,0,591,2,0.23,16814,15447,5597,60,Car,Urban,Graduate,Female,Government,No
+469,8313,3144,Salaried,22,Married,2,591,2,0.48,9255,27370,38304,72,Education,Semiurban,,Male,MNC,No
+470,19924,9631,Self-employed,58,Single,2,,0,0.2,,7971,31788,36,Home,Rural,Graduate,Male,Private,No
+471,15807,552,Salaried,56,,1,569,1,0.26,5782,31269,,36,Home,Rural,Graduate,Female,MNC,No
+472,11580,8907,Contract,57,Married,0,622,0,0.33,1234,25651,34071,36,Personal,Semiurban,Graduate,,Government,No
+473,19749,5383,Salaried,35,Married,2,566,4,0.57,5205,35757,6067,84,Education,Urban,Graduate,Female,Unemployed,No
+,,3911,Salaried,48,,2,576,2,0.57,1420,23446,6024,72,Car,Urban,Graduate,Male,MNC,No
+475,9494,9905,Contract,38,Single,,724,3,0.2,17152,38108,8715,12,Education,Semiurban,Graduate,Male,Business,Yes
+476,6312,3389,Self-employed,54,Married,2,551,3,0.28,9596,9643,,72,Home,Rural,Graduate,Male,Business,No
+477,3324,9299,Salaried,42,Single,1,612,2,0.17,19488,3823,12226,12,Car,Urban,,Female,Private,
+478,5141,8442,Contract,31,,0,611,0,0.35,,13454,36399,36,Education,Urban,Graduate,Female,Private,No
+479,3810,2430,Contract,33,Single,,649,1,0.33,19689,3932,14412,48,Home,Rural,Not Graduate,Male,Government,No
+480,8588,458,Salaried,24,Single,3,,0,0.55,17922,10220,13569,48,Car,,Not Graduate,Male,Private,No
+481,7301,207,Salaried,42,Married,0,566,2,0.57,17715,8554,3369,12,Car,Semiurban,Graduate,Female,Private,No
+482,17485,899,Unemployed,27,Married,2,618,2,,8261,2429,33021,36,Home,Urban,Graduate,Male,Private,
+483,13714,21,Self-employed,44,Married,3,716,1,,13765,28208,1528,72,Car,Urban,Graduate,Male,MNC,Yes
+484,6748,8601,Self-employed,24,Single,2,759,4,0.55,5944,7444,31314,48,Home,Urban,Graduate,Female,Private,
+485,11435,894,Contract,48,Single,0,666,4,0.5,7126,10510,38443,12,Business,Rural,Graduate,Male,Private,
+486,5709,514,Salaried,35,Married,0,795,1,0.1,,44045,19047,72,Business,Semiurban,Graduate,Female,Government,Yes
+487,15116,7294,Salaried,21,Single,0,748,4,0.26,5263,10537,20748,36,Car,Rural,Graduate,Female,Government,Yes
+488,,4904,Salaried,23,Married,1,630,3,0.31,15300,7147,36109,24,Car,Semiurban,Graduate,Male,Private,No
+489,12150,7867,Contract,34,Married,2,588,4,0.21,,40399,14919,36,Home,Urban,Not Graduate,Male,Unemployed,
+490,8530,4109,Self-employed,58,Single,1,585,4,0.2,2892,3598,16256,84,Car,Urban,Not Graduate,Male,Government,No
+491,12188,7179,Self-employed,21,Married,0,717,4,0.12,1198,,5905,36,Personal,Semiurban,Graduate,Female,,Yes
+492,16683,1560,Salaried,58,Married,3,722,3,0.42,18756,6718,9884,72,,Semiurban,Graduate,Male,Private,No
+493,2504,1266,Salaried,58,Married,2,681,4,0.23,18276,42691,29906,72,Car,Semiurban,Graduate,Female,Government,No
+494,3214,3638,Salaried,41,Married,1,779,3,0.13,1883,13782,6950,60,Car,Rural,Not Graduate,Female,MNC,Yes
+495,3531,8941,Contract,49,Married,2,702,1,0.22,797,49244,2360,60,,Urban,Not Graduate,Female,Private,Yes
+,2823,3427,Self-employed,25,Married,3,746,0,0.5,8209,51,38895,72,Car,Urban,Not Graduate,Male,Private,No
+497,19312,4780,Salaried,30,Single,1,707,1,0.53,8235,16702,22946,72,Personal,Semiurban,Graduate,Female,Private,No
+498,7029,1927,Contract,48,Married,0,753,0,0.34,16538,10184,9730,24,Business,Urban,Not Graduate,Female,Unemployed,Yes
+499,15428,2356,Salaried,41,Married,,745,1,0.31,15257,12468,23161,24,Education,Urban,Graduate,Male,Private,Yes
+500,18517,4790,Unemployed,27,Married,2,765,0,0.59,8050,22072,28738,36,Home,Rural,Not Graduate,Male,MNC,No
+501,4105,306,Salaried,23,Married,2,578,0,0.2,5947,15479,4925,84,Home,Urban,Not Graduate,Male,Private,No
+502,5627,7979,Self-employed,40,Single,2,750,2,0.21,9617,,9463,48,,Semiurban,Graduate,Male,Government,Yes
+503,14972,3665,Salaried,39,Single,2,745,0,0.25,1892,23402,18412,84,Home,Urban,Graduate,Female,Business,Yes
+504,,7057,Unemployed,55,Married,0,600,,0.19,3424,7210,23402,24,Personal,Rural,Not Graduate,Male,,No
+505,6910,661,,24,Single,1,701,2,0.29,,45702,35010,36,Car,Rural,Graduate,Female,Government,No
+506,13003,4644,Salaried,25,Married,0,563,4,0.56,13418,36724,26717,84,Business,Rural,Graduate,Female,Private,No
+,15843,8503,Salaried,21,Married,0,618,4,0.41,2015,6057,10797,12,Education,Urban,Graduate,Female,Private,No
+508,13704,2920,Salaried,24,Married,0,695,2,0.31,4833,30916,21594,60,Car,Urban,Graduate,Female,MNC,Yes
+509,17761,9274,Salaried,32,Married,2,719,3,0.57,9894,27268,7406,84,Home,Urban,Graduate,Male,Private,No
+510,8190,8946,Unemployed,47,Married,2,606,0,0.12,15942,43978,14965,48,Home,Urban,Graduate,Female,Business,No
+511,19640,6236,,43,Single,2,760,0,0.21,9065,47358,14733,36,Education,Rural,Graduate,Male,Private,
+512,7645,6078,Contract,45,Married,1,561,2,0.38,565,23259,27926,84,Personal,Urban,Graduate,Male,Private,No
+513,11588,352,Self-employed,41,Single,3,759,2,0.41,7412,13864,29783,72,Education,Urban,Graduate,Male,Business,No
+514,,9094,,44,Married,2,566,3,0.12,18402,34293,18824,12,Business,Urban,Graduate,Female,Government,No
+515,10053,7005,Salaried,45,Married,1,579,4,0.3,10077,46045,37394,60,Education,Rural,Graduate,Female,Private,No
+516,5330,158,,52,,2,637,1,0.42,10315,7043,29287,12,Home,Urban,Graduate,Male,Government,No
+517,10662,956,Contract,52,,2,752,4,0.45,12834,41473,17568,36,Personal,Semiurban,Graduate,Male,Private,No
+518,9114,,Unemployed,25,Married,,648,0,0.42,2314,38893,31436,24,Personal,Rural,Not Graduate,Female,MNC,No
+519,15323,8595,Salaried,56,Single,0,572,2,0.26,4412,40642,22380,60,Education,Rural,Graduate,Male,Private,No
+,3353,9579,Salaried,59,Single,0,758,3,0.15,3883,12529,25796,12,Business,Semiurban,Not Graduate,Male,Private,No
+521,12975,3453,Salaried,36,Single,1,678,4,0.31,11384,30868,9031,24,Home,Urban,Graduate,Female,MNC,Yes
+522,13023,6675,Unemployed,53,Single,3,628,3,,10051,26309,22947,,Car,Semiurban,Not Graduate,,,No
+523,2667,955,Salaried,41,,3,581,,0.57,8216,23284,4188,36,Personal,Rural,Graduate,Male,Private,
+524,11337,6295,,29,Single,1,558,0,0.34,,47723,26669,,Education,,Graduate,Male,Private,No
+525,15659,1712,Contract,26,Married,2,564,1,0.26,7902,35268,36713,60,Business,Semiurban,Graduate,Male,MNC,No
+526,5719,4703,Salaried,55,Married,,705,3,0.48,13187,3464,,12,Business,Urban,Graduate,,Unemployed,No
+527,9483,6563,Salaried,59,Married,2,701,3,0.35,17573,18643,,48,Home,Urban,Graduate,Male,Business,Yes
+528,2539,9465,Self-employed,42,Married,1,737,1,0.26,12288,29265,24171,72,Personal,Rural,Graduate,Male,Government,No
+,6964,5631,Unemployed,25,Single,1,712,3,0.51,14210,15954,11807,60,Home,Rural,Graduate,Male,Business,No
+530,6835,9633,Salaried,,Single,1,763,3,0.53,6884,23880,11204,72,Car,Urban,Not Graduate,Female,Government,No
+,8042,9989,Salaried,37,Married,,576,4,0.44,19541,19043,28066,60,Car,Urban,Graduate,Female,,No
+532,16837,1394,Salaried,32,,0,760,4,0.12,10559,255,38367,12,Car,,Graduate,Male,Unemployed,Yes
+533,9312,9461,,43,Single,1,658,1,0.38,18125,1502,23658,48,,Rural,Graduate,Female,Private,Yes
+534,7320,4732,Self-employed,36,Married,3,625,0,0.48,3688,4656,38081,12,Personal,Semiurban,Graduate,Male,Private,No
+535,15216,3714,Salaried,23,Single,0,697,3,0.17,14114,10302,35986,36,Home,Rural,Not Graduate,Male,MNC,Yes
+536,4779,529,Salaried,50,Married,0,614,0,0.21,5369,5430,14786,72,Home,Urban,Not Graduate,Male,Business,No
+537,19308,2958,Salaried,42,Married,1,762,1,0.54,,41366,30283,24,Car,,Not Graduate,Male,Private,No
+538,3581,7904,Self-employed,,Married,2,726,1,,4023,27425,1056,,Personal,Urban,Not Graduate,Female,Private,Yes
+,14677,,Self-employed,49,Married,2,,4,0.48,15982,48744,33911,36,Personal,Urban,Graduate,Male,Government,No
+540,7713,6895,Contract,57,Single,2,678,3,0.34,17100,1860,9559,36,Education,Semiurban,Graduate,Male,Government,Yes
+541,18639,9131,Salaried,43,Single,1,559,2,0.32,3967,6158,27058,72,Personal,Urban,Graduate,Female,Government,No
+542,,525,Contract,33,Single,2,596,1,,7423,5806,23745,60,Personal,Rural,Not Graduate,Male,Private,No
+543,12136,6477,Contract,52,Married,3,672,3,0.51,6450,20738,1615,36,Home,Semiurban,Not Graduate,Male,Unemployed,No
+544,,1,Salaried,43,Married,3,608,0,0.28,12213,17106,9062,84,Personal,Semiurban,Graduate,Male,Private,No
+545,7124,374,Salaried,37,Single,3,645,4,0.37,3215,9474,29214,48,Personal,Urban,Graduate,Male,Government,No
+546,3015,4648,Salaried,41,Single,3,739,0,0.44,390,16997,39745,36,Home,Urban,Not Graduate,Male,Government,No
+547,,2365,,22,Married,0,652,1,0.45,19421,32599,11681,48,Personal,Urban,Graduate,Male,Private,No
+548,10415,1525,Salaried,57,Married,3,673,1,0.58,232,,7984,12,Home,Rural,Not Graduate,Male,Private,No
+549,15550,1646,Salaried,26,Single,2,635,0,0.37,19515,10170,28579,60,,Semiurban,Graduate,Male,Unemployed,No
+550,16512,13,Salaried,38,Married,1,695,1,0.3,7634,,26274,48,Business,Urban,Graduate,,MNC,Yes
+551,6158,4599,Contract,50,Married,2,661,3,0.58,11498,,38739,36,Home,Urban,Graduate,Female,Private,No
+552,8970,2278,Salaried,42,Married,3,723,1,0.42,10916,,28399,60,Home,Semiurban,Graduate,Female,MNC,No
+553,8938,3155,Contract,53,Married,0,709,4,0.25,233,25792,32481,84,Personal,Rural,,,,
+554,15772,8321,Self-employed,50,Single,3,,3,0.16,1391,30216,1944,60,Home,Semiurban,Graduate,Female,Business,No
+555,12344,3814,Contract,37,Single,1,769,2,0.52,11084,7232,29457,48,Car,Urban,Not Graduate,Female,Private,No
+556,9266,3216,Self-employed,52,Married,,567,1,0.28,9447,12674,10114,48,Car,Urban,Graduate,Female,MNC,No
+557,10702,8219,Salaried,34,Married,1,716,1,0.43,14184,16052,19130,24,Education,Urban,Not Graduate,Male,Private,No
+558,2384,2113,Self-employed,,Married,1,726,4,0.34,11882,48542,13312,24,Home,Urban,Graduate,Female,Government,No
+559,2404,9444,Salaried,56,Married,1,770,,0.2,14838,5913,33596,60,Personal,,Not Graduate,Male,MNC,No
+560,10175,4356,Salaried,54,Married,,631,0,0.4,17273,46870,39551,72,Personal,Urban,Graduate,Female,Private,No
+561,17158,5543,Unemployed,29,Single,3,721,0,0.13,7902,48157,10751,72,Business,Urban,Graduate,Male,Government,Yes
+562,,4555,Salaried,48,Married,1,621,0,0.31,12879,27913,7907,24,Education,Semiurban,Graduate,Female,Private,No
+563,11860,7062,Salaried,31,Married,2,603,4,0.37,17129,10567,29114,36,Personal,Urban,Graduate,Male,Business,No
+,7989,3374,Contract,34,Married,0,772,0,0.32,9911,38379,26009,,Business,Rural,Not Graduate,,Private,Yes
+565,17106,6430,Contract,59,Married,2,711,0,0.47,,9432,20310,60,Personal,Urban,Graduate,Male,Government,No
+566,19844,3466,Self-employed,39,Married,,620,2,0.51,731,319,,12,Business,Semiurban,Graduate,Male,Unemployed,No
+567,5636,,Salaried,35,Married,2,713,0,0.49,799,24469,19996,24,Car,Urban,Not Graduate,Male,Private,
+568,12916,629,,48,Single,3,695,1,0.12,7025,45454,7047,48,Car,Rural,Graduate,Male,Private,Yes
+,6809,269,Salaried,44,Married,1,587,4,0.2,14481,26490,29767,84,Personal,Urban,Not Graduate,Male,Business,No
+570,,5724,,28,Married,3,736,3,0.37,7624,,17347,60,Education,Urban,Graduate,Male,MNC,Yes
+571,17444,5897,Unemployed,29,Single,2,686,2,0.57,14961,4791,37527,24,Home,Rural,Not Graduate,Female,Unemployed,No
+572,7997,3432,Contract,53,Single,1,750,4,0.52,,31736,25102,36,Education,Urban,Graduate,Male,Private,No
+573,4048,,,53,Married,0,787,4,0.52,8232,329,5263,84,Education,Urban,Not Graduate,Male,Private,No
+574,14338,6276,,39,Single,2,,1,0.25,3367,8851,2902,60,Home,Semiurban,Graduate,Female,MNC,Yes
+575,19100,5895,Contract,23,Married,1,728,0,0.31,13262,44078,31823,60,Car,Semiurban,Graduate,Male,MNC,Yes
+576,6544,7115,Contract,30,Married,0,584,1,0.34,5229,23126,31540,72,Car,Urban,Graduate,Male,Business,No
+577,6976,,Salaried,21,Married,0,631,0,0.18,18799,21300,36335,48,Home,Urban,Graduate,Male,Private,No
+578,14775,575,Contract,49,Single,3,682,0,0.12,13747,10164,11190,60,Business,,Graduate,Female,Private,Yes
+579,12015,7029,Salaried,54,Single,2,691,4,0.57,19333,24509,28690,48,Education,Urban,Graduate,Male,Private,No
+580,5419,,Self-employed,33,Married,0,769,0,0.22,4261,5703,3994,24,Personal,Semiurban,Graduate,Male,Unemployed,Yes
+581,16430,9499,Contract,21,Married,1,707,,0.22,3466,27109,38997,36,Car,Rural,Not Graduate,Female,Private,Yes
+582,9239,3192,Self-employed,,Single,0,553,2,0.14,13785,43417,3010,84,Personal,Urban,Graduate,Male,Government,No
+583,16489,3178,Salaried,49,Married,0,716,2,0.56,3088,22554,8377,,Home,Semiurban,Not Graduate,Female,,No
+584,18633,6052,Self-employed,33,Married,3,761,4,0.39,13015,27676,14036,36,Personal,Rural,Graduate,Male,Private,Yes
+585,12357,2734,Self-employed,49,Single,3,741,1,,1115,23804,27467,60,Personal,Rural,Graduate,Male,Private,No
+586,19154,6116,Unemployed,59,Single,1,702,3,0.56,4578,45440,1048,60,Education,Urban,Not Graduate,Female,Business,No
+587,6363,,Salaried,44,Single,3,705,0,0.27,2590,36923,,24,Home,Urban,,Male,Private,No
+588,12176,9847,Salaried,46,Single,0,753,3,0.41,,29802,17038,72,Personal,Rural,Graduate,Female,Private,No
+589,19461,9771,Contract,37,Married,0,743,1,,3573,24795,33576,72,Car,Urban,Graduate,Female,Private,Yes
+590,10427,2203,Salaried,27,Single,3,784,1,0.19,,2611,8878,72,Home,Urban,Graduate,Male,MNC,Yes
+591,10580,1390,Self-employed,33,Single,0,755,4,0.52,10639,,28609,48,Car,Urban,,Female,Unemployed,No
+592,6858,1742,Self-employed,25,Married,0,699,2,0.48,9422,16479,25070,72,Business,Urban,Graduate,Male,Business,No
+593,12040,1925,Contract,46,Married,1,708,2,0.28,10858,9180,22996,36,Personal,,Graduate,Female,MNC,Yes
+594,17254,619,Self-employed,23,Married,3,572,1,0.29,4975,9304,19161,84,Home,Rural,Graduate,Male,Government,No
+595,13470,1274,Self-employed,27,Married,0,597,4,0.37,4925,14610,3228,84,Car,Urban,Graduate,Male,Business,No
+596,3252,956,Salaried,59,Single,3,697,4,0.1,10786,8437,27365,48,Personal,Urban,,Male,Unemployed,No
+597,8996,1939,Salaried,21,Single,1,674,0,0.22,19814,43118,26188,24,Education,Rural,Not Graduate,Male,Government,
+598,14173,3953,Salaried,37,Married,3,715,2,0.2,14716,12521,9888,,Car,Urban,Graduate,Male,Private,Yes
+599,6673,968,Salaried,45,Married,0,,1,0.23,1995,24028,24130,84,Car,Rural,Graduate,Female,Unemployed,No
+600,17781,9508,Self-employed,23,Single,3,,3,0.5,13844,,19790,36,Business,Rural,Graduate,Female,MNC,No
+601,15051,9235,Contract,35,Married,0,756,2,0.24,3891,27301,25824,84,Education,Urban,,Male,Private,Yes
+602,8881,281,,49,Married,0,637,0,0.2,15522,38015,34405,12,Business,Rural,Graduate,,Unemployed,No
+603,8949,6262,Contract,52,Married,0,766,4,0.35,7145,21740,25474,24,Education,Rural,Graduate,Female,Private,Yes
+604,11521,1058,Unemployed,46,Married,1,550,1,0.53,8498,36845,18333,24,Car,Urban,Graduate,Male,Private,No
+605,10017,4293,Contract,,Married,3,684,2,0.22,9554,21282,37355,12,Business,Urban,Graduate,Male,Business,Yes
+606,8941,5178,,45,Married,1,734,3,0.14,2102,10858,34879,48,Personal,,Graduate,Male,Private,Yes
+607,12209,6980,Self-employed,48,Married,3,,0,0.28,3030,44159,9367,84,Education,Urban,Not Graduate,Male,Business,
+608,19715,9200,Salaried,29,Married,1,689,0,,8524,43714,1722,84,Car,Semiurban,Graduate,Male,,No
+,11550,1229,Salaried,21,Married,2,655,2,0.38,8107,15186,32145,84,Home,Rural,Graduate,Female,Private,Yes
+610,6637,9227,Salaried,49,Married,0,682,3,0.51,16626,34185,38634,72,Education,Urban,Graduate,Female,,No
+611,6854,4585,Unemployed,,Single,0,657,0,0.58,18268,31194,11139,72,Education,Urban,Graduate,Male,Government,No
+612,12320,8467,Contract,36,Single,1,727,1,0.5,14935,25230,3128,72,Personal,Urban,,Female,Private,No
+613,6892,2740,Salaried,27,Married,2,591,0,0.4,9624,27018,21617,72,Education,Urban,Graduate,Male,Unemployed,No
+614,9043,2289,Salaried,34,Married,0,651,3,0.35,15823,49262,29080,72,Education,Rural,Graduate,Male,Government,Yes
+615,18521,1239,Contract,49,Single,3,673,,0.12,7863,24665,36285,12,Personal,Semiurban,Not Graduate,Male,,Yes
+616,,5370,Salaried,39,Married,,689,4,0.59,3109,41722,18533,24,Personal,Semiurban,Not Graduate,Male,Private,No
+617,9941,125,Salaried,39,,0,652,2,0.29,18570,46359,33624,48,Business,Urban,Graduate,Male,MNC,Yes
+618,16388,7473,Contract,22,Single,0,695,3,,12482,40159,28956,36,Car,Semiurban,Not Graduate,,Government,Yes
+619,7569,9400,Salaried,35,Single,1,743,0,0.43,1550,44132,34077,72,Car,Semiurban,Not Graduate,Male,Private,No
+620,6300,5342,Salaried,23,Single,1,623,0,0.24,646,43139,4952,12,Business,Semiurban,Graduate,Male,Private,No
+621,8269,7351,Self-employed,31,,3,756,4,0.39,13407,21516,23796,84,Car,Urban,Graduate,Female,Government,Yes
+622,5818,6638,Contract,,Single,3,771,4,0.39,12700,35272,32746,48,Education,Rural,Graduate,Female,Private,
+623,14015,6570,Self-employed,38,Married,0,657,1,0.32,537,24673,22249,48,Business,Rural,Graduate,Male,Business,Yes
+624,14234,3249,Salaried,22,Single,0,,4,0.52,14166,5239,1015,48,Business,,Not Graduate,Female,Unemployed,No
+625,8254,9110,Salaried,52,Married,1,566,1,0.23,6572,,26957,12,Car,Semiurban,Graduate,Female,Private,No
+626,19144,7595,Salaried,28,Married,0,745,0,0.32,234,26415,17005,36,Home,Urban,Graduate,,MNC,Yes
+627,9350,6294,Self-employed,42,Single,0,620,1,0.37,14067,37888,22292,72,Car,Urban,Graduate,Male,Unemployed,No
+628,17183,6527,Contract,26,Married,1,611,1,0.43,9696,27195,32876,48,Home,Semiurban,Graduate,Male,Unemployed,No
+,8238,5757,Salaried,32,Married,0,590,2,0.49,14150,39161,15817,12,Business,Urban,Graduate,Female,Unemployed,No
+630,8090,1969,Contract,56,Single,,772,4,0.3,17758,29323,26470,84,Home,Semiurban,Graduate,Male,MNC,Yes
+631,13637,891,Salaried,35,Married,2,792,1,0.42,1909,34964,10759,24,Education,Rural,Graduate,Male,Government,No
+,14647,4470,Salaried,,Married,3,796,0,0.18,12150,36234,7412,84,Personal,Urban,Not Graduate,Male,Government,Yes
+633,11911,7175,Salaried,38,Married,1,780,3,0.57,80,30763,21504,12,Home,Urban,Not Graduate,Female,Government,No
+634,10472,9556,Salaried,22,Single,2,668,1,0.29,2083,,9507,12,Personal,Rural,Not Graduate,Female,MNC,Yes
+635,5266,8320,Self-employed,33,,3,711,4,0.46,13378,18105,22050,12,Education,Rural,Not Graduate,Male,Private,No
+636,2666,9206,Self-employed,35,Married,3,747,2,0.11,15217,,5820,48,Personal,Semiurban,Not Graduate,Male,Private,Yes
+637,6188,9991,Salaried,40,Single,3,791,0,,18074,29739,8835,12,Education,Semiurban,Graduate,Female,Private,Yes
+638,19055,6812,Self-employed,49,Married,2,,2,0.34,17140,48205,,24,Personal,Urban,Graduate,Male,MNC,Yes
+639,12161,7519,Salaried,49,Single,2,594,3,0.54,2670,31969,35617,48,Personal,Urban,Graduate,Male,,No
+640,13314,4612,Contract,23,Married,3,607,1,0.36,3751,14497,,84,Car,Semiurban,Graduate,Male,Government,No
+641,14891,9710,Unemployed,39,Married,0,728,1,0.56,11744,1816,,24,Home,Rural,Graduate,Female,Private,No
+642,6777,1198,Salaried,23,Single,0,675,4,0.34,5261,26483,7840,60,Personal,Urban,Not Graduate,Female,Business,Yes
+643,5900,5238,Self-employed,34,Married,2,711,,,14691,43481,38834,84,Business,Semiurban,Graduate,Female,,No
+644,15716,6089,Salaried,24,Married,2,593,0,0.16,6852,22159,32440,12,Car,Semiurban,,Male,,No
+645,8981,6257,Salaried,31,Married,2,564,3,0.5,1494,3849,36183,72,Home,,,Male,Private,No
+646,8376,7705,Salaried,51,Single,3,627,2,0.22,17285,21612,31636,72,Car,Urban,Graduate,Male,Unemployed,No
+647,18907,3719,Contract,52,Married,0,619,3,0.55,672,39617,3389,48,Home,Rural,Not Graduate,Female,Government,No
+648,12160,302,Self-employed,47,Married,2,727,1,0.56,8630,33826,1763,72,Education,Rural,Graduate,Male,,No
+649,,,,,Married,2,,2,0.57,10268,44498,24925,,Personal,Semiurban,Graduate,Male,Business,No
+,18282,4440,Contract,22,Married,1,791,4,0.36,444,18706,27549,48,Business,Semiurban,Graduate,Female,Government,Yes
+651,12488,4909,Self-employed,29,Married,3,709,3,0.44,9157,24563,24457,84,Car,Rural,Not Graduate,Male,Private,No
+652,7240,3072,Contract,48,Single,1,744,2,0.49,11982,4359,22423,12,,Rural,Graduate,Male,Government,No
+653,12453,3124,Self-employed,51,Single,0,552,2,0.17,8655,30669,11518,36,Car,Semiurban,Graduate,Female,,No
+654,12478,9519,Self-employed,54,Married,1,763,2,0.4,18582,12809,33360,36,Car,Urban,Not Graduate,Male,Government,No
+655,14394,8125,Salaried,35,Married,1,635,0,0.12,,,29173,24,Personal,Urban,Graduate,Male,Business,No
+656,6432,3291,Salaried,45,Married,1,623,3,0.35,11957,29454,10395,12,Home,Semiurban,Graduate,Male,Unemployed,No
+657,15568,4033,Unemployed,56,Married,3,600,2,0.18,4008,7254,20207,72,Personal,Urban,Graduate,Male,MNC,No
+658,16178,,Salaried,28,Single,0,616,,0.19,11696,45590,39055,12,Education,Urban,Not Graduate,,Business,No
+659,19660,703,Unemployed,29,Married,1,625,2,0.28,9104,24785,27639,60,Personal,Urban,Graduate,Female,Business,No
+660,2302,8133,Self-employed,57,Married,3,642,4,0.32,496,2093,29924,36,Personal,Urban,,Male,Unemployed,No
+661,19022,574,Salaried,59,Single,0,725,4,0.41,1463,44498,8433,72,Education,Urban,Graduate,Female,Unemployed,No
+662,2055,5704,Salaried,52,Married,2,694,,0.14,12459,40985,31104,84,Personal,Urban,Graduate,Male,Unemployed,No
+663,15013,7848,Salaried,37,Single,1,556,1,0.35,16877,32009,38594,84,Home,Semiurban,Graduate,Male,Business,No
+664,10717,5208,Unemployed,55,Married,0,562,2,0.19,17810,16558,,36,Business,Rural,Graduate,Male,Private,No
+665,10150,6924,Salaried,57,Single,1,669,1,0.39,9884,17718,11528,12,Education,Rural,Graduate,Female,Private,Yes
+666,4125,3828,Salaried,39,Single,,615,3,,18177,16705,29190,72,Car,Urban,Graduate,Male,Private,No
+,13479,3230,Salaried,49,Single,0,553,1,0.38,2723,22082,1497,24,Home,,Graduate,Female,Unemployed,No
+668,17745,,Salaried,27,Single,3,687,3,0.47,17042,12342,8641,84,Business,Rural,Graduate,Female,MNC,No
+669,18748,7114,,48,Married,0,780,3,0.27,4761,12239,5643,12,,Rural,Graduate,Female,Government,Yes
+670,8809,9539,Salaried,29,Married,3,637,3,0.48,7630,46622,6056,24,Home,Urban,Graduate,Female,Government,No
+671,6621,3173,Contract,48,Single,0,566,1,0.32,16375,46665,33899,72,Car,Urban,Graduate,Male,Private,No
+672,17034,1667,Salaried,26,Married,3,601,2,0.34,8741,32274,,36,Business,Semiurban,Not Graduate,Female,Government,No
+673,15623,9829,Salaried,49,Married,2,683,1,0.42,4350,11419,18241,60,Home,Rural,Graduate,Female,Business,No
+674,7126,4114,Salaried,37,Married,2,760,2,0.11,207,42832,9712,48,,Rural,Graduate,Female,Government,Yes
+,7122,3553,Salaried,36,Married,2,618,2,0.43,4190,15003,9221,36,Education,Rural,Graduate,Male,Private,No
+,19302,7761,Unemployed,43,Married,0,773,3,0.41,1883,30866,32346,24,Car,Urban,Graduate,Female,Government,No
+677,7870,1000,Self-employed,51,Married,2,751,1,0.25,2886,21988,16660,12,Personal,Rural,Not Graduate,Male,Private,Yes
+678,3531,9042,Salaried,23,,1,686,2,0.14,16861,43027,39915,,Car,Urban,Graduate,Male,Unemployed,No
+679,10172,1388,Self-employed,41,Married,,768,4,0.15,8953,24908,,72,Car,Rural,Graduate,Female,Private,Yes
+680,9673,5450,,46,Married,3,754,,0.56,8381,5674,38372,36,Car,Semiurban,Graduate,Female,Unemployed,No
+681,8882,,Salaried,56,Married,3,760,4,0.44,13795,5002,18942,84,Home,Rural,Graduate,Male,Private,No
+682,3906,1367,Unemployed,,Married,3,570,1,0.16,17139,27567,,84,Business,Urban,Graduate,Female,Private,No
+683,5086,8189,Contract,,Single,0,573,1,0.28,9638,910,2607,60,Car,Urban,Graduate,Male,Business,No
+684,15503,9013,Unemployed,32,Married,1,779,1,0.4,4931,29072,,72,Car,Rural,Not Graduate,Male,MNC,No
+685,10152,454,Salaried,33,Married,2,553,2,0.52,9855,33717,4574,24,Personal,Semiurban,Not Graduate,Male,Government,No
+686,7750,9816,Self-employed,31,Single,1,701,0,0.12,5724,21809,8274,72,Personal,Rural,Graduate,Male,Private,Yes
+687,14772,,Salaried,36,Married,1,736,2,0.22,12420,26651,16748,,Education,Rural,Graduate,Female,Private,Yes
+688,12267,,,28,Married,3,776,2,0.54,4060,44291,21175,12,Education,Urban,Not Graduate,Male,Business,
+689,3062,7232,Contract,22,Married,3,552,3,,4765,43989,12826,48,Personal,Rural,Graduate,Male,Private,No
+690,19680,4806,Salaried,50,Single,3,617,3,,19996,16484,,84,Business,Rural,Graduate,Male,Private,No
+691,8229,2190,Contract,50,Married,0,798,2,0.58,6553,4646,35129,24,Education,Semiurban,Not Graduate,Male,Business,No
+692,18509,9108,Contract,32,Married,,650,4,0.41,7378,39713,5473,12,Business,Urban,Graduate,Female,Private,No
+693,17147,2875,Salaried,30,Married,1,717,3,0.23,18073,2400,24490,84,Personal,Rural,Graduate,Male,Private,Yes
+694,6632,5592,Self-employed,31,Married,0,725,2,0.13,17700,44331,10481,48,Education,Urban,Graduate,Male,Private,Yes
+695,8288,1440,Self-employed,35,Married,0,603,0,0.11,7130,22185,9520,12,Car,Rural,Graduate,Female,Unemployed,No
+696,,8927,Salaried,36,Married,0,584,4,0.22,3186,,,48,Personal,Semiurban,Not Graduate,Male,Private,No
+697,13475,6059,Contract,37,Married,1,772,1,0.54,5789,33120,18570,48,Education,Urban,Graduate,Female,Unemployed,No
+698,8168,7010,,46,,1,,2,0.31,16122,48257,20798,48,Business,Urban,Not Graduate,Male,Private,
+699,11795,7117,Salaried,22,Single,3,657,2,0.46,17529,1018,4536,12,Business,Rural,Graduate,Male,MNC,
+700,9561,9153,Self-employed,,Married,3,766,4,0.56,7942,17563,2773,72,Education,Rural,Graduate,Female,Private,No
+701,10258,2989,Unemployed,46,Single,1,589,3,0.3,,5193,30894,48,Business,Urban,Graduate,Female,Government,No
+702,18616,9218,,43,Married,3,754,3,0.2,16944,15701,36326,72,Education,Urban,Graduate,Male,MNC,
+703,8371,6228,Contract,38,Married,0,617,3,0.36,18296,3536,6079,84,Education,Rural,Graduate,Female,,No
+704,16369,6471,Salaried,52,Single,,595,,0.55,18248,48217,26838,84,Business,Semiurban,Graduate,Female,MNC,No
+705,,,Contract,,Single,3,627,4,0.5,296,44610,22804,24,Home,Urban,Not Graduate,Male,MNC,No
+706,9943,1177,Contract,23,Single,1,690,4,0.13,2409,18886,20675,60,Car,Semiurban,Not Graduate,Male,Private,Yes
+707,14199,4760,Salaried,58,Married,3,704,3,0.45,1461,36587,26594,72,Personal,Urban,Graduate,Male,Government,No
+708,17728,11,Salaried,23,Single,3,555,3,0.39,2268,29410,37292,84,Car,Urban,Graduate,Male,Government,No
+709,8738,5252,Contract,50,Married,3,566,0,0.55,17378,33744,9998,60,Personal,Urban,Not Graduate,Male,MNC,No
+710,17913,4399,,21,Single,2,,0,,6554,38665,14697,48,Personal,Semiurban,Graduate,,Private,Yes
+711,4472,8234,Contract,50,Single,0,781,2,0.37,16391,15957,14429,,Car,Urban,Graduate,Male,Unemployed,Yes
+712,17679,9135,Salaried,52,Married,1,790,2,0.54,18899,48127,8140,,Education,Rural,Not Graduate,Female,Government,No
+713,3761,5445,Contract,48,Single,2,648,4,,17801,46008,15901,48,Business,Urban,Graduate,Male,Business,No
+714,12167,6570,Contract,41,Married,1,630,4,0.34,18700,32875,24279,,Home,Semiurban,Graduate,Male,Private,No
+715,12554,9196,Unemployed,33,Married,1,782,1,0.14,7358,48292,29525,48,Home,Semiurban,Graduate,Female,Government,
+716,19260,8212,Salaried,47,Married,1,551,1,0.24,17671,1626,21491,24,Home,Rural,Graduate,Male,Business,No
+717,16277,406,Self-employed,56,Married,2,798,0,0.26,17502,25279,4280,36,Car,Semiurban,Graduate,Male,Government,Yes
+718,5812,9206,Self-employed,,Single,0,626,2,0.57,7637,6229,35980,12,Car,Rural,Graduate,Male,Unemployed,No
+719,19844,4431,Salaried,42,Single,1,729,0,0.24,660,6877,30989,48,Education,Semiurban,Not Graduate,Female,Business,Yes
+720,3605,5243,Salaried,30,Married,0,615,0,0.33,8907,33642,9078,48,Home,Urban,,Male,Government,No
+721,7622,6542,Salaried,59,Single,0,601,2,0.44,6922,38311,27118,60,Education,Urban,,Male,,No
+722,8767,6936,Contract,35,Single,3,641,1,0.18,11953,32356,24985,24,Home,Rural,Graduate,Female,Business,No
+723,13613,8906,Self-employed,35,Married,2,720,2,0.34,18913,3809,17997,84,Car,Urban,Not Graduate,Female,Business,Yes
+724,12589,4146,Salaried,24,Single,2,767,3,0.47,3970,43371,15274,84,Business,Urban,Not Graduate,Male,,No
+725,15918,140,Self-employed,52,Married,3,571,3,0.53,3407,34875,1868,60,,Rural,Not Graduate,Male,Private,No
+726,15046,4882,Salaried,43,,3,660,3,0.41,,44513,27398,72,Business,Urban,Graduate,Female,Business,No
+727,4590,6012,Salaried,26,Married,0,656,4,0.43,14547,9465,17042,48,Business,Rural,Not Graduate,Female,MNC,No
+728,19447,963,Unemployed,44,Married,1,732,1,0.16,4760,559,32820,48,Personal,Urban,Graduate,Male,Private,Yes
+729,6324,7151,Unemployed,40,Married,2,616,1,0.57,18281,8308,22246,60,Home,Semiurban,Graduate,Male,Private,No
+730,12787,8564,Self-employed,57,Single,,776,4,0.17,13465,21353,21561,48,Business,Semiurban,Graduate,Female,Government,Yes
+731,11111,3610,Salaried,40,Married,1,737,0,0.49,4087,15250,,,Personal,Semiurban,Graduate,Female,Private,No
+732,7342,9884,Contract,32,Married,3,735,3,0.23,7607,46023,35512,36,Personal,Urban,Not Graduate,Female,Business,Yes
+733,18389,6894,Salaried,53,Married,1,689,,,4019,35814,36024,12,Personal,Rural,Graduate,Male,Business,No
+734,10659,7311,,48,Single,0,765,0,0.46,815,46624,24996,12,Education,Semiurban,Graduate,Male,Private,No
+735,16043,105,Salaried,28,Married,3,618,,0.48,12563,16427,29618,12,Education,Semiurban,Graduate,Female,MNC,No
+736,10837,5539,Self-employed,21,Married,1,633,2,,13292,33276,12859,36,Personal,Rural,Graduate,Male,Government,No
+737,2117,9873,Self-employed,57,Married,3,652,1,0.32,16158,6107,24580,48,Business,Urban,Graduate,Male,Business,No
+738,15917,6787,Salaried,42,Married,0,588,4,0.41,922,13476,,60,Home,Rural,Graduate,Male,Private,
+739,16309,2137,Self-employed,26,Single,0,562,1,0.48,12929,,38857,84,Car,Rural,Graduate,Male,Government,No
+,15234,4445,Unemployed,41,Single,1,590,2,0.15,14925,20312,7608,24,Education,Urban,,Male,MNC,No
+741,7560,3530,Salaried,52,Married,3,606,0,0.58,,21795,5876,48,Business,Rural,Not Graduate,Female,Private,No
+,2846,,Contract,55,Married,1,730,1,0.55,10979,13136,22038,36,Business,Semiurban,Not Graduate,Female,Private,No
+743,12954,7052,,35,Single,1,,3,0.24,2722,14167,29006,72,,Rural,Not Graduate,Female,Private,Yes
+744,15703,3654,Salaried,25,Married,3,,,0.51,5355,17300,36775,36,Car,Urban,Not Graduate,Female,Private,No
+745,17385,7102,Salaried,26,Single,1,562,0,0.36,13301,17182,31810,,Business,Rural,Graduate,Male,Private,No
+746,15746,2359,Self-employed,45,Single,0,669,2,0.33,2550,,15325,12,Car,,Not Graduate,Male,Private,Yes
+747,8469,8105,Self-employed,49,Single,3,751,,0.26,11141,,36892,48,Business,Rural,Graduate,Male,Unemployed,Yes
+748,11333,8636,Contract,27,Married,3,646,3,,18057,19659,2753,84,Car,Rural,Not Graduate,Male,Business,No
+749,18608,6441,Salaried,33,Married,3,606,4,0.46,11284,31403,30531,,Car,Rural,Graduate,Female,Private,No
+750,14819,5047,Unemployed,58,Single,3,,1,0.31,18050,48651,18996,24,Business,Rural,Not Graduate,Male,MNC,No
+751,6208,8227,Salaried,38,Married,1,667,2,0.41,1384,33586,4275,72,Personal,Rural,Graduate,Male,Private,
+752,8283,5203,Salaried,22,Single,1,629,1,0.45,8252,10360,9747,12,Business,Urban,Graduate,,Government,No
+753,4048,9667,Self-employed,28,Married,0,677,2,0.46,7238,21424,1824,24,Home,Urban,,Male,Private,No
+754,8233,1798,Salaried,31,Single,2,722,3,0.13,6026,32499,14880,36,,,Graduate,Female,Private,Yes
+755,14941,9600,Salaried,53,Married,2,584,4,0.53,10482,44695,2081,12,Education,Urban,Not Graduate,Male,MNC,No
+756,14607,5291,Salaried,58,Married,0,552,1,0.33,13801,48791,12517,12,Car,Urban,,Male,Private,No
+757,11765,5495,Salaried,47,Married,2,669,3,0.23,16120,3065,22683,60,Home,Urban,Graduate,Male,MNC,Yes
+758,3828,9900,Salaried,40,Single,0,554,2,0.22,15580,3259,17876,72,Education,Semiurban,Not Graduate,Female,Government,No
+759,3917,6284,Unemployed,,Single,1,767,1,0.34,8664,12300,38532,72,Education,Urban,Graduate,Male,Private,
+760,8988,7285,Salaried,51,Married,3,560,1,0.54,17342,33370,9266,84,Business,Urban,Graduate,Male,Business,No
+761,16594,1300,Contract,47,Married,3,675,3,0.29,493,4295,12183,36,Personal,Urban,Graduate,Male,Government,Yes
+762,14977,6869,Contract,52,Single,1,620,1,0.47,16465,27209,22066,60,Business,Rural,Graduate,Male,Private,No
+763,2009,9435,Unemployed,30,Married,3,666,4,0.15,6999,,13877,84,,Urban,Not Graduate,Male,Private,No
+764,18644,3097,Salaried,23,,3,733,4,0.34,13833,36295,10982,24,Education,,Not Graduate,Female,Private,Yes
+765,11865,4616,Contract,47,Married,2,687,3,0.6,2970,20927,9968,84,Personal,Urban,Not Graduate,Female,Unemployed,No
+766,4219,9,Self-employed,55,Married,1,,2,0.49,,34579,27598,24,Car,Semiurban,Graduate,Female,Government,No
+767,9041,5752,Self-employed,51,Married,2,665,3,0.21,15551,44871,15639,36,Personal,Semiurban,Graduate,Male,Private,Yes
+768,7287,9852,Self-employed,,Married,2,711,4,0.35,17145,9032,5674,72,Business,Semiurban,Graduate,Male,MNC,Yes
+769,3619,6295,Contract,36,Married,3,616,0,,3185,27718,5316,24,Car,Urban,Not Graduate,Male,,No
+770,10512,4815,Salaried,33,Married,3,749,0,0.3,16409,12877,,36,Business,Rural,Graduate,Male,Private,Yes
+771,3342,1072,Contract,55,Married,1,580,1,0.49,1806,40731,32094,84,Personal,Rural,Graduate,Male,Private,No
+772,12568,3225,Self-employed,31,Married,3,624,1,,,,23187,24,Car,Urban,Graduate,Male,Government,No
+,16231,1316,Contract,,,3,786,0,0.21,14126,,2214,48,Personal,Urban,Graduate,Female,Private,Yes
+774,5490,5699,Unemployed,31,Single,1,620,4,0.56,12894,41684,24940,12,Home,Urban,Not Graduate,Female,Government,No
+775,,6807,Salaried,50,Married,3,786,1,0.4,5154,6766,26685,84,Education,Rural,Graduate,Female,MNC,No
+776,9984,6674,Unemployed,55,Married,2,615,3,0.29,13767,49954,16977,72,Car,,Graduate,Female,Private,No
+777,19988,3683,Salaried,,Married,1,619,3,0.35,15226,22829,36904,84,Education,Urban,Graduate,Male,Private,No
+778,14219,7227,Salaried,58,Married,3,590,4,0.4,1525,20221,26538,48,Home,Urban,,Male,Private,No
+779,2235,3273,Salaried,51,Married,0,740,1,0.38,760,25102,39033,36,Car,Rural,Graduate,Male,Government,No
+780,12161,7000,Salaried,34,Married,1,709,3,0.34,16978,34433,8965,36,Education,Semiurban,Graduate,Male,Unemployed,Yes
+781,3908,145,Self-employed,44,Single,1,569,1,0.35,13880,15932,10597,84,Education,Rural,Graduate,Male,Private,No
+782,10567,5010,Salaried,52,Married,0,734,1,0.19,1055,25714,28740,48,Car,Rural,Graduate,Male,Private,Yes
+783,5530,3040,Salaried,56,Single,3,775,3,0.51,10046,39743,7569,84,,Rural,Not Graduate,Male,Private,No
+784,7256,9654,Unemployed,52,Married,3,727,0,0.37,3083,2552,38981,12,Education,Urban,Graduate,Female,,No
+785,,9776,Contract,35,,1,757,3,0.17,15678,45987,12881,12,Car,Urban,Not Graduate,Female,Business,Yes
+786,7415,482,Contract,55,Married,1,702,4,0.48,12108,14274,37996,60,Education,,Graduate,Male,Private,No
+,5391,3179,Contract,23,Married,3,689,2,0.57,9650,45380,33177,24,Education,,Not Graduate,Male,Private,
+788,13157,1249,Contract,36,Married,3,748,3,0.57,5957,29250,38177,60,,Rural,Not Graduate,Male,Government,No
+789,7951,630,Salaried,25,Single,2,588,1,0.28,5255,2808,1590,12,Business,Urban,Graduate,Female,Private,No
+790,10007,8853,Salaried,41,,1,694,1,0.17,,43858,27119,48,Home,Urban,Graduate,Male,Government,Yes
+791,,2852,Contract,30,Single,1,594,3,0.36,16344,45028,28915,24,Business,Urban,Graduate,Female,Private,No
+792,17524,987,Salaried,39,Single,,688,2,0.16,9691,15295,3708,48,Business,Semiurban,Graduate,Male,Unemployed,
+793,2077,7622,Self-employed,45,Married,,619,3,0.57,18214,47605,39749,60,Home,Rural,Graduate,Male,Private,No
+794,9577,7327,Salaried,24,Married,,674,2,0.19,3395,14669,23106,36,Education,Semiurban,Graduate,Male,Unemployed,Yes
+795,18984,9738,Salaried,49,Married,2,700,2,0.23,1203,10523,18131,48,Education,Rural,Not Graduate,Male,Private,Yes
+796,16060,8841,Self-employed,39,Married,3,640,4,,19194,45530,7553,60,Business,Urban,Graduate,Male,,No
+797,19449,9160,Self-employed,22,Married,3,787,1,0.29,19476,13769,18881,60,Home,Urban,Not Graduate,Female,Private,Yes
+798,,1100,Self-employed,30,Married,2,619,,0.5,3044,46499,2379,60,Education,Urban,Graduate,Male,Business,No
+799,11510,6652,Self-employed,45,Married,1,715,2,0.33,7272,44645,26255,36,Personal,Rural,Graduate,Male,Private,Yes
+800,8943,8632,Salaried,40,Married,3,679,1,0.19,3514,25207,4770,36,Car,Urban,Not Graduate,Female,Government,Yes
+801,13954,7421,Salaried,39,Single,2,763,0,0.23,9990,35224,20726,84,Car,Rural,Graduate,Male,Business,
+802,9804,5016,Contract,,Single,0,633,2,0.35,6192,25557,10088,36,Car,Rural,Graduate,Male,Government,No
+803,8565,769,Self-employed,44,Single,2,638,1,0.17,10767,38191,35314,24,Business,Urban,Not Graduate,,Government,No
+804,7984,1343,Salaried,31,,,628,,0.41,16528,14246,39976,36,Car,Urban,Not Graduate,Female,Private,No
+805,6670,4358,Contract,54,Married,3,662,4,0.38,7507,12846,17350,36,Car,Urban,Graduate,Female,Private,Yes
+806,11184,9769,Salaried,48,Married,2,,1,0.46,4857,37085,35063,36,Personal,Rural,Graduate,Male,Government,No
+807,4192,6780,Salaried,25,Married,2,621,0,0.57,12118,45403,16861,48,Education,Urban,,Female,Private,No
+808,,6602,Salaried,25,,0,714,,0.56,17761,13470,14973,36,Personal,Urban,Graduate,Female,Private,No
+809,13246,2349,Contract,41,Single,2,598,3,0.57,3146,13176,18769,24,Business,Semiurban,Graduate,Male,Private,No
+810,14790,5699,Self-employed,32,Single,2,601,0,0.22,,41881,18326,60,Car,Rural,Graduate,Female,Private,No
+811,5687,1241,Salaried,24,,3,582,2,0.17,,13546,37048,48,Education,Rural,Graduate,Male,Government,No
+812,6018,1125,Contract,40,Married,2,571,2,0.25,4414,6805,3786,12,Car,Rural,Not Graduate,Female,Government,No
+813,13302,9382,,58,Married,1,663,1,0.55,17494,16788,36001,36,Car,Semiurban,Not Graduate,Male,Unemployed,No
+814,3970,6764,Salaried,45,Married,0,788,3,0.59,3937,29348,2620,84,Business,Rural,Graduate,Female,Private,No
+815,10389,5101,Salaried,34,Married,2,,2,0.53,3963,8080,37303,84,Car,Urban,Graduate,Male,Unemployed,No
+816,19586,7843,Salaried,31,Married,0,780,2,0.16,5897,35886,20589,60,Home,Urban,Graduate,Female,Business,Yes
+817,17374,72,Salaried,52,Married,0,567,3,0.57,,23764,3882,60,Education,Rural,Graduate,Male,Unemployed,No
+,7788,5472,Self-employed,31,Single,0,715,4,0.31,14377,6630,25524,48,Education,Rural,Graduate,Female,MNC,Yes
+819,7408,,,38,Married,2,667,2,0.1,17500,33333,10745,84,,Rural,Graduate,,Business,Yes
+820,11446,2472,Self-employed,47,Single,2,666,0,0.32,16056,15701,37665,12,Business,Semiurban,Graduate,Female,Private,Yes
+821,2922,707,Salaried,38,Married,,586,1,0.12,1750,14859,16861,72,Car,,Not Graduate,Female,Private,No
+822,2419,1804,Salaried,43,Married,1,771,2,0.37,4027,21183,27171,,Car,Urban,Not Graduate,Male,Private,No
+,12789,6704,Salaried,31,Married,0,792,2,0.27,11528,40438,27199,84,Education,Urban,Not Graduate,Female,Unemployed,Yes
+824,3120,3713,Salaried,41,Married,1,772,4,0.34,5745,31749,3837,24,Business,Urban,Graduate,Male,Unemployed,Yes
+825,13260,5051,Contract,25,Married,0,613,0,0.41,9679,31887,9599,72,Business,Rural,Graduate,Female,Business,No
+826,19334,2475,Salaried,43,,3,687,1,0.53,5938,42244,16911,60,Business,Urban,Graduate,Female,MNC,No
+827,4336,3610,Contract,45,Single,0,628,2,0.43,12150,8776,21553,72,Car,Urban,Not Graduate,Male,Unemployed,No
+828,7373,4255,Contract,30,Married,0,719,1,0.32,13406,15021,24813,84,Business,Urban,Graduate,Female,Government,Yes
+829,4243,7397,Salaried,42,Married,2,672,3,0.51,,4327,39255,60,Home,Urban,Graduate,Male,Business,No
+830,6612,,Contract,39,Single,1,725,2,0.55,17743,48043,30520,72,Personal,Urban,Graduate,Male,Government,No
+831,15946,9777,Self-employed,21,Married,3,593,2,0.16,4853,7614,,60,Business,Urban,Graduate,Female,Government,No
+832,13104,8258,Self-employed,27,Married,1,631,3,0.37,18325,1245,1236,60,Personal,Rural,Graduate,Female,Private,No
+833,15429,7979,Self-employed,24,Married,3,636,4,0.24,3148,41011,28350,48,Car,Urban,Graduate,Male,Government,No
+834,8371,2428,Salaried,21,Single,0,774,2,0.12,16243,10355,12549,12,Business,Urban,Graduate,Male,Business,Yes
+835,8359,7426,Salaried,35,Single,2,565,1,,7933,33305,28453,60,Education,Semiurban,,Female,Government,No
+836,9863,8533,Salaried,32,Married,2,603,,0.53,9436,48692,36191,24,Car,Semiurban,Graduate,Male,MNC,No
+837,5228,5249,Salaried,42,Single,1,,,0.18,17669,,13906,84,Home,Urban,Graduate,Female,Private,Yes
+838,16382,5291,Self-employed,42,Single,2,712,4,0.51,,49692,15988,84,Home,Urban,Not Graduate,Female,Private,No
+839,,2817,Salaried,37,Married,1,647,0,,14679,,28723,24,,Rural,Graduate,Male,,No
+840,5756,9424,Unemployed,49,Married,1,705,1,0.56,11228,,34800,36,Personal,Urban,Graduate,Male,Business,No
+841,17770,3874,Contract,34,Married,3,551,1,0.23,770,1415,28430,60,Education,Urban,Graduate,Male,Private,No
+842,,9686,Salaried,40,Single,1,643,3,0.55,1843,43798,33535,60,,Urban,Not Graduate,Male,Government,No
+843,4674,4211,Salaried,53,Married,3,,4,0.26,73,1652,3940,60,Home,Urban,Graduate,Female,Government,Yes
+844,8898,661,Contract,35,Single,2,718,3,0.38,18044,43625,22793,72,Business,Rural,Graduate,Female,Unemployed,Yes
+845,12147,3374,Contract,32,Married,1,757,0,,16059,20446,13262,60,Home,Semiurban,Graduate,Male,Business,Yes
+846,2793,9208,Contract,40,Single,1,608,3,0.12,8000,,,60,Home,Rural,Graduate,Male,Private,No
+847,4116,207,Salaried,50,Married,0,618,4,0.46,13273,3810,7961,24,Education,Rural,Graduate,Male,Government,No
+848,7779,,Salaried,58,Married,1,668,2,0.32,16121,16569,27499,12,Personal,Urban,Graduate,Female,MNC,Yes
+849,14298,2493,Salaried,23,Single,1,641,2,0.23,331,34319,32283,,Education,Rural,Not Graduate,Female,Business,No
+850,16153,6813,Salaried,48,Single,0,730,0,0.2,17805,13584,,36,Education,Urban,Not Graduate,Female,MNC,Yes
+851,13111,632,Contract,46,Single,0,780,2,0.43,7512,26783,7822,24,Education,Urban,Not Graduate,Male,Private,No
+,12789,3083,Contract,,Married,2,594,,0.1,4931,33529,26968,60,Home,Rural,Graduate,Female,MNC,No
+853,13397,3719,Self-employed,33,Single,1,697,0,0.5,12742,12511,20830,12,Business,Semiurban,Not Graduate,Male,MNC,No
+854,14999,7123,Contract,33,Married,2,573,4,0.14,13426,,6738,48,Home,Urban,Graduate,Female,,No
+855,2814,1679,Self-employed,22,Married,2,738,0,0.2,5113,45235,4098,48,Car,Semiurban,Graduate,Female,Private,No
+856,18729,236,Salaried,57,,0,640,0,0.29,8419,6163,30888,48,Education,Urban,Not Graduate,Female,MNC,No
+857,12541,7446,,58,Married,3,643,1,0.34,2881,16065,9097,60,Education,Urban,Graduate,Male,Business,No
+858,4443,4443,Unemployed,22,Married,2,607,1,0.28,13145,44654,14136,60,Car,Urban,Graduate,Female,MNC,No
+859,12457,6770,Salaried,56,Single,3,786,0,0.26,13556,17920,39244,36,Education,Rural,Graduate,Male,Private,Yes
+860,12380,9732,Unemployed,46,Married,1,704,2,0.58,19249,38969,9253,84,Education,Semiurban,Graduate,Female,Private,No
+861,9783,6099,Contract,31,Single,0,703,1,,2575,48348,26208,36,Education,Rural,Not Graduate,Male,Private,No
+862,13473,8555,Salaried,28,Married,1,677,4,0.11,12714,19154,5887,36,Car,Urban,Graduate,Male,Government,Yes
+,19368,2368,Self-employed,42,Married,1,556,3,0.32,6185,40167,10492,72,Home,Urban,Graduate,Male,Government,No
+864,17328,285,Contract,40,Married,0,719,1,0.54,8656,20229,36421,48,Education,Rural,Graduate,Female,Government,No
+865,2827,148,Self-employed,,Single,1,596,0,,5741,49713,2454,60,Business,Urban,Not Graduate,Male,Government,No
+866,9147,4037,Unemployed,49,Single,,602,2,0.15,16661,26997,18522,48,Car,Urban,Graduate,Female,MNC,No
+867,6451,6549,Unemployed,46,Single,3,736,3,0.48,65,21101,39575,36,Personal,Semiurban,Graduate,Female,Private,
+868,17343,7121,Salaried,50,Single,1,587,1,0.4,4262,40391,4192,60,Car,Rural,Not Graduate,Female,Private,No
+869,15635,9958,Salaried,37,Married,0,746,,0.39,5704,10327,16775,24,Home,Urban,Graduate,Male,MNC,Yes
+870,7959,4895,Unemployed,40,Married,2,764,2,0.13,15355,7187,11402,12,Car,Urban,Graduate,Female,Government,Yes
+871,2126,5280,Self-employed,36,Single,1,,2,0.17,8594,29685,14074,12,Personal,Urban,Not Graduate,Male,Government,No
+872,10795,1012,Salaried,27,Married,3,775,0,0.41,12175,34948,16245,36,Business,Rural,Graduate,Male,Government,No
+873,13641,9715,Salaried,36,Married,0,602,4,0.2,12696,34728,37527,84,Personal,Semiurban,Not Graduate,Male,Government,No
+874,9196,2785,Self-employed,47,Married,1,692,2,0.35,6255,37921,26936,48,Car,Rural,Graduate,Male,Private,Yes
+875,13559,3725,,43,Married,1,773,3,0.37,7441,7035,28002,24,Personal,Urban,Not Graduate,,Government,
+876,5368,4576,Contract,44,Married,1,703,1,0.24,14986,,16683,60,Car,Urban,Not Graduate,Male,Unemployed,Yes
+877,5797,5782,Self-employed,29,Married,3,597,3,0.57,13350,28460,13460,84,Business,Semiurban,Graduate,Male,Government,No
+878,17114,6257,Salaried,55,Married,0,644,0,0.52,14440,21071,31482,48,Business,Semiurban,Graduate,Male,Private,No
+879,15718,9793,Salaried,40,Married,2,696,0,0.46,7960,582,17447,36,Home,Rural,Not Graduate,Male,MNC,
+880,3792,2408,Contract,57,Married,2,686,3,0.14,17821,48282,18729,,Business,Urban,,Male,Private,Yes
+881,13053,340,Salaried,37,Married,2,613,4,0.15,19762,26189,21545,36,Education,Rural,Graduate,Female,Private,No
+882,5476,2817,Salaried,51,Single,0,642,0,0.35,13665,15531,29204,72,,Semiurban,Graduate,Male,MNC,No
+883,5417,2496,Salaried,28,Married,2,731,0,0.18,6629,16672,10814,12,,Rural,Not Graduate,Male,Private,Yes
+884,3645,5962,Self-employed,35,Married,3,674,3,0.59,13828,,14890,84,,Rural,Not Graduate,,Unemployed,No
+,16755,5299,Unemployed,51,Single,0,799,0,0.18,4541,20243,2740,12,Business,Urban,Graduate,Male,Government,Yes
+886,5072,9917,Salaried,50,,1,728,4,0.34,7876,3060,31121,48,Home,Urban,Graduate,Male,Business,No
+887,3854,7574,Salaried,40,Married,3,588,,0.28,13311,13731,12218,24,Home,Urban,Not Graduate,Male,Government,No
+888,,1689,Self-employed,59,Single,,553,4,0.42,14588,12294,,60,Home,Semiurban,Not Graduate,Female,Private,No
+889,8514,3267,Unemployed,32,Married,2,675,1,0.16,16648,20719,23705,36,Education,Rural,Graduate,Female,,Yes
+890,4708,4406,Salaried,37,Single,3,552,,0.32,12380,47042,35722,60,Business,Rural,Not Graduate,Female,Unemployed,No
+891,13694,8453,Salaried,50,Single,0,797,4,0.24,9877,49116,,12,Home,Urban,Not Graduate,Female,MNC,Yes
+892,11524,1442,Salaried,,Single,3,613,1,0.54,17818,26325,31921,24,Education,Semiurban,Graduate,Female,Business,No
+893,8456,8597,Contract,39,Married,1,578,2,0.12,5097,22597,34729,24,Personal,Semiurban,Not Graduate,Female,Unemployed,No
+894,6212,4437,Salaried,31,Married,0,665,,0.56,18044,1903,24211,60,Car,Urban,Graduate,Female,Private,No
+895,15224,5435,,54,Married,3,560,4,0.52,18738,14551,31614,12,Business,Semiurban,Graduate,Male,Private,No
+896,9970,8435,Self-employed,27,Married,3,646,0,0.25,6461,27751,18601,60,Business,Urban,Graduate,Male,Private,No
+897,18920,4107,Contract,54,Married,3,651,3,0.49,7044,24278,28796,48,Personal,Urban,Not Graduate,Male,Business,No
+898,,560,Salaried,40,Married,3,735,0,0.12,5497,25653,7007,24,Business,Urban,Not Graduate,Male,MNC,No
+899,12314,8785,Contract,58,Married,0,752,1,0.58,13751,15141,21514,24,Business,Semiurban,Graduate,Female,Business,No
+900,9973,,Salaried,44,Married,1,704,0,0.36,9304,2377,18776,48,Business,Semiurban,Graduate,Male,Unemployed,Yes
+901,10577,1826,Self-employed,30,Married,3,774,0,0.25,,33615,3076,12,Business,Urban,Graduate,Female,Business,Yes
+902,10070,7629,,52,Married,0,570,0,0.28,11058,47148,26350,,Education,Rural,Not Graduate,Male,Private,No
+903,10666,8325,Contract,35,Single,1,588,2,0.13,11260,27452,39964,84,Education,Rural,Not Graduate,Male,Private,No
+904,5600,3138,Salaried,57,Married,3,,2,0.59,18563,22725,17292,72,Car,Semiurban,Graduate,,Unemployed,No
+905,8783,7693,Contract,40,Married,1,,3,0.12,634,9524,32510,72,Business,Urban,Graduate,Male,Private,Yes
+906,15226,8264,Contract,23,Single,1,595,1,0.43,10057,47999,29000,72,Personal,Rural,Graduate,,Government,No
+907,11146,7842,Self-employed,57,Married,0,615,0,0.32,13345,11698,31383,36,Home,Rural,Graduate,Male,Private,
+908,6971,6721,Contract,28,Married,1,640,0,0.57,10147,43339,,84,Car,,Graduate,Male,Private,No
+909,15490,7002,Contract,43,Married,0,713,0,0.22,18602,21175,25855,36,Home,Urban,Not Graduate,Male,,Yes
+910,19589,4225,Salaried,31,Single,3,752,0,0.37,1389,12314,25281,12,Home,Rural,Graduate,Female,Private,Yes
+911,14951,2978,Salaried,28,Married,1,660,2,0.34,13071,44197,5841,48,Business,Urban,Graduate,Male,Unemployed,Yes
+912,14312,7373,Unemployed,49,,1,631,3,0.45,11322,2365,32668,60,Personal,Semiurban,Graduate,Male,Government,No
+913,3990,5907,Salaried,50,Married,2,672,4,0.13,4276,32017,27918,84,Home,Urban,Graduate,Male,Business,No
+914,7299,6097,Contract,30,Single,3,742,1,0.2,,32126,18443,12,Home,Semiurban,Graduate,,Business,Yes
+915,14997,5656,Unemployed,59,Married,3,740,0,0.21,1249,43372,33250,60,Car,,,Male,Business,Yes
+916,15472,8984,Salaried,48,,2,648,3,0.47,17629,44134,2922,12,Personal,Urban,Graduate,Male,Unemployed,No
+,,4259,Self-employed,56,Single,2,584,4,0.19,8245,37823,32976,36,Personal,,Not Graduate,Male,Private,No
+918,6757,8286,Salaried,33,Married,0,708,3,0.39,11102,5622,12991,72,Home,Rural,Graduate,Female,Private,Yes
+919,12395,5901,Self-employed,52,Single,0,705,2,0.21,16226,30540,39869,48,Personal,Rural,Not Graduate,Male,Private,Yes
+920,18241,9325,Salaried,56,Married,1,652,4,0.53,10588,49524,23733,36,Car,Urban,Graduate,Male,MNC,No
+921,7588,4917,Salaried,57,Single,1,678,3,0.57,,40551,3473,48,Car,,Graduate,Male,Unemployed,No
+922,19350,8429,Self-employed,46,Married,1,574,2,0.36,6976,1949,9108,84,Car,Rural,Graduate,Male,Private,No
+923,6944,2530,Contract,42,Single,1,592,3,0.28,4675,49396,29715,60,Business,Urban,Not Graduate,Male,Business,No
+924,15395,1960,Contract,24,Single,0,779,3,0.22,,42800,33210,12,Home,Rural,Graduate,Female,Private,Yes
+925,19072,7045,Self-employed,51,Married,3,633,4,0.12,7953,31912,38317,24,Personal,Urban,Graduate,Female,Private,No
+926,6243,1048,Salaried,38,Married,1,744,2,0.23,4377,32161,34362,24,Car,Rural,Not Graduate,Male,Business,No
+927,11916,5772,Self-employed,58,Married,3,,0,0.43,10599,44387,5889,48,Home,Rural,,Female,Private,No
+928,11984,,Salaried,44,Married,1,600,1,0.37,7058,16508,25021,72,Home,Semiurban,Not Graduate,Male,Government,No
+929,,2964,Unemployed,43,Married,2,679,4,0.57,17206,45592,9212,72,Business,Rural,Graduate,Female,Business,No
+930,11181,7137,Contract,42,,1,759,2,0.3,11894,43713,32971,48,Personal,Urban,Graduate,Female,MNC,Yes
+931,4482,963,Contract,22,Married,1,675,3,0.45,2939,1919,4201,36,Personal,,Graduate,Female,Government,No
+932,2951,536,,51,,1,785,2,0.34,1031,42595,25346,24,Car,Rural,Not Graduate,Male,Business,No
+,4079,7340,Salaried,31,Married,0,741,1,0.36,10208,9617,38958,36,Car,Rural,Graduate,Male,Government,No
+934,4717,7179,Contract,48,Single,2,751,1,0.23,562,,14715,60,Home,Semiurban,,Male,Private,Yes
+935,11692,7967,Salaried,52,Married,1,618,0,0.33,10730,33298,6681,24,Personal,Rural,Graduate,Male,Business,No
+936,9311,8734,Unemployed,25,Married,1,558,,0.34,16724,40617,37446,60,Personal,Rural,Graduate,Male,Private,No
+937,2768,845,Salaried,58,Married,3,551,1,0.45,16152,6929,17720,12,Car,,Not Graduate,Male,Private,No
+938,7490,5777,,30,Married,2,711,4,0.57,13998,37117,2667,36,Education,Urban,Graduate,Male,Government,No
+939,17534,3036,Contract,44,Married,1,737,4,0.26,18680,,29152,48,Home,Urban,Graduate,Female,MNC,
+940,8645,5947,Salaried,55,Married,3,779,3,0.12,16618,44063,9204,,Personal,Urban,Graduate,Male,Private,Yes
+941,7232,2494,Salaried,43,,3,738,0,0.35,9308,21140,38890,36,Business,Rural,Graduate,Female,Private,No
+942,13485,2719,Contract,37,Single,0,708,3,0.37,9609,18185,25537,48,Business,Urban,Graduate,Male,Private,Yes
+943,7797,1884,Salaried,21,Married,3,559,0,0.18,17675,37924,,12,Education,Urban,Graduate,Female,Private,No
+944,14342,4349,Salaried,51,Single,1,663,1,0.48,8720,24240,34741,24,Car,Urban,Not Graduate,Male,Government,No
+945,10038,5179,Salaried,51,Single,0,625,4,0.59,10172,21845,21654,60,Car,Urban,Not Graduate,,Private,No
+946,18002,6610,Salaried,54,Single,,713,4,0.57,14457,9228,2408,12,,Urban,Graduate,Female,MNC,No
+947,15087,6430,Contract,29,Single,1,795,1,0.2,2939,21686,19672,72,Business,Rural,Not Graduate,Male,MNC,Yes
+948,6873,7154,Self-employed,42,Married,2,634,3,0.54,14345,11920,2218,48,Car,Urban,Graduate,Male,Business,No
+949,3481,6488,Salaried,33,Married,3,598,3,0.45,16158,7432,37145,24,Business,,Graduate,Male,Government,No
+950,,4737,Salaried,45,Single,0,788,2,0.33,5435,44971,,24,Education,Rural,Graduate,Male,Private,Yes
+951,16422,6525,Salaried,38,Married,2,619,0,0.37,5392,6189,5098,84,,Semiurban,Graduate,Male,Private,
+952,18438,3850,Salaried,32,Married,1,789,3,0.52,7972,,8619,84,Personal,Urban,Graduate,Male,Government,No
+953,9643,689,Salaried,37,,3,726,1,0.34,,33910,12939,12,Education,Urban,,Female,,Yes
+954,17708,5175,Salaried,35,Single,3,680,3,0.29,19184,30226,19226,24,Business,Urban,Not Graduate,Female,Business,Yes
+955,13271,8648,Salaried,35,Single,0,751,4,0.35,14799,7614,26322,48,Education,Urban,Graduate,Male,Private,Yes
+956,19216,5078,Contract,,Single,3,682,0,0.39,19159,47021,17878,12,Personal,Semiurban,Graduate,Female,Private,Yes
+957,14600,5448,Salaried,59,Single,3,787,2,0.19,15052,21224,7560,60,Home,Rural,,Male,Private,Yes
+958,12998,1179,Self-employed,33,Married,3,767,0,0.55,6044,18013,39278,12,Personal,Rural,Graduate,Male,Private,No
+959,16295,9074,Self-employed,37,Single,3,738,4,0.44,19871,21446,37212,12,Business,Urban,Graduate,Male,Unemployed,No
+960,,6406,,52,Married,1,762,4,0.42,14415,,30299,60,Personal,Rural,Graduate,Female,Private,No
+961,18380,8591,Self-employed,29,Married,2,786,4,0.15,17274,39673,8543,72,,Urban,Graduate,Male,MNC,
+962,10519,6907,Self-employed,40,Single,,639,4,0.4,13858,37657,24946,84,Car,Rural,Graduate,,,No
+963,5300,8800,Contract,46,Married,1,779,1,0.16,17572,4839,32740,48,Education,Rural,,Male,MNC,No
+964,8722,1638,Self-employed,47,Married,0,,2,0.14,5644,36725,8253,72,Business,Urban,Not Graduate,,Government,Yes
+965,9218,5671,Self-employed,41,Married,3,575,4,0.36,17124,30203,,72,,Urban,Graduate,Female,Unemployed,No
+966,5054,6928,Contract,38,Single,1,621,4,0.3,17753,557,33813,72,Personal,Semiurban,Not Graduate,Male,Private,No
+967,15575,1382,Self-employed,33,Married,3,554,3,0.39,18384,30666,28632,84,Home,Urban,Graduate,Female,Government,No
+968,9970,1403,Salaried,36,Single,1,564,2,0.14,17855,37389,3057,36,Business,Urban,Graduate,Male,Private,No
+969,4143,,Salaried,29,Married,1,672,0,0.32,17920,47700,34431,84,Personal,Urban,Not Graduate,,Government,No
+970,11503,3292,Salaried,32,Single,0,693,2,0.19,16702,33607,38436,72,Education,Urban,Graduate,Male,Government,
+971,17149,9011,Contract,58,Single,2,550,2,0.59,5153,24578,19413,36,Education,Rural,Graduate,Male,Business,No
+972,14175,419,Contract,39,Married,2,693,2,0.38,1894,9243,31225,60,Business,Rural,Graduate,Female,Private,Yes
+973,10356,4517,Unemployed,27,Married,,714,4,0.44,7991,9596,39485,84,Personal,Rural,Not Graduate,Male,Private,No
+974,17070,3302,Self-employed,55,Married,0,552,4,0.26,15439,6998,3696,48,Education,Urban,Not Graduate,Male,Business,No
+975,2822,7857,Salaried,38,Single,3,729,1,0.15,9467,10129,17101,72,Business,,Not Graduate,Male,Government,No
+976,19327,,Salaried,36,Single,3,596,0,0.59,5935,510,9831,24,Business,Semiurban,Graduate,Male,Private,No
+977,16289,,Self-employed,59,Single,1,644,3,0.24,17107,11596,20047,60,Home,Urban,Not Graduate,Male,Unemployed,No
+978,8150,5693,Self-employed,24,Married,2,562,2,0.31,2329,12974,6004,36,Education,Urban,Graduate,Female,Unemployed,No
+979,6425,,Unemployed,45,Single,0,669,0,0.42,9327,1137,23705,84,Personal,Semiurban,Not Graduate,Female,MNC,No
+980,18032,2044,Salaried,52,Single,2,757,0,0.11,2770,46468,22509,48,,Urban,Graduate,Male,MNC,Yes
+981,4198,1549,Self-employed,33,Single,3,604,1,0.51,4846,27897,38170,12,Education,Urban,Graduate,Male,Private,No
+982,5452,9956,Self-employed,37,Single,2,784,3,0.37,16651,4666,15662,48,Education,Urban,Graduate,Male,Unemployed,Yes
+983,11106,6140,Self-employed,57,Married,3,698,2,0.24,16276,8906,39680,48,Business,Urban,Not Graduate,Female,Government,Yes
+984,15859,3716,Self-employed,26,Married,0,615,3,0.13,14633,21818,1394,72,Car,Urban,Not Graduate,Male,Private,No
+985,19692,4481,Contract,39,Single,0,731,1,0.18,13628,43246,37365,,Car,Urban,,Male,,Yes
+986,10705,7898,Salaried,33,Single,1,704,4,0.55,569,2654,11524,84,Home,Rural,Graduate,Female,Private,No
+987,12112,6548,Contract,46,Married,1,715,0,0.44,1973,33758,34097,84,Education,Urban,Not Graduate,Male,Government,
+988,6841,2293,Self-employed,34,Married,2,639,2,0.22,2822,24204,27673,36,Car,Semiurban,Graduate,Male,Private,No
+989,17358,4837,Contract,51,Married,0,735,4,0.13,270,34928,18156,84,Home,Urban,,Female,Government,Yes
+990,,7758,Contract,24,Married,0,611,1,0.45,16320,30552,2645,36,Business,Semiurban,Not Graduate,Male,Government,No
+991,6566,6793,Salaried,59,Married,1,651,3,0.39,7641,47904,30049,72,,Semiurban,Graduate,Male,Government,Yes
+992,13382,7638,Salaried,28,Single,3,723,,0.3,8930,10336,10815,72,Personal,Rural,Graduate,Male,Private,Yes
+993,19939,7993,Unemployed,,Single,2,766,2,0.28,6680,47037,2848,24,Business,Semiurban,Graduate,Male,Government,Yes
+994,16596,6007,Self-employed,33,Married,2,688,4,0.21,1257,16206,35329,24,Home,Rural,Graduate,Male,Government,Yes
+,2804,5542,Unemployed,,Married,1,749,4,0.43,8250,34831,,60,Business,Semiurban,Graduate,Female,Private,No
+996,,9092,Salaried,58,Married,0,557,0,0.59,5370,43563,8311,72,Personal,,Not Graduate,Male,Unemployed,No
+997,3279,6356,Self-employed,58,Married,1,646,3,0.19,,18361,22563,12,Business,Urban,Graduate,Female,Government,No
+998,15192,8433,Contract,48,Single,1,666,1,0.4,8581,41335,16203,24,Home,Rural,Graduate,Male,MNC,No
+999,9083,7380,Unemployed,50,Single,1,748,3,0.31,13491,8933,10290,36,Personal,Urban,Graduate,Male,Private,Yes
+1000,13093,2385,Salaried,23,Married,1,613,3,0.32,12436,25816,35818,48,Personal,Semiurban,Graduate,,Private,No
