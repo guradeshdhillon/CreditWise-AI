@@ -13,6 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy source
 COPY src/ ./src/
+COPY app/ ./app/
 COPY saved_models/ ./saved_models/
 COPY data/ ./data/
 COPY frontend/ ./frontend/
