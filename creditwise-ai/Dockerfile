@@ -15,15 +15,19 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/ ./src/
 COPY saved_models/ ./saved_models/
 COPY data/ ./data/
+COPY frontend/ ./frontend/
 COPY .env.example ./.env.example
 
 # Non-root user for security
 RUN useradd -m appuser && chown -R appuser /app
 USER appuser
 
-EXPOSE 8000
+# PORT is injected by Railway at runtime; default to 8000 for local Docker runs
+ENV PORT=8000
+EXPOSE $PORT
 
-HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
-  CMD curl -f http://localhost:8000/api/v1/health || exit 1
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+  CMD curl -f http://localhost:${PORT}/api/v1/health || exit 1
 
-CMD ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Use shell form so $PORT is expanded at runtime
+CMD uvicorn src.api.main:app --host 0.0.0.0 --port ${PORT}
