@@ -32,8 +32,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage   = "https://github.com/your-username/creditwise-ai"
-Repository = "https://github.com/your-username/creditwise-ai"
+Homepage   = "https://creditwise-ai-production.up.railway.app"
+Repository = "https://github.com/guradeshdhillon/CreditWise-AI"
 
 # ── Ruff linter / formatter configuration ─────────────────────────────────────
 [tool.ruff]

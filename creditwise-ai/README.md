@@ -2,7 +2,8 @@
 
 > **Production-grade loan approval intelligence platform** — built as a portfolio project by Guradesh Dhillon (3rd-year Computer Engineering, AI & Data Science specialization).
 
-[![CI](https://github.com/your-username/creditwise-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/creditwise-ai/actions)
+[![CI](https://github.com/guradeshdhillon/CreditWise-AI/actions/workflows/ci.yml/badge.svg)](https://github.com/guradeshdhillon/CreditWise-AI/actions)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Railway-blueviolet?logo=railway)](https://creditwise-ai-production.up.railway.app)
 ![Python 3.11](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.112-009688?logo=fastapi)
 ![XGBoost](https://img.shields.io/badge/Model-XGBoost-orange)
@@ -45,6 +46,18 @@ creditwise-ai/
 ├── Dockerfile + docker-compose.yml
 └── .github/workflows/ci.yml
 ```
+
+---
+
+## 🌐 Live Demo
+
+| Page | URL |
+|---|---|
+| **Frontend Dashboard** | [creditwise-ai-production.up.railway.app](https://creditwise-ai-production.up.railway.app) |
+| **API Docs (Swagger)** | [/docs](https://creditwise-ai-production.up.railway.app/docs) |
+| **Health Check** | [/api/v1/health](https://creditwise-ai-production.up.railway.app/api/v1/health) |
+| **What-If Analysis** | [/what-if](https://creditwise-ai-production.up.railway.app/what-if) |
+| **Fairness Report** | [/fairness](https://creditwise-ai-production.up.railway.app/fairness) |
 
 ---
 
