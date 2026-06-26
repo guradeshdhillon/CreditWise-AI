@@ -1,0 +1,51 @@
+{
+  "model_version": "1.0.0",
+  "model_type": "XGBoost",
+  "feature_names": [
+    "Gender",
+    "Marital_Status",
+    "Dependents",
+    "Education_Level",
+    "Employment_Status",
+    "Employer_Category",
+    "Property_Area",
+    "Loan_Purpose",
+    "Applicant_Income",
+    "Coapplicant_Income",
+    "Age",
+    "Credit_Score",
+    "Existing_Loans",
+    "DTI_Ratio",
+    "Savings",
+    "Collateral_Value",
+    "Loan_Amount",
+    "Loan_Term",
+    "Total_Income",
+    "EMI",
+    "Balance_Income",
+    "Income_to_Loan_Ratio",
+    "Savings_to_Loan_Ratio",
+    "Collateral_to_Loan_Ratio",
+    "LoanAmount_log",
+    "Total_Income_log",
+    "Credit_Score_norm"
+  ],
+  "best_params": {
+    "n_estimators": 316,
+    "max_depth": 6,
+    "learning_rate": 0.13847348099449683,
+    "subsample": 0.9345453422869393,
+    "colsample_bytree": 0.8982062676533047,
+    "min_child_weight": 2,
+    "reg_alpha": 0.1565610260722634,
+    "reg_lambda": 6.666160612832748e-08
+  },
+  "performance": {
+    "accuracy": 0.9621,
+    "precision": 0.9207,
+    "recall": 0.9628,
+    "f1": 0.9408,
+    "roc_auc": 0.9882
+  },
+  "training_date": "2026-06-20"
+}

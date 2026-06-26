@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>What-If Analyzer - CreditWise AI</title>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+    <!-- Tailwind CSS with Forms and Container Queries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#82d2e7",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-fixed": "#410005",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#bdf0ff",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary-fixed": "#ffdad7",
+                        "surface": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#002106",
+                        "primary-container": "#111827",
+                        "outline-variant": "#bec8cc",
+                        "secondary-fixed-dim": "#61df72",
+                        "primary-fixed": "#abedff",
+                        "tertiary-fixed-dim": "#ffb3ae",
+                        "primary-fixed-dim": "#82d2e7",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#004e5c",
+                        "surface-container": "#edeeef",
+                        "inverse-on-surface": "#f0f1f2",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-container": "#007528",
+                        "on-surface": "#191c1d",
+                        "secondary-fixed": "#7ffd8b",
+                        "secondary-container": "#e8f5e9",
+                        "secondary": "#2e7d32",
+                        "surface-container-high": "#e7e8e9",
+                        "background": "#f8f9fa",
+                        "primary": "#111827",
+                        "tertiary": "#a20b1c",
+                        "outline": "#6f797c",
+                        "on-tertiary-container": "#ffe1df",
+                        "on-secondary-fixed-variant": "#00531a",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#3f484b",
+                        "tertiary-container": "#c52b31",
+                        "surface-dim": "#d9dadb",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#111827",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001f26",
+                        "on-tertiary-fixed-variant": "#930016",
+                        "on-background": "#191c1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "gutter": "24px",
+                        "base": "4px",
+                        "container-max": "1440px",
+                        "md": "24px",
+                        "sm": "16px",
+                        "xs": "8px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-bold": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        .card-hover:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.04);
+            border-color: #e9ecef;
+            transform: translateY(-2px);
+            transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .floating-card {
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .floating-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 45px rgba(0, 0, 0, 0.22);
+        }
+
+        .input-glow:focus {
+            box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.2);
+            border-color: #111827;
+        }
+
+        input[type="range"] {
+            accent-color: #111827;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #bec8cc;
+            border-radius: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #6f797c;
+        }
+    </style>
+
+</head>
+
+<body class="font-body-md text-body-md min-h-screen flex flex-col pt-[72px]">
+    <!-- TopAppBar -->
+    <header class="bg-[#111827] fixed top-0 w-full z-50 border-b border-white/10 shadow-sm">
+        <div class="flex justify-between items-center h-[72px] px-lg max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md font-bold text-[#EDE9D0] flex items-center gap-xs">
+                <span class="bg-[#EDE9D0] text-[#111827] px-2 py-1 rounded text-sm font-extrabold">CW</span>
+                <span>CreditWise AI</span>
+            </div>
+            <nav class="hidden md:flex gap-md h-full items-center">
+                <a class="text-white/70 hover:text-white font-semibold text-body-sm transition-colors duration-200"
+                    href="/">Loan Assessment</a>
+                <a class="text-white border-b-2 border-white py-5 font-semibold text-body-sm transition-colors duration-200"
+                    href="/what-if">What-If Analyzer</a>
+                <a class="text-white/70 hover:text-white font-semibold text-body-sm transition-colors duration-200"
+                    href="/fairness">Fairness Audit</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Context Banner -->
+    <div class="bg-white border-b border-surface-variant py-sm px-lg">
+        <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-sm">
+            <div class="flex items-center gap-xs text-on-surface-variant">
+                <span class="material-symbols-outlined text-[18px]">database</span>
+                <span class="font-body-sm text-body-sm" id="banner-context-text">Using application data from <span
+                        class="font-bold">Main Dashboard</span></span>
+            </div>
+            <div class="flex items-center gap-sm px-md py-xs rounded-full shadow-sm border" id="banner-status-box">
+                <span class="font-label-bold text-[10px]" id="banner-prob-label">PROBABILITY</span>
+                <span class="font-headline-md text-headline-md" id="banner-prob-value">42%</span>
+                <span class="font-label-bold text-[10px] opacity-80" id="banner-decision-value">(REJECTED)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Layout -->
+    <main class="flex-1 max-w-container-max mx-auto w-full flex flex-col lg:flex-row gap-gutter p-lg">
+        <aside class="w-full lg:w-[320px] shrink-0 flex flex-col gap-md">
+            <div
+                class="rounded-2xl border border-[#d6d2b8] floating-card overflow-hidden bg-[#EDE9D0] h-full flex flex-col">
+                <div class="border-b border-[#d6d2b8] p-md bg-[#111827]">
+                    <div class="flex items-center gap-sm">
+                        <span class="material-symbols-outlined text-white">tune</span>
+                        <h2 class="font-headline-md text-headline-md text-white">Parameters</h2>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-slate-400 mt-xs">Adjust values to explore loan approval
+                        scenarios.</p>
+                </div>
+
+                <form id="param-form" class="flex-1 overflow-y-auto custom-scrollbar p-md space-y-md"
+                    onsubmit="recalculateSweep(event)">
+                    <!-- Credit Score Input -->
+                    <div class="space-y-[4px]">
+                        <div class="flex justify-between">
+                            <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Credit Score</label>
+                            <span class="font-label-bold text-label-bold text-primary" id="p_credit_score_val">620</span>
+                        </div>
+                        <input id="p_credit_score"
+                            class="w-full mt-[4px]"
+                            max="900" min="300" step="10" type="range" value="620"
+                            oninput="document.getElementById('p_credit_score_val').innerText = this.value" />
+                        <div class="flex justify-between text-[10px] text-slate-600 font-semibold">
+                            <span>300</span>
+                            <span>900</span>
+                        </div>
+                    </div>
+
+                    <!-- Monthly Income -->
+                    <div class="space-y-[4px]">
+                        <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Monthly Income (INR)</label>
+                        <input id="p_applicant_income"
+                            class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                            type="number" value="15000" />
+                    </div>
+
+                    <!-- Co-applicant Income -->
+                    <div class="space-y-[4px]">
+                        <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Co-applicant Income (INR)</label>
+                        <input id="p_coapplicant_income"
+                            class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                            type="number" value="0" />
+                    </div>
+
+                    <!-- DTI Ratio -->
+                    <div class="space-y-[4px]">
+                        <div class="flex justify-between">
+                            <label class="font-body-sm text-body-sm text-slate-800 font-semibold">DTI Ratio</label>
+                            <span class="font-label-bold text-label-bold text-primary" id="p_dti_ratio_val">0.55</span>
+                        </div>
+                        <input id="p_dti_ratio"
+                            class="w-full mt-[4px]"
+                            max="0.95" min="0.05" step="0.01" type="range" value="0.55"
+                            oninput="document.getElementById('p_dti_ratio_val').innerText = this.value" />
+                        <div class="flex justify-between text-[10px] text-slate-600 font-semibold">
+                            <span>0.05</span>
+                            <span>0.95</span>
+                        </div>
+                    </div>
+
+                    <!-- Savings -->
+                    <div class="space-y-[4px]">
+                        <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Savings (INR)</label>
+                        <input id="p_savings"
+                            class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                            type="number" value="5000" />
+                    </div>
+
+                    <!-- Loan Amount -->
+                    <div class="space-y-[4px]">
+                        <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Loan Amount (INR)</label>
+                        <input id="p_loan_amount"
+                            class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                            type="number" value="25000" />
+                    </div>
+
+                    <!-- Existing Loans -->
+                    <div class="space-y-[4px]">
+                        <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Existing Loans</label>
+                        <input id="p_existing_loans"
+                            class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                            type="number" value="2" />
+                    </div>
+
+                    <!-- Hidden values to preserve form requirements -->
+                    <input type="hidden" id="p_gender" value="Male" />
+                    <input type="hidden" id="p_marital_status" value="Married" />
+                    <input type="hidden" id="p_dependents" value="1" />
+                    <input type="hidden" id="p_age" value="30" />
+                    <input type="hidden" id="p_education_level" value="Graduate" />
+                    <input type="hidden" id="p_property_area" value="Rural" />
+                    <input type="hidden" id="p_employment_status" value="Salaried" />
+                    <input type="hidden" id="p_employer_category" value="Private" />
+                    <input type="hidden" id="p_loan_purpose" value="Personal" />
+                    <input type="hidden" id="p_collateral_value" value="0" />
+                    <input type="hidden" id="p_loan_term" value="60" />
+
+                    <div class="pt-md border-t border-[#d6d2b8] mt-md">
+                        <button type="submit" id="recalculate-btn"
+                            class="w-full bg-primary-container text-white font-body-md text-body-md font-bold py-sm px-lg rounded-lg hover:scale-[0.98] transition-transform duration-200 shadow-sm flex justify-center items-center gap-xs cursor-pointer">
+                            <span class="material-symbols-outlined text-[20px]" id="recalc-icon">play_arrow</span>
+                            <span id="recalc-text">Recalculate</span>
+                        </button>
+                        <button type="button" onclick="resetToDashboardPayload()"
+                            class="w-full mt-2 text-slate-700 hover:text-[#111827] font-semibold text-xs py-2 transition-colors cursor-pointer">
+                            RESET TO MAIN APP VALUES
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <div class="flex-1 flex flex-col gap-lg min-w-0">
+            <!-- Minimum Changes Section -->
+            <section class="space-y-md">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary">insights</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Minimum Changes to Get Approved</h3>
+                </div>
+
+                <div id="flip-cards-container" class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+                    <!-- Dynamically filled flip cards -->
+                </div>
+            </section>
+
+            <!-- Interactive Probability Curves -->
+            <section class="flex-1 flex flex-col bg-white rounded-lg shadow-sm overflow-hidden card-shadow"
+                style="border: 2px solid #111827">
+                <div class="border-b border-surface-variant px-md pt-md bg-slate-50/50">
+                    <h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Interactive Probability Curves
+                    </h3>
+                    <!-- Tabs -->
+                    <div class="flex gap-md border-b border-surface-variant translate-y-[1px]" id="sweep-tabs">
+                        <!-- Dynamically populated tabs -->
+                    </div>
+                </div>
+                <div class="flex-1 p-md relative min-h-[400px]">
+                    <canvas id="sweep-chart"></canvas>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-md mt-xl border-t border-white/10 bg-[#111827]">
+        <div class="flex flex-col md:flex-row justify-between items-center px-lg max-w-container-max mx-auto gap-sm">
+            <div class="font-headline-md text-headline-sm text-[#EDE9D0] font-bold">CreditWise AI</div>
+            <div class="font-body-sm text-body-sm text-slate-400 text-center md:text-right">
+                &copy; 2026 CreditWise AI. Project by Guradesh Dhillon.
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        const API_BASE = "/api/v1";
+        let activeTabFeature = "credit_score";
+        let sweepCurvesData = [];
+        let chartInstance = null;
+
+        document.addEventListener("DOMContentLoaded", () => {
+            loadBasePayload();
+        });
+
+
+
+        // Load payload from sessionStorage or defaults
+        function loadBasePayload() {
+            const savedPayload = sessionStorage.getItem("cw_payload");
+            let payload = null;
+
+            if (savedPayload) {
+                try {
+                    payload = JSON.parse(savedPayload);
+                    document.getElementById("banner-context-text").innerHTML = 'Using application data from <span class="font-bold">Main Dashboard</span>';
+                } catch (e) { }
+            }
+
+            if (!payload) {
+                // Fallback defaults
+                payload = {
+                    gender: "Male", marital_status: "Married", dependents: 1,
+                    education_level: "Graduate", employment_status: "Salaried",
+                    employer_category: "Private", age: 30,
+                    applicant_income: 10000.0, coapplicant_income: 0.0,
+                    loan_amount: 50000.0, loan_term: 60.0, existing_loans: 2,
+                    dti_ratio: 0.55, savings: 5000.0, collateral_value: 0.0,
+                    credit_score: 620, property_area: "Rural", loan_purpose: "Personal"
+                };
+                document.getElementById("banner-context-text").innerHTML = 'Using <span class="font-bold">Default System Parameters</span> (no active dashboard application)';
+            }
+
+            populateParamForm(payload);
+            triggerRecalculate(payload);
+        }
+
+        function populateParamForm(payload) {
+            document.getElementById("p_gender").value = payload.gender || "Male";
+            document.getElementById("p_marital_status").value = payload.marital_status || "Married";
+            document.getElementById("p_dependents").value = payload.dependents !== undefined ? payload.dependents : 1;
+            document.getElementById("p_age").value = payload.age || 30;
+            document.getElementById("p_education_level").value = payload.education_level || "Graduate";
+            document.getElementById("p_property_area").value = payload.property_area || "Rural";
+            document.getElementById("p_employment_status").value = payload.employment_status || "Salaried";
+            document.getElementById("p_employer_category").value = payload.employer_category || "Private";
+            document.getElementById("p_loan_purpose").value = payload.loan_purpose || "Personal";
+            document.getElementById("p_collateral_value").value = payload.collateral_value !== undefined ? payload.collateral_value : 0;
+            document.getElementById("p_loan_term").value = payload.loan_term || 60;
+
+            document.getElementById("p_credit_score").value = payload.credit_score || 620;
+            document.getElementById("p_credit_score_val").innerText = payload.credit_score || 620;
+            document.getElementById("p_applicant_income").value = payload.applicant_income !== undefined ? payload.applicant_income : 10000;
+            document.getElementById("p_coapplicant_income").value = payload.coapplicant_income !== undefined ? payload.coapplicant_income : 0;
+            document.getElementById("p_dti_ratio").value = payload.dti_ratio !== undefined ? payload.dti_ratio : 0.55;
+            document.getElementById("p_dti_ratio_val").innerText = payload.dti_ratio !== undefined ? payload.dti_ratio : 0.55;
+            document.getElementById("p_savings").value = payload.savings !== undefined ? payload.savings : 5000;
+            document.getElementById("p_loan_amount").value = payload.loan_amount !== undefined ? payload.loan_amount : 50000;
+            document.getElementById("p_existing_loans").value = payload.existing_loans !== undefined ? payload.existing_loans : 2;
+        }
+
+        function resetToDashboardPayload() {
+            sessionStorage.removeItem("cw_payload");
+            loadBasePayload();
+        }
+
+        function recalculateSweep(e) {
+            e.preventDefault();
+
+            const payload = {
+                gender: document.getElementById("p_gender").value,
+                marital_status: document.getElementById("p_marital_status").value,
+                dependents: parseInt(document.getElementById("p_dependents").value) || 0,
+                age: parseInt(document.getElementById("p_age").value) || 30,
+                education_level: document.getElementById("p_education_level").value,
+                property_area: document.getElementById("p_property_area").value,
+                employment_status: document.getElementById("p_employment_status").value,
+                employer_category: document.getElementById("p_employer_category").value,
+                loan_purpose: document.getElementById("p_loan_purpose").value,
+                applicant_income: parseFloat(document.getElementById("p_applicant_income").value) || 0,
+                coapplicant_income: parseFloat(document.getElementById("p_coapplicant_income").value) || 0,
+                savings: parseFloat(document.getElementById("p_savings").value) || 0,
+                collateral_value: parseFloat(document.getElementById("p_collateral_value").value) || 0,
+                existing_loans: parseInt(document.getElementById("p_existing_loans").value) || 0,
+                credit_score: parseInt(document.getElementById("p_credit_score").value) || 700,
+                dti_ratio: parseFloat(document.getElementById("p_dti_ratio").value) || 0.35,
+                loan_amount: parseFloat(document.getElementById("p_loan_amount").value) || 0,
+                loan_term: parseFloat(document.getElementById("p_loan_term").value) || 60,
+            };
+
+            triggerRecalculate(payload);
+        }
+
+        async function triggerRecalculate(payload) {
+            // Show loading state
+            const btn = document.getElementById("recalculate-btn");
+            const btnText = document.getElementById("recalc-text");
+            const icon = document.getElementById("recalc-icon");
+            btn.disabled = true;
+            btnText.innerText = "Sweeping feature curves...";
+            icon.innerText = "autorenew";
+            icon.classList.add("animate-spin");
+
+            try {
+                const res = await fetch(`${API_BASE}/whatif_sweep`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!res.ok) throw new Error("Recalculate sweep failed");
+                const data = await res.json();
+
+                // Update Context Status Banner
+                updateStatusBanner(data);
+
+                // Save curves data globally
+                sweepCurvesData = data.curves;
+
+                // Render Flip cards
+                renderFlipCards(data);
+
+                // Render Tabs
+                renderTabs();
+
+                // Render Chart
+                renderChartForFeature(activeTabFeature);
+
+            } catch (err) {
+                alert(`Recalculate sweep error: ${err.message}`);
+            } finally {
+                btn.disabled = false;
+                btnText.innerText = "Recalculate";
+                icon.innerText = "play_arrow";
+                icon.classList.remove("animate-spin");
+            }
+        }
+
+        function updateStatusBanner(data) {
+            const box = document.getElementById("banner-status-box");
+            const val = document.getElementById("banner-prob-value");
+            const desc = document.getElementById("banner-decision-value");
+
+            val.innerText = `${(data.base_probability * 100).toFixed(1)}%`;
+
+            if (data.base_approved) {
+                box.className = "flex items-center gap-sm px-md py-xs rounded-full shadow-sm border";
+                box.style.backgroundColor = "rgb(46, 125, 50)";
+                box.style.borderColor = "rgb(36, 100, 40)";
+                box.style.color = "white";
+                desc.innerText = "(APPROVED)";
+            } else {
+                box.className = "flex items-center gap-sm px-md py-xs rounded-full shadow-sm border";
+                box.style.backgroundColor = "#BA1A1A";
+                box.style.borderColor = "#93000A";
+                box.style.color = "white";
+                desc.innerText = "(REJECTED)";
+            }
+        }
+
+        function renderFlipCards(data) {
+            const container = document.getElementById("flip-cards-container");
+            container.innerHTML = "";
+
+            const formatted = {
+                "credit_score": (v) => v.toFixed(0),
+                "dti_ratio": (v) => `${(v * 100).toFixed(0)}%`,
+                "savings": (v) => `₹${v.toLocaleString()}`,
+                "loan_amount": (v) => `₹${v.toLocaleString()}`,
+                "coapplicant_income": (v) => `₹${v.toLocaleString()}`,
+                "existing_loans": (v) => v.toFixed(0)
+            };
+
+            const flips = data.curves
+                .filter(c => c.flip_val !== null)
+                .map(c => {
+                    const diff = c.flip_val - c.current_val;
+                    return {
+                        feature: c.feature,
+                        label: c.label,
+                        current: c.current_val,
+                        target: c.flip_val,
+                        prob: c.flip_prob,
+                        hint: c.hint,
+                        diff: Math.abs(diff),
+                        fmt: formatted[c.feature]
+                    };
+                })
+                .sort((a, b) => a.diff - b.diff);
+
+            if (data.base_approved) {
+                container.innerHTML = `
+                <div class="col-span-2 rounded-lg p-md flex items-center gap-sm card-shadow" style="background-color: rgb(46,125,50); color: white;">
+                    <span class="material-symbols-outlined text-[32px] text-white">check_circle</span>
+                    <div>
+                        <h4 class="font-bold text-sm text-white">Application Already Approved</h4>
+                        <p class="text-xs mt-1 leading-normal" style="color: rgba(255,255,255,0.85)">
+                            No modifications are required! You are above the 50% approval decision boundary. The charts below demonstrate the sensitivity thresholds for each parameter.
+                        </p>
+                    </div>
+                </div>
+            `;
+                return;
+            }
+
+            if (flips.length === 0) {
+                container.innerHTML = `
+                <div class="col-span-2 bg-amber-50 border border-amber-200 rounded-lg p-md text-amber-950 flex items-center gap-sm card-shadow">
+                    <span class="material-symbols-outlined text-[32px] text-amber-700">warning</span>
+                    <div>
+                        <h4 class="font-bold text-sm">No Single Flip Point Found</h4>
+                        <p class="text-xs mt-1 text-amber-800 leading-normal">
+                            Modifying a single feature is insufficient to trigger approval. Consider combining improvements (e.g., boosting your Credit Score while reducing your DTI ratio).
+                        </p>
+                    </div>
+                </div>
+            `;
+                return;
+            }
+
+            flips.slice(0, 4).forEach((flip, idx) => {
+                const card = document.createElement("div");
+                card.className = "bg-white border border-surface-variant rounded-lg p-md shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group cursor-pointer border-l-4 border-l-emerald-600";
+                card.innerHTML = `
+                <div class="flex justify-between items-start mb-sm">
+                    <span class="font-label-bold text-[10px] text-on-surface-variant tracking-wider uppercase">${flip.label}</span>
+                    <div class="bg-emerald-50 text-emerald-700 px-2 py-1 rounded text-[10px] font-bold flex items-center gap-[2px]">
+                        <span class="material-symbols-outlined text-[12px]">check_circle</span>
+                        FLIP POINT #${idx + 1}
+                    </div>
+                </div>
+                <div class="flex items-center gap-md">
+                    <div class="flex flex-col">
+                        <span class="text-[10px] text-slate-400 font-semibold uppercase">Current</span>
+                        <span class="font-headline-lg text-[22px] text-rose-600 font-bold">${flip.fmt(flip.current)}</span>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400">arrow_forward</span>
+                    <div class="flex flex-col">
+                        <span class="text-[10px] text-slate-400 font-semibold uppercase">Target</span>
+                        <span class="font-headline-lg text-[22px] text-emerald-700 font-bold">${flip.fmt(flip.target)}</span>
+                    </div>
+                </div>
+                <div class="mt-sm text-xs text-on-surface-variant font-medium leading-relaxed">
+                    ${flip.hint} Target reaches <strong class="text-emerald-700">${(flip.prob * 100).toFixed(1)}%</strong> probability.
+                </div>
+            `;
+                // Add click to focus chart
+                card.onclick = () => {
+                    activeTabFeature = flip.feature;
+                    renderTabs();
+                    renderChartForFeature(flip.feature);
+                };
+                container.appendChild(card);
+            });
+        }
+
+        function renderTabs() {
+            const tabsBox = document.getElementById("sweep-tabs");
+            tabsBox.innerHTML = "";
+
+            sweepCurvesData.forEach(curve => {
+                const btn = document.createElement("button");
+                const isActive = curve.feature === activeTabFeature;
+
+                btn.className = isActive
+                    ? "pb-xs px-xs border-b-2 border-primary text-primary font-bold text-xs"
+                    : "pb-xs px-xs border-b-2 border-transparent text-on-surface-variant hover:text-primary transition-colors font-semibold text-xs";
+
+                btn.innerText = curve.label;
+                btn.onclick = () => {
+                    activeTabFeature = curve.feature;
+                    renderTabs();
+                    renderChartForFeature(curve.feature);
+                };
+                tabsBox.appendChild(btn);
+            });
+        }
+
+        function renderChartForFeature(featKey) {
+            const curve = sweepCurvesData.find(c => c.feature === featKey);
+            if (!curve) return;
+
+            const ctx = document.getElementById("sweep-chart").getContext("2d");
+
+            const formatted = {
+                "credit_score": (v) => v.toFixed(0),
+                "dti_ratio": (v) => `${(v * 100).toFixed(0)}%`,
+                "savings": (v) => `₹${v.toLocaleString()}`,
+                "loan_amount": (v) => `₹${v.toLocaleString()}`,
+                "coapplicant_income": (v) => `₹${v.toLocaleString()}`,
+                "existing_loans": (v) => v.toFixed(0)
+            };
+
+            const fmt = formatted[featKey];
+
+            // Prepare datasets
+            const lineData = curve.vals.map((v, i) => ({ x: v, y: curve.probs[i] * 100 }));
+
+            // Find current point index
+            const curIndex = curve.vals.indexOf(curve.current_val);
+            const curPoint = curIndex !== -1 ? [{ x: curve.current_val, y: curve.probs[curIndex] * 100 }] : [];
+
+            // Target flip point
+            const flipPoint = curve.flip_val !== null ? [{ x: curve.flip_val, y: curve.flip_prob * 100 }] : [];
+
+            if (chartInstance) chartInstance.destroy();
+
+            chartInstance = new Chart(ctx, {
+                type: "line",
+                data: {
+                    datasets: [
+                        {
+                            label: "Approval Probability",
+                            data: lineData,
+                            borderColor: "rgba(17, 24, 39, 0.9)",
+                            backgroundColor: "rgba(17, 24, 39, 0.05)",
+                            borderWidth: 2,
+                            pointRadius: 2,
+                            fill: true,
+                            tension: 0.2
+                        },
+                        {
+                            label: "Current Position",
+                            data: curPoint,
+                            borderColor: "#fab005",
+                            backgroundColor: "#fab005",
+                            pointStyle: "rectRot",
+                            pointRadius: 9,
+                            pointHoverRadius: 11,
+                            showLine: false
+                        },
+                        {
+                            label: "Flip point threshold",
+                            data: flipPoint,
+                            borderColor: "#2e7d32",
+                            backgroundColor: "#2e7d32",
+                            pointStyle: "triangle",
+                            pointRadius: 10,
+                            pointHoverRadius: 12,
+                            showLine: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: "top",
+                            labels: { font: { family: "Inter", size: 11, weight: 600 } }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (ctx) {
+                                    return `${ctx.dataset.label}: ${fmt(ctx.raw.x)} (${ctx.raw.y.toFixed(1)}%)`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: "linear",
+                            grid: { color: "#f1f3f5" },
+                            title: {
+                                display: true,
+                                text: curve.label,
+                                font: { family: "Inter", size: 11, weight: "bold" }
+                            },
+                            ticks: {
+                                callback: function (v) { return fmt(v); },
+                                font: { family: "Inter", size: 10 }
+                            }
+                        },
+                        y: {
+                            min: 0,
+                            max: 105,
+                            grid: { color: "#f1f3f5" },
+                            title: {
+                                display: true,
+                                text: "Approval Probability (%)",
+                                font: { family: "Inter", size: 11, weight: "bold" }
+                            },
+                            ticks: {
+                                callback: function (v) { return `${v}%`; },
+                                font: { family: "Inter", size: 10 }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>

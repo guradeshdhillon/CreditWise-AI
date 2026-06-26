@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CreditWise AI - Loan Assessment</title>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+    <!-- Tailwind CSS with Forms and Container Queries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#82d2e7",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-fixed": "#410005",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#bdf0ff",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary-fixed": "#ffdad7",
+                        "surface": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#002106",
+                        "primary-container": "#111827",
+                        "outline-variant": "#bec8cc",
+                        "secondary-fixed-dim": "#61df72",
+                        "primary-fixed": "#abedff",
+                        "tertiary-fixed-dim": "#ffb3ae",
+                        "primary-fixed-dim": "#82d2e7",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#004e5c",
+                        "surface-container": "#edeeef",
+                        "inverse-on-surface": "#f0f1f2",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-container": "#007528",
+                        "on-surface": "#191c1d",
+                        "secondary-fixed": "#7ffd8b",
+                        "secondary-container": "#e8f5e9",
+                        "secondary": "#2e7d32",
+                        "surface-container-high": "#e7e8e9",
+                        "background": "#f8f9fa",
+                        "primary": "#111827",
+                        "tertiary": "#a20b1c",
+                        "outline": "#6f797c",
+                        "on-tertiary-container": "#ffe1df",
+                        "on-secondary-fixed-variant": "#00531a",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#3f484b",
+                        "tertiary-container": "#c52b31",
+                        "surface-dim": "#d9dadb",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#111827",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001f26",
+                        "on-tertiary-fixed-variant": "#930016",
+                        "on-background": "#191c1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "gutter": "24px",
+                        "base": "4px",
+                        "container-max": "1440px",
+                        "md": "24px",
+                        "sm": "16px",
+                        "xs": "8px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-bold": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        .card-hover:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.04);
+            border-color: #e9ecef;
+            transform: translateY(-2px);
+            transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .floating-card {
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .floating-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 45px rgba(0, 0, 0, 0.22);
+        }
+
+        .input-glow:focus {
+            box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.2);
+            border-color: #111827;
+        }
+
+        input[type="range"] {
+            accent-color: #111827;
+        }
+    </style>
+</head>
+
+<body class="text-on-surface font-body-md bg-background min-h-screen flex flex-col">
+    <!-- TopAppBar -->
+    <header class="bg-[#111827] border-b border-white/10 shadow-sm fixed top-0 w-full z-50">
+        <div class="flex justify-between items-center h-[72px] px-lg max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md font-bold text-[#EDE9D0] flex items-center gap-xs">
+                <span class="bg-[#EDE9D0] text-[#111827] px-2 py-1 rounded text-sm font-extrabold">CW</span>
+                <span>CreditWise AI</span>
+            </div>
+            <nav class="hidden md:flex gap-md items-center h-full">
+                <a class="text-white border-b-2 border-white py-5 font-semibold text-body-sm transition-colors duration-200"
+                    href="/">Loan Assessment</a>
+                <a class="text-white/70 hover:text-white font-semibold text-body-sm transition-colors duration-200"
+                    href="/what-if">What-If Analyzer</a>
+                <a class="text-white/70 hover:text-white font-semibold text-body-sm transition-colors duration-200"
+                    href="/fairness">Fairness Audit</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Main Content Canvas -->
+    <main
+        class="flex-1 pt-[96px] px-sm md:px-lg max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+        <!-- Sub-header & Status Panel (Full Width) -->
+        <div
+            class="col-span-1 lg:col-span-12 mb-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-sm">
+            <div>
+                <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-xs">New
+                    Assessment</h1>
+                <div class="flex flex-wrap items-center gap-sm font-body-sm text-body-sm text-on-surface-variant">
+                    <span class="flex items-center gap-[4px]"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"
+                            id="status-dot"></span> <span id="status-text">Connecting...</span></span>
+                    <span class="text-outline-variant">|</span>
+                    <span id="model-ver-text">XGBoost v1.0.0</span>
+                    <span class="text-outline-variant">|</span>
+                    <span id="explain-text-badge">SHAP Active</span>
+                </div>
+            </div>
+            <!-- Performance Pills -->
+            <div class="flex gap-sm">
+                <div
+                    class="bg-gray-900 px-sm py-xs rounded-full border border-gray-700 flex items-center gap-xs shadow-sm">
+                    <span class="font-label-bold text-[10px] text-gray-400 uppercase">ROC-AUC</span>
+                    <span class="font-body-sm text-body-sm text-white font-bold" id="metric-roc">0.9880</span>
+                </div>
+                <div
+                    class="bg-gray-900 px-sm py-xs rounded-full border border-gray-700 flex items-center gap-xs shadow-sm">
+                    <span class="font-label-bold text-[10px] text-gray-400 uppercase">F1</span>
+                    <span class="font-body-sm text-body-sm text-white font-bold" id="metric-f1">0.9420</span>
+                </div>
+                <div
+                    class="bg-gray-900 px-sm py-xs rounded-full border border-gray-700 flex items-center gap-xs hidden sm:flex shadow-sm">
+                    <span class="font-label-bold text-[10px] text-gray-400 uppercase">Accuracy</span>
+                    <span class="font-body-sm text-body-sm text-white font-bold" id="metric-acc">0.9620</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left Column: Interactive Loan Form -->
+        <div class="col-span-1 lg:col-span-8 flex flex-col gap-gutter">
+            <div class="rounded-2xl border border-[#d6d2b8] floating-card overflow-hidden bg-[#EDE9D0]">
+                <div class="border-b border-[#d6d2b8] p-md bg-[#111827]">
+                    <h2 class="font-headline-md text-headline-md text-white">Application Details</h2>
+                    <p class="font-body-sm text-body-sm text-slate-400 mt-xs">Enter applicant parameters for
+                        real-time risk assessment.</p>
+                </div>
+                <form id="loan-form" class="p-md space-y-md">
+                    <!-- Section 1: Personal & Demographic Info -->
+                    <div>
+                        <h3 class="font-label-bold text-label-bold text-primary uppercase tracking-wider mb-sm">Personal
+                            & Demographic Info</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-sm">
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Gender</label>
+                                <select id="gender" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Marital
+                                    Status</label>
+                                <select id="marital_status" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]">
+                                    <option value="Single">Single</option>
+                                    <option value="Married">Married</option>
+                                </select>
+                            </div>
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Dependents</label>
+                                <input id="dependents" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                                    min="0" max="10" type="number" value="0" />
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-sm mt-sm">
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Age</label>
+                                <input id="age" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                                    min="18" max="85" type="number" value="30" />
+                            </div>
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Education</label>
+                                <select id="education_level" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]">
+                                    <option value="Graduate">Graduate</option>
+                                    <option value="Not Graduate">Not Graduate</option>
+                                </select>
+                            </div>
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Property
+                                    Area</label>
+                                <select id="property_area" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]">
+                                    <option value="Urban">Urban</option>
+                                    <option value="Semiurban">Semiurban</option>
+                                    <option value="Rural">Rural</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Employment & Purpose -->
+                    <div class="pt-sm border-t border-[#d6d2b8]">
+                        <h3 class="font-label-bold text-label-bold text-primary uppercase tracking-wider mb-sm">
+                            Employment & Purpose</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-sm">
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Employment
+                                    Status</label>
+                                <select id="employment_status" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]">
+                                    <option value="Salaried">Salaried</option>
+                                    <option value="Self-employed">Self-employed</option>
+                                    <option value="Contract">Contract</option>
+                                    <option value="Unemployed">Unemployed</option>
+                                </select>
+                            </div>
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Employer
+                                    Category</label>
+                                <select id="employer_category" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]">
+                                    <option value="Private">Private</option>
+                                    <option value="Government">Government</option>
+                                    <option value="MNC">MNC</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Unemployed">Unemployed</option>
+                                </select>
+                            </div>
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Loan
+                                    Purpose</label>
+                                <select id="loan_purpose" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]">
+                                    <option value="Home">Home</option>
+                                    <option value="Car">Car</option>
+                                    <option value="Personal">Personal</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Education">Education</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Financial Profile -->
+                    <div class="pt-sm border-t border-[#d6d2b8]">
+                        <h3 class="font-label-bold text-label-bold text-primary uppercase tracking-wider mb-sm">
+                            Financial Profile</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Monthly
+                                    Income (INR)</label>
+                                <input id="applicant_income" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                                    min="1000" max="10000000" type="number" value="15000" />
+                            </div>
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Co-applicant
+                                    Income (INR)</label>
+                                <input id="coapplicant_income" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                                    min="0" max="10000000" type="number" value="0" />
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-sm mt-sm">
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Savings
+                                    (INR)</label>
+                                <input id="savings" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                                    min="0" max="10000000" type="number" value="20000" />
+                            </div>
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Collateral
+                                    Value (INR)</label>
+                                <input id="collateral_value" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                                    min="0" max="10000000" type="number" value="0" />
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-sm mt-sm">
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Existing
+                                    Active Loans</label>
+                                <input id="existing_loans" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                                    min="0" max="20" type="number" value="0" />
+                            </div>
+                            <div class="space-y-[4px]">
+                                <div class="flex justify-between">
+                                    <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Credit
+                                        Score</label>
+                                    <span class="font-label-bold text-label-bold text-primary"
+                                        id="credit_score_val">700</span>
+                                </div>
+                                <input id="credit_score" class="w-full mt-[4px]" max="900" min="300" step="10"
+                                    type="range" value="700"
+                                    oninput="document.getElementById('credit_score_val').innerText = this.value" />
+                            </div>
+                            <div class="space-y-[4px]">
+                                <div class="flex justify-between">
+                                    <label class="font-body-sm text-body-sm text-slate-800 font-semibold">DTI
+                                        Ratio</label>
+                                    <span class="font-label-bold text-label-bold text-primary"
+                                        id="dti_ratio_val">0.35</span>
+                                </div>
+                                <input id="dti_ratio" class="w-full mt-[4px]" max="0.95" min="0.05" step="0.01"
+                                    type="range" value="0.35"
+                                    oninput="document.getElementById('dti_ratio_val').innerText = this.value" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Loan Details -->
+                    <div class="pt-sm border-t border-[#d6d2b8]">
+                        <h3 class="font-label-bold text-label-bold text-primary uppercase tracking-wider mb-sm">Loan
+                            Details</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Loan
+                                    Amount (INR)</label>
+                                <input id="loan_amount" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]"
+                                    min="5000" max="100000000" type="number" value="25000" />
+                            </div>
+                            <div class="space-y-[4px]">
+                                <label class="font-body-sm text-body-sm text-slate-800 font-semibold">Term
+                                    (Months)</label>
+                                <select id="loan_term" required
+                                    class="w-full rounded-lg border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px]">
+                                    <option value="12">12</option>
+                                    <option value="24">24</option>
+                                    <option value="36">36</option>
+                                    <option value="60" selected>60</option>
+                                    <option value="84">84</option>
+                                    <option value="120">120</option>
+                                    <option value="180">180</option>
+                                    <option value="240">240</option>
+                                    <option value="360">360</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Button -->
+                    <div class="pt-sm border-t border-[#d6d2b8] flex justify-end">
+                        <button type="submit" id="assess-btn"
+                            class="bg-primary-container text-white font-body-md text-body-md font-bold py-sm px-lg rounded-lg hover:scale-[0.98] transition-transform duration-200 shadow-sm flex items-center gap-xs cursor-pointer">
+                            <span class="material-symbols-outlined text-[20px]" id="assess-icon">memory</span>
+                            <span id="assess-btn-text">Assess Loan Application</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right Column: Results Section -->
+        <div class="col-span-1 lg:col-span-4 flex flex-col gap-gutter" id="results-column">
+            <!-- Placeholder Card (Visible until first run) -->
+            <div id="results-placeholder"
+                class="rounded-lg border-2 card-shadow p-md text-center py-12 flex flex-col items-center justify-center h-full bg-white"
+                style="border-color: #111827">
+                <span class="material-symbols-outlined text-primary text-[48px] mb-xs animate-pulse">analytics</span>
+                <h3 class="font-headline-md text-[20px] text-on-surface font-bold">Awaiting Assessment</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-sm max-w-xs">
+                    Fill in the application details and click the button to calculate loan approval probability, risk
+                    drivers, and recommendations.
+                </p>
+            </div>
+
+            <!-- Decision Banner (Hidden initially) -->
+            <div id="decision-banner"
+                class="hidden rounded-lg border p-md flex items-start gap-sm shadow-sm relative overflow-hidden">
+                <div class="absolute right-[-20px] top-[-20px] opacity-10">
+                    <span class="material-symbols-outlined text-[120px]" id="banner-icon-bg">check_circle</span>
+                </div>
+                <div class="rounded-full w-10 h-10 flex items-center justify-center shrink-0"
+                    id="banner-icon-container">
+                    <span class="material-symbols-outlined text-white" id="banner-icon">task_alt</span>
+                </div>
+                <div>
+                    <h3 class="font-headline-md text-[20px] font-bold leading-tight" id="decision-title">Approved</h3>
+                    <p class="font-body-sm text-body-sm opacity-80 mt-[4px]" id="decision-subtitle">Approval Probability
+                    </p>
+                    <div class="font-display-lg text-[36px] font-bold mt-xs tracking-tight" id="decision-prob">94.2%
+                    </div>
+                    <div class="text-[11px] font-semibold tracking-wide uppercase opacity-75 mt-1">Confidence: <span
+                            id="decision-conf">High</span></div>
+                </div>
+            </div>
+
+            <!-- SHAP Factors Container (Hidden initially) -->
+            <div id="shap-card" class="hidden rounded-lg border-2 card-shadow p-md bg-white"
+                style="border-color: #111827">
+                <h3 class="font-headline-md text-[18px] text-on-surface mb-xs">Feature Influence</h3>
+                <p class="font-body-sm text-[13px] text-on-surface-variant mb-md">SHAP analysis of key decision drivers.
+                </p>
+
+                <div class="space-y-sm" id="shap-factors-list">
+                    <!-- Dynamically populated rows -->
+                </div>
+
+                <!-- Chart Container -->
+                <div class="mt-md pt-md border-t border-slate-100">
+                    <h4 class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-sm">Contribution
+                        Waterfall</h4>
+                    <div class="h-[220px]">
+                        <canvas id="shap-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Explanation Card (Hidden initially) -->
+            <div id="ai-card" class="hidden rounded-lg border-2 card-shadow p-md bg-white"
+                style="border-color: #111827">
+                <div class="flex items-center gap-xs mb-sm">
+                    <span class="material-symbols-outlined text-primary">auto_awesome</span>
+                    <h3 class="font-headline-md text-[18px] text-on-surface">AI Explanation</h3>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-md leading-relaxed" id="ai-summary">
+                    Generating summary...
+                </p>
+                <div class="pt-sm border-t border-slate-100" id="key-factor-box">
+                    <h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wider mb-xs">Key Factor
+                    </h4>
+                    <p class="font-body-sm text-[13px] text-on-surface-variant" id="ai-key-factor">—</p>
+                </div>
+                <div class="pt-sm border-t border-slate-100 hidden" id="recommendations-box">
+                    <h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wider mb-xs">
+                        Recommendations</h4>
+                    <ul class="space-y-xs font-body-sm text-[13px] text-on-surface-variant" id="ai-tips">
+                        <!-- tips -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Action Panel (Hidden initially) -->
+            <div id="actions-card" class="hidden flex flex-col gap-sm">
+                <button onclick="downloadPDF()"
+                    class="w-full text-white font-semibold py-sm px-md rounded-lg transition-colors duration-200 flex items-center justify-center gap-xs cursor-pointer hover:opacity-90"
+                    style="background-color: #111827">
+                    <span class="material-symbols-outlined text-[20px]" id="pdf-icon">download</span>
+                    <span id="pdf-text">Download PDF Assessment</span>
+                </button>
+                <div id="whatif-notice"
+                    class="hidden bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-xs text-yellow-800 leading-normal flex gap-xs items-start">
+                    <span class="material-symbols-outlined text-[16px] text-yellow-600 shrink-0">info</span>
+                    <span>Use the <strong>What-If Analyzer</strong> to explore feature thresholds that could flip this
+                        decision to Approved.</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIN Dialog Modal -->
+    <div id="pin-modal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white p-md rounded-lg border border-slate-200 max-w-sm w-full card-shadow mx-sm">
+            <div class="flex justify-between items-start mb-sm">
+                <h3 class="font-headline-md text-headline-md text-on-surface">Enter Passcode</h3>
+                <button onclick="closePinModal()" class="text-on-surface-variant hover:text-on-surface"><span
+                        class="material-symbols-outlined">close</span></button>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-md">
+                Please enter your administrator passcode to access advanced auditing and modeling pages.
+            </p>
+            <div class="space-y-sm">
+                <input type="password" id="pin-input"
+                    class="w-full rounded-lg border-surface-variant bg-white text-center text-lg font-bold py-sm tracking-[1em]"
+                    placeholder="••••" maxLength="4" onkeydown="if(event.key === 'Enter') submitPin()" />
+                <div id="pin-error" class="text-xs text-error font-semibold hidden text-center">Incorrect passcode. Try
+                    again.</div>
+                <button onclick="submitPin()"
+                    class="w-full bg-primary-container text-white py-sm rounded-lg font-bold hover:scale-[0.98] transition-transform">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full py-md mt-xl border-t border-white/10 bg-[#111827]">
+        <div class="flex flex-col md:flex-row justify-between items-center px-lg max-w-container-max mx-auto gap-sm">
+            <div class="font-headline-md text-headline-sm text-[#EDE9D0] font-bold">CreditWise AI</div>
+            <div class="font-body-sm text-body-sm text-slate-400 text-center md:text-right">
+                &copy; 2026 CreditWise AI. Project by Guradesh Dhillon.
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        const API_BASE = "/api/v1";
+        let chartInstance = null;
+        let lastPayload = null;
+        let lastResult = null;
+        let lastExplanation = null;
+
+        // Initialize custom selects for rounded-lg popups
+        function initCustomSelects() {
+            const selects = document.querySelectorAll("select");
+            selects.forEach(select => {
+                if (select.parentNode.classList.contains("custom-select-wrapper")) return;
+
+                const wrapper = document.createElement("div");
+                wrapper.className = "relative w-full custom-select-wrapper";
+
+                const btn = document.createElement("div");
+                btn.className = "w-full rounded-lg border border-surface-variant bg-white text-on-surface font-body-sm text-body-sm input-glow py-xs px-sm h-[38px] flex items-center justify-between cursor-pointer select-none";
+
+                const label = document.createElement("span");
+                label.className = "custom-select-label";
+                label.innerText = select.options[select.selectedIndex]?.text || "";
+                btn.appendChild(label);
+
+                const arrow = document.createElement("span");
+                arrow.className = "material-symbols-outlined text-[18px] text-on-surface-variant";
+                arrow.innerText = "arrow_drop_down";
+                btn.appendChild(arrow);
+
+                const menu = document.createElement("div");
+                menu.className = "absolute z-50 left-0 right-0 mt-[4px] bg-white border border-surface-variant rounded-lg shadow-lg max-h-[200px] overflow-y-auto hidden custom-select-menu";
+
+                Array.from(select.options).forEach((opt, idx) => {
+                    const item = document.createElement("div");
+                    item.className = "px-sm py-2 hover:bg-slate-100 cursor-pointer font-body-sm text-body-sm text-on-surface select-none";
+                    item.innerText = opt.text;
+                    item.onclick = (e) => {
+                        e.stopPropagation();
+                        select.selectedIndex = idx;
+                        label.innerText = opt.text;
+                        select.dispatchEvent(new Event("change"));
+                        menu.classList.add("hidden");
+                    };
+                    menu.appendChild(item);
+                });
+
+                btn.onclick = (e) => {
+                    e.stopPropagation();
+                    document.querySelectorAll(".custom-select-menu").forEach(m => {
+                        if (m !== menu) m.classList.add("hidden");
+                    });
+                    menu.classList.toggle("hidden");
+                };
+
+                select.classList.add("hidden");
+                select.parentNode.insertBefore(wrapper, select);
+                wrapper.appendChild(btn);
+                wrapper.appendChild(menu);
+                wrapper.appendChild(select);
+            });
+
+            document.addEventListener("click", () => {
+                document.querySelectorAll(".custom-select-menu").forEach(m => {
+                    m.classList.add("hidden");
+                });
+            });
+        }
+
+        window.syncCustomSelects = function () {
+            document.querySelectorAll(".custom-select-wrapper").forEach(wrapper => {
+                const select = wrapper.querySelector("select");
+                const label = wrapper.querySelector(".custom-select-label");
+                if (select && label) {
+                    label.innerText = select.options[select.selectedIndex]?.text || "";
+                }
+            });
+        };
+
+        // Load initial configurations
+        document.addEventListener("DOMContentLoaded", () => {
+            initCustomSelects();
+            checkApiHealth();
+
+            // Restore last payload if available in sessionStorage
+            const savedPayload = sessionStorage.getItem("cw_payload");
+            if (savedPayload) {
+                try {
+                    const payload = JSON.parse(savedPayload);
+                    document.getElementById("gender").value = payload.gender;
+                    document.getElementById("marital_status").value = payload.marital_status;
+                    document.getElementById("dependents").value = payload.dependents;
+                    document.getElementById("age").value = payload.age;
+                    document.getElementById("education_level").value = payload.education_level;
+                    document.getElementById("property_area").value = payload.property_area;
+                    document.getElementById("employment_status").value = payload.employment_status;
+                    document.getElementById("employer_category").value = payload.employer_category;
+                    document.getElementById("loan_purpose").value = payload.loan_purpose;
+                    document.getElementById("applicant_income").value = payload.applicant_income;
+                    document.getElementById("coapplicant_income").value = payload.coapplicant_income;
+                    document.getElementById("savings").value = payload.savings;
+                    document.getElementById("collateral_value").value = payload.collateral_value;
+                    document.getElementById("existing_loans").value = payload.existing_loans;
+                    document.getElementById("credit_score").value = payload.credit_score;
+                    document.getElementById("credit_score_val").innerText = payload.credit_score;
+                    document.getElementById("dti_ratio").value = payload.dti_ratio;
+                    document.getElementById("dti_ratio_val").innerText = payload.dti_ratio;
+                    document.getElementById("loan_amount").value = payload.loan_amount;
+                    document.getElementById("loan_term").value = payload.loan_term;
+                } catch (e) { }
+            }
+            window.syncCustomSelects();
+        });
+
+        // API Health check
+        async function checkApiHealth() {
+            try {
+                const res = await fetch(`${API_BASE}/health`);
+                if (res.ok) {
+                    const data = await res.json();
+                    document.getElementById("status-dot").className = "w-2.5 h-2.5 rounded-full";
+                    document.getElementById("status-dot").style.backgroundColor = "rgb(46, 125, 50)";
+                    document.getElementById("status-text").innerText = "API Live";
+                    document.getElementById("model-ver-text").innerText = `XGBoost v${data.model_version}`;
+                    document.getElementById("metric-roc").innerText = (data.performance.roc_auc || 0.9880).toFixed(4);
+                    document.getElementById("metric-f1").innerText = (data.performance.f1 || 0.9420).toFixed(4);
+                    document.getElementById("metric-acc").innerText = (data.performance.accuracy || 0.9620).toFixed(4);
+                } else {
+                    setOfflineStatus();
+                }
+            } catch (err) {
+                setOfflineStatus();
+            }
+        }
+
+        function setOfflineStatus() {
+            document.getElementById("status-dot").className = "w-2.5 h-2.5 rounded-full bg-amber-400";
+            document.getElementById("status-text").innerText = "Standalone Mode";
+        }
+
+
+
+        // Form Submission & Inference
+        const form = document.getElementById("loan-form");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            // Show loading state
+            const assessBtn = document.getElementById("assess-btn");
+            const assessBtnText = document.getElementById("assess-btn-text");
+            const assessIcon = document.getElementById("assess-icon");
+
+            assessBtn.disabled = true;
+            assessBtnText.innerText = "Computing Decision...";
+            assessIcon.innerText = "autorenew";
+            assessIcon.classList.add("animate-spin");
+
+            // Parse inputs
+            const payload = {
+                gender: document.getElementById("gender").value,
+                marital_status: document.getElementById("marital_status").value,
+                dependents: parseInt(document.getElementById("dependents").value) || 0,
+                age: parseInt(document.getElementById("age").value) || 30,
+                education_level: document.getElementById("education_level").value,
+                property_area: document.getElementById("property_area").value,
+                employment_status: document.getElementById("employment_status").value,
+                employer_category: document.getElementById("employer_category").value,
+                loan_purpose: document.getElementById("loan_purpose").value,
+                applicant_income: parseFloat(document.getElementById("applicant_income").value) || 0,
+                coapplicant_income: parseFloat(document.getElementById("coapplicant_income").value) || 0,
+                savings: parseFloat(document.getElementById("savings").value) || 0,
+                collateral_value: parseFloat(document.getElementById("collateral_value").value) || 0,
+                existing_loans: parseInt(document.getElementById("existing_loans").value) || 0,
+                credit_score: parseInt(document.getElementById("credit_score").value) || 700,
+                dti_ratio: parseFloat(document.getElementById("dti_ratio").value) || 0.35,
+                loan_amount: parseFloat(document.getElementById("loan_amount").value) || 0,
+                loan_term: parseFloat(document.getElementById("loan_term").value) || 60,
+            };
+
+            lastPayload = payload;
+            sessionStorage.setItem("cw_payload", JSON.stringify(payload));
+
+            try {
+                // Predict endpoint
+                const res = await fetch(`${API_BASE}/predict`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!res.ok) throw new Error("Inference failed");
+                const result = await res.json();
+                lastResult = result;
+                sessionStorage.setItem("cw_result", JSON.stringify(result));
+
+                // Hide placeholder card
+                document.getElementById("results-placeholder").classList.add("hidden");
+
+                // Renders decision banner
+                renderDecisionBanner(result);
+
+                // Renders SHAP list
+                renderShapList(result);
+
+                // Renders SHAP waterfall Chart
+                renderShapWaterfallChart(result.shap_values);
+
+                // Show explanation loading
+                document.getElementById("ai-card").classList.remove("hidden");
+                document.getElementById("ai-summary").innerText = "Generating AI explanation (Claude Sonnet)...";
+                document.getElementById("recommendations-box").classList.add("hidden");
+                document.getElementById("key-factor-box").classList.add("hidden");
+
+                // Explain endpoint
+                const explainRes = await fetch(`${API_BASE}/explain`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ application: payload, prediction: result })
+                });
+
+                if (explainRes.ok) {
+                    const explanation = await explainRes.json();
+                    lastExplanation = explanation;
+                    sessionStorage.setItem("cw_explanation", JSON.stringify(explanation));
+                    renderAIExplanation(explanation);
+                } else {
+                    document.getElementById("ai-summary").innerText = "Explanation unavailable in offline mode.";
+                }
+
+                // Show action buttons
+                document.getElementById("actions-card").classList.remove("hidden");
+                if (!result.approved) {
+                    document.getElementById("whatif-notice").classList.remove("hidden");
+                } else {
+                    document.getElementById("whatif-notice").classList.add("hidden");
+                }
+
+            } catch (err) {
+                alert(`Assessment error: ${err.message}`);
+            } finally {
+                // Reset button loading state
+                assessBtn.disabled = false;
+                assessBtnText.innerText = "Assess Loan Application";
+                assessIcon.innerText = "memory";
+                assessIcon.classList.remove("animate-spin");
+            }
+        });
+
+        // Render results helper functions
+        function renderDecisionBanner(result) {
+            const banner = document.getElementById("decision-banner");
+            const title = document.getElementById("decision-title");
+            const prob = document.getElementById("decision-prob");
+            const conf = document.getElementById("decision-conf");
+            const bgIcon = document.getElementById("banner-icon-bg");
+            const icon = document.getElementById("banner-icon");
+            const container = document.getElementById("banner-icon-container");
+
+            banner.classList.remove("hidden");
+            prob.innerText = `${(result.probability * 100).toFixed(1)}%`;
+            conf.innerText = result.confidence;
+
+            if (result.approved) {
+                banner.className = "rounded-lg border p-md flex items-start gap-sm shadow-sm relative overflow-hidden";
+                banner.style.backgroundColor = "rgb(46, 125, 50)";
+                banner.style.borderColor = "rgb(36, 100, 40)";
+                banner.style.color = "white";
+                container.className = "text-white rounded-full w-10 h-10 flex items-center justify-center shrink-0";
+                container.style.backgroundColor = "rgba(0,0,0,0.2)";
+                title.innerText = "Approved";
+                title.className = "font-headline-md text-[20px] font-bold leading-tight text-white";
+                bgIcon.innerText = "check_circle";
+                icon.innerText = "task_alt";
+            } else {
+                banner.className = "rounded-lg border p-md flex items-start gap-sm shadow-sm relative overflow-hidden";
+                banner.style.backgroundColor = "rgb(186, 26, 26)";
+                banner.style.borderColor = "rgb(150, 20, 20)";
+                banner.style.color = "white";
+                container.className = "text-white rounded-full w-10 h-10 flex items-center justify-center shrink-0";
+                container.style.backgroundColor = "rgba(0,0,0,0.2)";
+                title.innerText = "Rejected";
+                title.className = "font-headline-md text-[20px] font-bold leading-tight text-white";
+                bgIcon.innerText = "cancel";
+                icon.innerText = "error";
+            }
+        }
+
+        function renderShapList(result) {
+            const card = document.getElementById("shap-card");
+            const list = document.getElementById("shap-factors-list");
+            card.classList.remove("hidden");
+            list.innerHTML = "";
+
+            const positive = result.top_factors.filter(f => f.direction === "positive").slice(0, 3);
+            const negative = result.top_factors.filter(f => f.direction === "negative").slice(0, 3);
+
+            const mapper = {
+                "Credit_Score_norm": "Credit Score",
+                "DTI_Ratio": "Debt-to-Income",
+                "Savings": "Savings",
+                "Applicant_Income": "Monthly Income",
+                "Loan_Amount": "Loan Amount",
+                "Existing_Loans": "Existing Loans",
+                "Total_Income": "Total Income",
+                "EMI": "Monthly EMI",
+                "Balance_Income": "Disposable Income",
+                "Savings_to_Loan_Ratio": "Savings to Loan",
+                "Collateral_to_Loan_Ratio": "Collateral to Loan",
+            };
+
+            const renderFactor = (f, isPos) => {
+                const displayName = mapper[f.feature] || f.feature.replace(/_/g, " ");
+                const color = isPos ? "rgb(46,125,50)" : "rgb(186,26,26)";
+                const valSign = isPos ? "+" : "";
+                const scorePct = Math.min(Math.abs(f.value) * 150, 100);
+
+                const row = document.createElement("div");
+                row.className = "space-y-[4px]";
+                row.innerHTML = `
+                <div class="flex items-center justify-between text-body-sm">
+                    <span class="font-body-sm text-on-surface">${displayName}</span>
+                    <span class="font-semibold text-xs" style="color: ${color}">${valSign}${f.value.toFixed(3)}</span>
+                </div>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden flex ${isPos ? 'justify-end' : 'justify-start'}">
+                    <div class="h-full rounded-full" style="width: ${scorePct}%; background-color: ${color}"></div>
+                </div>
+            `;
+                list.appendChild(row);
+            };
+
+            positive.forEach(f => renderFactor(f, true));
+            negative.forEach(f => renderFactor(f, false));
+        }
+
+        function renderShapWaterfallChart(shapValues) {
+            const ctx = document.getElementById("shap-chart").getContext("2d");
+
+            // Sort features by absolute contribution
+            const displayNames = {
+                "Credit_Score_norm": "Credit Score", "DTI_Ratio": "Debt-to-Income Ratio", "Savings": "Savings Amount",
+                "Applicant_Income": "Monthly Income", "Loan_Amount": "Loan Amount", "Existing_Loans": "Existing Loans",
+                "Total_Income": "Total Income", "EMI": "Monthly EMI", "Balance_Income": "Disposable Income",
+                "Savings_to_Loan_Ratio": "Savings to Loan", "Collateral_to_Loan_Ratio": "Collateral to Loan",
+            };
+
+            const sorted = Object.entries(shapValues)
+                .map(([k, v]) => ({ key: k, label: displayNames[k] || k.replace(/_/g, " "), val: v }))
+                .sort((a, b) => Math.abs(b.val) - Math.abs(a.val))
+                .slice(0, 8); // Top 8 features
+
+            const labels = sorted.map(x => x.label);
+            const dataVals = sorted.map(x => x.val);
+            const bgColors = dataVals.map(v => v >= 0 ? "rgba(46, 125, 50, 0.85)" : "rgba(186, 26, 26, 0.85)");
+            const borderColors = dataVals.map(v => v >= 0 ? "rgb(46, 125, 50)" : "rgb(186, 26, 26)");
+
+            if (chartInstance) chartInstance.destroy();
+
+            chartInstance = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: "SHAP Impact Score",
+                        data: dataVals,
+                        backgroundColor: bgColors,
+                        borderColor: borderColors,
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: "y",
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function (ctx) {
+                                    return `SHAP: ${ctx.raw >= 0 ? "+" : ""}${ctx.raw.toFixed(4)}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { color: "#f1f3f5" },
+                            ticks: { font: { family: "Inter", size: 10 } }
+                        },
+                        y: {
+                            grid: { display: false },
+                            ticks: { font: { family: "Inter", size: 10, weight: 600 } }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderAIExplanation(explanation) {
+            document.getElementById("ai-summary").innerText = explanation.explanation;
+
+            if (explanation.key_factor) {
+                document.getElementById("key-factor-box").classList.remove("hidden");
+                document.getElementById("ai-key-factor").innerText = explanation.key_factor;
+            }
+
+            if (explanation.improvement_tips && explanation.improvement_tips.length > 0) {
+                const list = document.getElementById("ai-tips");
+                list.innerHTML = "";
+                explanation.improvement_tips.forEach((tip, idx) => {
+                    const li = document.createElement("li");
+                    li.className = "flex gap-xs";
+                    li.innerHTML = `<span class="font-semibold text-slate-400">0${idx + 1}.</span> <span>${tip}</span>`;
+                    list.appendChild(li);
+                });
+                document.getElementById("recommendations-box").classList.remove("hidden");
+            }
+        }
+
+        // PDF Report Generator Download Endpoint
+        async function downloadPDF() {
+            const btn = document.getElementById("pdf-text");
+            const icon = document.getElementById("pdf-icon");
+
+            if (!lastPayload || !lastResult) {
+                alert("Please run an assessment first before downloading the report.");
+                return;
+            }
+
+            btn.innerText = "Generating PDF...";
+            icon.innerText = "hourglass_empty";
+            icon.classList.add("animate-spin");
+
+            // Provide a fallback explanation if AI explanation hasn't loaded
+            const explanation = lastExplanation || {
+                explanation: lastResult.approved
+                    ? `Loan application approved with ${(lastResult.probability * 100).toFixed(1)}% probability and ${lastResult.confidence} confidence.`
+                    : `Loan application rejected with ${(lastResult.probability * 100).toFixed(1)}% approval probability and ${lastResult.confidence} confidence.`,
+                key_factor: lastResult.top_factors && lastResult.top_factors.length > 0
+                    ? lastResult.top_factors[0].feature.replace(/_/g, " ")
+                    : "Credit Score",
+                improvement_tips: lastResult.approved
+                    ? ["Maintain your strong financial profile.", "Continue making timely loan repayments."]
+                    : ["Improve your credit score by making timely payments.", "Reduce your debt-to-income ratio below 40%.", "Consider increasing your savings before reapplying."]
+            };
+
+            try {
+                const res = await fetch(`${API_BASE}/pdf`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        application: lastPayload,
+                        prediction: lastResult,
+                        explanation: explanation
+                    })
+                });
+
+                if (!res.ok) {
+                    const errData = await res.json().catch(() => ({}));
+                    throw new Error(errData.detail || `Server error ${res.status}`);
+                }
+
+                // Verify we got a PDF back
+                const contentType = res.headers.get("content-type") || "";
+                if (!contentType.includes("pdf")) {
+                    throw new Error("Server did not return a PDF. Please try again.");
+                }
+
+                const blob = await res.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = `creditwise_assessment_${lastResult.approved ? 'approved' : 'rejected'}.pdf`;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                window.URL.revokeObjectURL(url);
+            } catch (e) {
+                alert(`Download failed: ${e.message}`);
+            } finally {
+                btn.innerText = "Download PDF Assessment";
+                icon.innerText = "download";
+                icon.classList.remove("animate-spin");
+            }
+        }
+    </script>
+</body>
+
+</html>

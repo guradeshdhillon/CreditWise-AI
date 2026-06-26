@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Fairness & Bias Audit - CreditWise AI</title>
+    <link class="icon-link" rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+    <!-- Tailwind CSS with Forms and Container Queries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#82d2e7",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-fixed": "#410005",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#bdf0ff",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary-fixed": "#ffdad7",
+                        "surface": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#002106",
+                        "primary-container": "#111827",
+                        "outline-variant": "#bec8cc",
+                        "secondary-fixed-dim": "#61df72",
+                        "primary-fixed": "#abedff",
+                        "tertiary-fixed-dim": "#ffb3ae",
+                        "primary-fixed-dim": "#82d2e7",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#004e5c",
+                        "surface-container": "#edeeef",
+                        "inverse-on-surface": "#f0f1f2",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-container": "#007528",
+                        "on-surface": "#191c1d",
+                        "secondary-fixed": "#7ffd8b",
+                        "secondary-container": "#e8f5e9",
+                        "secondary": "#2e7d32",
+                        "surface-container-high": "#e7e8e9",
+                        "background": "#f8f9fa",
+                        "primary": "#111827",
+                        "tertiary": "#a20b1c",
+                        "outline": "#6f797c",
+                        "on-tertiary-container": "#ffe1df",
+                        "on-secondary-fixed-variant": "#00531a",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#3f484b",
+                        "tertiary-container": "#c52b31",
+                        "surface-dim": "#d9dadb",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#111827",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001f26",
+                        "on-tertiary-fixed-variant": "#930016",
+                        "on-background": "#191c1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "gutter": "24px",
+                        "base": "4px",
+                        "container-max": "1440px",
+                        "md": "24px",
+                        "sm": "16px",
+                        "xs": "8px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-bold": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #EDE9D0;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        .card-hover:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.04);
+            border-color: #e9ecef;
+            transform: translateY(-2px);
+            transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .input-glow:focus {
+            box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.2);
+            border-color: #111827;
+        }
+    </style>
+
+</head>
+
+<body class="bg-[#EDE9D0] text-on-background font-body-md antialiased min-h-screen flex flex-col pt-[72px]">
+    <!-- TopAppBar -->
+    <header class="bg-[#111827] fixed top-0 w-full z-50 border-b border-white/10 shadow-sm">
+        <div class="flex justify-between items-center h-[72px] px-lg max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md font-bold text-[#EDE9D0] flex items-center gap-xs">
+                <span class="bg-[#EDE9D0] text-[#111827] px-2 py-1 rounded text-sm font-extrabold">CW</span>
+                <span>CreditWise AI</span>
+            </div>
+            <nav class="hidden md:flex gap-md h-full items-center">
+                <a class="text-white/70 hover:text-white font-semibold text-body-sm transition-colors duration-200"
+                    href="/">Loan Assessment</a>
+                <a class="text-white/70 hover:text-white font-semibold text-body-sm transition-colors duration-200"
+                    href="/what-if">What-If Analyzer</a>
+                <a class="text-white border-b-2 border-white py-5 font-semibold text-body-sm transition-colors duration-200"
+                    href="/fairness">Fairness Audit</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-container-max mx-auto px-sm md:px-lg py-xl space-y-xl" id="main-content-area">
+        <!-- Loading Overlay -->
+        <div id="loading-box"
+            class="py-20 flex flex-col items-center justify-center space-y-sm bg-white rounded-lg border border-slate-200 card-shadow">
+            <span class="material-symbols-outlined text-[48px] text-primary animate-spin">sync</span>
+            <h3 class="font-headline-md text-on-surface font-bold">Auditing Portfolio</h3>
+            <p class="text-xs text-on-surface-variant">Running model batch predictions on 1,000+ historical applicants
+                to compute demographic parity metrics...</p>
+        </div>
+
+        <div id="content-container" class="hidden space-y-xl">
+            <!-- Header & Summary Metrics -->
+            <section class="space-y-md">
+                <div>
+                    <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Fairness
+                        &amp; Bias Audit</h1>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-3xl">Comprehensive analysis
+                        of XGBoost model outcomes to ensure equitable lending practices across protected demographic
+                        groups.</p>
+                </div>
+                <!-- Bento Grid Metrics -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+                    <!-- Metric 1 -->
+                    <div class="bg-white rounded-lg p-md card-shadow card-hover" style="border: 2px solid #111827">
+                        <p class="font-label-bold text-xs text-black font-semibold uppercase">Total Applicants</p>
+                        <p class="font-display-lg text-3xl text-primary font-bold mt-sm" id="m_total_applicants">1,240
+                        </p>
+                    </div>
+                    <!-- Metric 2 -->
+                    <div class="bg-white rounded-lg p-md card-shadow card-hover" style="border: 2px solid #111827">
+                        <p class="font-label-bold text-xs text-black font-semibold uppercase">Predicted Approved</p>
+                        <p class="font-display-lg text-3xl text-primary font-bold mt-sm" id="m_predicted_approved">842
+                        </p>
+                    </div>
+                    <!-- Metric 3 -->
+                    <div class="bg-white rounded-lg p-md card-shadow card-hover" style="border: 2px solid #111827">
+                        <p class="font-label-bold text-xs text-black font-semibold uppercase">Approval Rate</p>
+                        <p class="font-display-lg text-3xl text-primary font-bold mt-sm" id="m_approval_rate">68.0%</p>
+                    </div>
+                    <!-- Metric 4 -->
+                    <div class="bg-white rounded-lg p-md card-shadow card-hover" style="border: 2px solid #111827">
+                        <p class="font-label-bold text-xs text-black font-semibold uppercase">Model ROC-AUC</p>
+                        <p class="font-display-lg text-3xl text-secondary font-bold mt-sm" id="m_roc_auc">0.9880</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <!-- Demographic Analysis (Left Column) -->
+                <div class="lg:col-span-8 space-y-gutter">
+                    <div class="bg-white rounded-lg card-shadow overflow-hidden" style="border: 2px solid #111827">
+                        <div class="p-md border-b border-surface-variant bg-slate-50/50">
+                            <h2 class="font-headline-md text-headline-md text-on-surface">Demographic Analysis &amp; DIR
+                            </h2>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">Disparate Impact Ratio (DIR)
+                                threshold target: 0.80 - 1.25.</p>
+                        </div>
+
+                        <div class="p-md grid grid-cols-1 md:grid-cols-2 gap-md" id="demographics-grid">
+                            <!-- Dynamic demographic cards -->
+                        </div>
+                    </div>
+
+                    <!-- Probability Distribution -->
+                    <div class="bg-white rounded-lg card-shadow overflow-hidden" style="border: 2px solid #111827">
+                        <div class="p-md border-b border-surface-variant bg-slate-50/50">
+                            <h2 class="font-headline-md text-headline-md text-on-surface">Probability Distribution</h2>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">Distribution of model approval
+                                probabilities for actual outcomes.</p>
+                        </div>
+                        <div class="p-md">
+                            <div class="h-64 relative">
+                                <canvas id="histogram-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Importance & Disclaimer (Right Column) -->
+                <div class="lg:col-span-4 space-y-gutter">
+                    <!-- Global Feature Importance -->
+                    <div class="bg-white rounded-lg card-shadow overflow-hidden" style="border: 2px solid #111827">
+                        <div class="p-md border-b border-surface-variant bg-slate-50/50">
+                            <h2 class="font-headline-md text-headline-md text-on-surface">Global Feature Importance</h2>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Mean absolute SHAP
+                                values across all rows.</p>
+                        </div>
+                        <div class="p-md space-y-sm">
+                            <div class="h-[280px]">
+                                <canvas id="shap-chart"></canvas>
+                            </div>
+                            <div class="h-px w-full bg-slate-100 my-md"></div>
+                            <!-- Demographic Features ranks -->
+                            <h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wider mb-sm">
+                                Demographic Impact Ranks</h4>
+                            <div class="space-y-sm" id="demographic-ranks-list">
+                                <!-- filled dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Responsible AI Disclaimer -->
+                    <div class="bg-white rounded-lg p-md card-shadow relative overflow-hidden"
+                        style="border: 2px solid #111827">
+                        <div class="absolute -right-4 -top-4 opacity-5">
+                            <span class="material-symbols-outlined text-[120px]">policy</span>
+                        </div>
+                        <div class="flex items-center gap-sm mb-sm relative z-10">
+                            <span class="material-symbols-outlined text-primary">info</span>
+                            <h3 class="font-headline-md text-[18px] text-on-surface">Responsible AI</h3>
+                        </div>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant relative z-10 leading-relaxed">
+                            This system monitors adherence to the EEOC 4/5ths (80%) rule regarding disparate impact.
+                            Automated decisions are augmentative. Final loan determinations, particularly for cases
+                            flagged near decision boundaries or showing marginal DIR variance, require human oversight
+                            and validation.
+                        </p>
+                        <button
+                            class="mt-md font-label-bold text-label-bold text-primary hover:underline flex items-center gap-xs relative z-10 cursor-pointer">
+                            Review Compliance Docs <span
+                                class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-md mt-xl border-t border-white/10 bg-[#111827]">
+        <div class="flex flex-col md:flex-row justify-between items-center px-lg max-w-container-max mx-auto gap-sm">
+            <div class="font-headline-md text-headline-sm text-[#EDE9D0] font-bold">CreditWise AI</div>
+            <div class="font-body-sm text-body-sm text-slate-400 text-center md:text-right">
+                &copy; 2026 CreditWise AI. Project by Guradesh Dhillon.
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        const API_BASE = "/api/v1";
+
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchFairnessData();
+        });
+
+
+
+        async function fetchFairnessData() {
+            try {
+                const res = await fetch(`${API_BASE}/fairness`);
+                if (!res.ok) throw new Error("Fairness endpoint error");
+                const data = await res.json();
+
+                // Hide loading, show content
+                document.getElementById("loading-box").classList.add("hidden");
+                document.getElementById("content-container").classList.remove("hidden");
+
+                // Update Metrics
+                document.getElementById("m_total_applicants").innerText = data.total_applicants.toLocaleString();
+                document.getElementById("m_predicted_approved").innerText = data.predicted_approved.toLocaleString();
+                document.getElementById("m_approval_rate").innerText = `${data.approval_rate.toFixed(1)}%`;
+                document.getElementById("m_roc_auc").innerText = data.roc_auc.toFixed(4);
+
+                // Demographic grid charts
+                renderDemographicsGrid(data.groups);
+
+                // Histogram
+                renderHistogram(data);
+
+                // Global SHAP
+                renderShapImportanceChart(data.global_shap);
+
+                // Demographic ranks
+                renderDemographicRanks(data.demographic_shap);
+
+            } catch (e) {
+                alert(`Error loading fairness data: ${e.message}`);
+            }
+        }
+
+        function renderDemographicsGrid(groups) {
+            const grid = document.getElementById("demographics-grid");
+            grid.innerHTML = "";
+
+            groups.forEach((g, idx) => {
+                const containerId = `chart-demo-${idx}`;
+                const card = document.createElement("div");
+                card.className = "space-y-sm border border-slate-100 p-3 rounded-lg bg-slate-50/20";
+
+                // Set styles based on DIR status
+                let badgeClass = "";
+                let badgeIcon = "";
+                if (g.dir_status === "Pass") {
+                    badgeClass = "bg-emerald-50 text-emerald-700 border border-emerald-200";
+                    badgeIcon = "check_circle";
+                } else if (g.dir_status === "Marginal") {
+                    badgeClass = "bg-amber-50 text-amber-700 border border-amber-200";
+                    badgeIcon = "warning";
+                } else {
+                    badgeClass = "bg-rose-50 text-rose-700 border border-rose-200";
+                    badgeIcon = "cancel";
+                }
+
+                card.innerHTML = `
+                <div class="flex justify-between items-center mb-sm">
+                    <h3 class="font-body-sm font-bold text-on-surface text-sm uppercase tracking-wide">${g.feature}</h3>
+                    <div class="${badgeClass} px-sm py-xs rounded-full font-semibold text-[10px] flex items-center gap-[2px]">
+                        <span class="material-symbols-outlined text-[14px]">${badgeIcon}</span>
+                        DIR: ${g.dir_value.toFixed(2)} (${g.dir_status})
+                    </div>
+                </div>
+                <div class="h-[140px] relative">
+                    <canvas id="${containerId}"></canvas>
+                </div>
+                <div class="text-[10px] text-slate-400 text-center font-medium">
+                    DIR Target Threshold: 0.80 - 1.25
+                </div>
+            `;
+                grid.appendChild(card);
+
+                // Draw Chart.js grouped bar chart
+                const ctx = document.getElementById(containerId).getContext("2d");
+                new Chart(ctx, {
+                    type: "bar",
+                    data: {
+                        labels: g.categories,
+                        datasets: [{
+                            label: "Approval Rate (%)",
+                            data: g.approval_rates,
+                            backgroundColor: "rgba(17, 24, 39, 0.85)",
+                            borderColor: "rgb(17, 24, 39)",
+                            borderWidth: 1,
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (ctx) {
+                                        return `Approval: ${ctx.raw.toFixed(1)}% (n=${g.counts[ctx.dataIndex]})`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: { grid: { display: false }, ticks: { font: { family: "Inter", size: 10 } } },
+                            y: { min: 0, max: 100, ticks: { font: { family: "Inter", size: 10 } }, grid: { color: "#f1f3f5" } }
+                        }
+                    }
+                });
+            });
+        }
+
+        function renderHistogram(data) {
+            const ctx = document.getElementById("histogram-chart").getContext("2d");
+
+            // Setup labels using intervals
+            const labels = [];
+            for (let i = 0; i < data.histogram_bins.length - 1; i++) {
+                const start = data.histogram_bins[i].toFixed(2);
+                const end = data.histogram_bins[i + 1].toFixed(2);
+                labels.push(`${start}-${end}`);
+            }
+
+            new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: "Rejected Applicants",
+                            data: data.histogram_rejected,
+                            backgroundColor: "rgba(186, 26, 26, 0.8)",
+                            borderColor: "rgb(186, 26, 26)",
+                            borderWidth: 1
+                        },
+                        {
+                            label: "Approved Applicants",
+                            data: data.histogram_approved,
+                            backgroundColor: "rgba(46, 125, 50, 0.8)",
+                            borderColor: "rgb(46, 125, 50)",
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: "top", labels: { font: { family: "Inter", size: 11, weight: 600 } } }
+                    },
+                    scales: {
+                        x: {
+                            stacked: true,
+                            grid: { display: false },
+                            title: { display: true, text: "Model Prediction Probability Range", font: { family: "Inter", size: 10 } },
+                            ticks: { font: { family: "Inter", size: 9 }, maxRotation: 45, minRotation: 45 }
+                        },
+                        y: {
+                            stacked: true,
+                            grid: { color: "#f1f3f5" },
+                            title: { display: true, text: "Applicant Count", font: { family: "Inter", size: 10 } },
+                            ticks: { font: { family: "Inter", size: 10 } }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderShapImportanceChart(shapData) {
+            const ctx = document.getElementById("shap-chart").getContext("2d");
+
+            const labels = shapData.map(x => x.feature).reverse();
+            const values = shapData.map(x => x.importance).reverse();
+
+            new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: "Mean Absolute SHAP",
+                        data: values,
+                        backgroundColor: "rgba(17, 24, 39, 0.85)",
+                        borderColor: "rgb(17, 24, 39)",
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: "y",
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: { grid: { color: "#f1f3f5" }, ticks: { font: { family: "Inter", size: 9 } } },
+                        y: { grid: { display: false }, ticks: { font: { family: "Inter", size: 9, weight: 600 } } }
+                    }
+                }
+            });
+        }
+
+        function renderDemographicRanks(demographicShap) {
+            const list = document.getElementById("demographic-ranks-list");
+            list.innerHTML = "";
+
+            if (demographicShap.length === 0) {
+                list.innerHTML = `<div class="text-xs text-slate-400">Demographic SHAP ranks computed only when model is fully initialized.</div>`;
+                return;
+            }
+
+            demographicShap.sort((a, b) => a.rank - b.rank).forEach(d => {
+                const row = document.createElement("div");
+                row.className = "flex justify-between items-center text-xs p-2 bg-slate-50/50 border border-slate-100 rounded";
+                row.innerHTML = `
+                <div class="flex items-center gap-xs">
+                    <span class="bg-primary-container text-white px-2 py-0.5 rounded-full text-[9px] font-bold">Rank #${d.rank}</span>
+                    <strong class="text-on-surface-variant font-semibold">${d.feature}</strong>
+                </div>
+                <div class="font-mono text-outline font-semibold">
+                    ${d.importance.toFixed(4)}
+                </div>
+            `;
+                list.appendChild(row);
+            });
+        }
+    </script>
+</body>
+
+</html>
