@@ -17,7 +17,7 @@ CreditWise AI is a production-grade loan approval intelligence platform. It comb
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 The application is deployed and publicly accessible on Railway.
 
