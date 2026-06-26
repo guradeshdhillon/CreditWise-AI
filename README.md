@@ -1,6 +1,32 @@
 # CreditWise AI
 
-CreditWise AI is a production-grade loan approval intelligence platform built as a minor academic project. It combines classical machine learning, explainable AI, a REST API, and three interactive browser-based frontends to deliver a complete, end-to-end loan assessment system.
+> Production-grade loan approval intelligence — ML · Explainability · GenAI · REST API · Live Demo
+
+<p align="left">
+  <a href="https://creditwise-ai-production.up.railway.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white" alt="Live on Railway" />
+  </a>
+  <img src="https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.11" />
+  <img src="https://img.shields.io/badge/FastAPI-0.138.0-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/XGBoost-2.1.4-EB5E28?style=for-the-badge&logo=xgboost&logoColor=white" alt="XGBoost" />
+  <img src="https://img.shields.io/badge/Claude%20AI-Anthropic-D97706?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude AI" />
+  <img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge" alt="MIT License" />
+</p>
+
+CreditWise AI is a production-grade loan approval intelligence platform. It combines classical machine learning, explainable AI, a REST API, and three interactive browser-based frontends to deliver a complete, end-to-end loan assessment system.
+
+---
+
+## 🚀 Live Demo
+
+The application is deployed and publicly accessible on Railway.
+
+| Page | URL | Description |
+|---|---|---|
+| Loan Assessment | [creditwise-ai-production.up.railway.app](https://creditwise-ai-production.up.railway.app/) | Submit an application and get an instant AI decision |
+| What-If Analyzer | [/what-if](https://creditwise-ai-production.up.railway.app/what-if) | Interactive sensitivity analysis across 6 key features |
+| Fairness & Bias Audit | [/fairness](https://creditwise-ai-production.up.railway.app/fairness) | Demographic approval parity and disparate impact metrics |
+| API Docs (Swagger) | [/docs](https://creditwise-ai-production.up.railway.app/docs) | Full interactive REST API documentation |
 
 ---
 
@@ -76,20 +102,20 @@ The model is trained on `loanData.csv`, a 20-column tabular dataset of loan appl
 |---|---|---|
 | Gender | Categorical | Male / Female |
 | Marital_Status | Categorical | Married / Single |
-| Dependents | Integer | Number of dependents (0-10) |
+| Dependents | Integer | Number of dependents (0–10) |
 | Education_Level | Categorical | Graduate / Not Graduate |
 | Employment_Status | Categorical | Salaried / Self-employed / Contract / Unemployed |
 | Employer_Category | Categorical | Private / Government / MNC / Business / Unemployed |
-| Age | Integer | Applicant age in years (18-85) |
+| Age | Integer | Applicant age in years (18–85) |
 | Applicant_Income | Float | Monthly income in rupees |
 | Coapplicant_Income | Float | Monthly co-applicant income in rupees |
 | Loan_Amount | Float | Requested loan amount in rupees |
 | Loan_Term | Float | Repayment term in months |
 | Existing_Loans | Integer | Number of active existing loans |
-| DTI_Ratio | Float | Debt-to-Income ratio (0.0-1.0) |
+| DTI_Ratio | Float | Debt-to-Income ratio (0.0–1.0) |
 | Savings | Float | Total savings in rupees |
 | Collateral_Value | Float | Collateral or asset value in rupees |
-| Credit_Score | Integer | Credit score (300-900) |
+| Credit_Score | Integer | Credit score (300–900) |
 | Property_Area | Categorical | Urban / Semiurban / Rural |
 | Loan_Purpose | Categorical | Home / Car / Personal / Business / Education |
 | Applicant_ID | String | Identifier column, dropped before training |
@@ -101,13 +127,13 @@ The model is trained on `loanData.csv`, a 20-column tabular dataset of loan appl
 
 Training is handled by `src/models/train.py` and runs a six-step pipeline.
 
-**Step 1 - Data loading.** Reads the CSV using a defensive loader that strips whitespace from column names and reports missing values.
+**Step 1 — Data loading.** Reads the CSV using a defensive loader that strips whitespace from column names and reports missing values.
 
-**Step 2 - Target separation.** Encodes the `Loan_Approved` column (Yes/No to 1/0) and drops rows with a null target before any preprocessing occurs, preventing data leakage.
+**Step 2 — Target separation.** Encodes the `Loan_Approved` column (Yes/No to 1/0) and drops rows with a null target before any preprocessing occurs, preventing data leakage.
 
-**Step 3 - Preprocessing.** A `LoanPreprocessor` instance is fit exclusively on the training data and serialized alongside the model. At inference time the exact same fitted instance is loaded, ensuring train-test consistency.
+**Step 3 — Preprocessing.** A `LoanPreprocessor` instance is fit exclusively on the training data and serialized alongside the model. At inference time the exact same fitted instance is loaded, ensuring train-test consistency.
 
-**Step 4 - Model comparison.** Five classifiers are benchmarked with 10-fold Stratified K-Fold cross-validation using Accuracy, Precision, Recall, F1, and ROC-AUC as metrics. The models compared are:
+**Step 4 — Model comparison.** Five classifiers are benchmarked with 10-fold Stratified K-Fold cross-validation using Accuracy, Precision, Recall, F1, and ROC-AUC as metrics. The models compared are:
 - K-Nearest Neighbors (k=7)
 - Logistic Regression
 - Gaussian Naive Bayes
@@ -116,9 +142,9 @@ Training is handled by `src/models/train.py` and runs a six-step pipeline.
 
 Results are sorted by ROC-AUC and saved to `saved_models/model_comparison.csv`.
 
-**Step 5 - Hyperparameter tuning.** XGBoost is tuned with Optuna using 50 trials and 5-fold cross-validation optimizing ROC-AUC. The search space covers: `n_estimators`, `max_depth`, `learning_rate`, `subsample`, `colsample_bytree`, `min_child_weight`, `reg_alpha`, and `reg_lambda`.
+**Step 5 — Hyperparameter tuning.** XGBoost is tuned with Optuna using 50 trials and 5-fold cross-validation optimizing ROC-AUC. The search space covers: `n_estimators`, `max_depth`, `learning_rate`, `subsample`, `colsample_bytree`, `min_child_weight`, `reg_alpha`, and `reg_lambda`.
 
-**Step 6 - Final model training.** The best parameters from Optuna are used to train a final XGBoost model on the full dataset. Final cross-validation performance metrics are recorded and saved to `model_info.json`.
+**Step 6 — Final model training.** The best parameters from Optuna are used to train a final XGBoost model on the full dataset. Final cross-validation performance metrics are recorded and saved to `model_info.json`.
 
 After training, a SHAP `TreeExplainer` is created with a background sample of 100 rows and persisted to `shap_explainer.pkl` for low-latency inference-time explanation.
 
@@ -132,13 +158,13 @@ The `LoanPreprocessor` generates 9 additional engineered features beyond the raw
 |---|---|
 | Total_Income | Applicant_Income + Coapplicant_Income |
 | EMI | Loan_Amount / Loan_Term |
-| Balance_Income | Total_Income - (EMI x 12) |
+| Balance_Income | Total_Income − (EMI × 12) |
 | Income_to_Loan_Ratio | Total_Income / Loan_Amount |
 | Savings_to_Loan_Ratio | Savings / Loan_Amount |
 | Collateral_to_Loan_Ratio | Collateral_Value / Loan_Amount |
 | LoanAmount_log | log1p(Loan_Amount) |
 | Total_Income_log | log1p(Total_Income) |
-| Credit_Score_norm | (Credit_Score - 300) / 600, clipped to [0, 1] |
+| Credit_Score_norm | (Credit_Score − 300) / 600, clipped to [0, 1] |
 
 All categorical columns are ordinally encoded using fixed maps defined in `preprocessing.py`. The final feature matrix has 27 columns in a fixed order that must be respected during both training and inference for SHAP values to be consistent.
 
@@ -146,7 +172,7 @@ All categorical columns are ordinally encoded using fixed maps defined in `prepr
 
 ## API Reference
 
-The FastAPI server runs on port 8000 and exposes all endpoints under the `/api/v1` prefix. Interactive documentation is available at `/docs` (Swagger UI) and `/redoc`.
+The FastAPI server runs on port 8000 (or at the deployed base URL) and exposes all endpoints under the `/api/v1` prefix. Interactive documentation is available at [`/docs`](https://creditwise-ai-production.up.railway.app/docs) (Swagger UI) and [`/redoc`](https://creditwise-ai-production.up.railway.app/redoc).
 
 **GET /api/v1/health**
 
@@ -156,7 +182,7 @@ Returns the model status, version, type, and cross-validation performance metric
 
 Accepts a full `LoanApplication` JSON body and returns:
 - `approved` (boolean)
-- `probability` (float, 0.0-1.0)
+- `probability` (float, 0.0–1.0)
 - `confidence` (High if probability >= 0.75 or <= 0.25, Medium if >= 0.62 or <= 0.38, Low otherwise)
 - `decision_text` (human-readable outcome string)
 - `shap_values` (dictionary of feature name to SHAP contribution)
@@ -166,7 +192,7 @@ Accepts a full `LoanApplication` JSON body and returns:
 **POST /api/v1/explain**
 
 Accepts a `LoanApplication` and a `PredictionResponse` and returns a plain-English explanation generated by Claude AI. Falls back to a rule-based explanation if the `ANTHROPIC_API_KEY` is not configured. The response includes:
-- `explanation` (2-3 sentence plain-English decision summary)
+- `explanation` (2–3 sentence plain-English decision summary)
 - `key_factor` (single most impactful factor)
 - `improvement_tips` (list of actionable tips)
 
@@ -202,15 +228,15 @@ Accepts a `LoanApplication`, `PredictionResponse`, and `ExplainResponse` and ret
 
 Three HTML pages are served directly by the FastAPI server. All pages use Tailwind CSS, Chart.js for visualizations, Plus Jakarta Sans and Inter from Google Fonts, and Material Symbols Outlined icons.
 
-**Loan Assessment (GET /)**
+**Loan Assessment ([/](https://creditwise-ai-production.up.railway.app/))**
 
 The main page where a user fills in all 18 loan application fields and submits the form. The page displays the prediction result (approved or rejected card), the approval probability gauge, confidence level, SHAP factor bars for the top positive and negative drivers, and the LLM-generated explanation with improvement tips. After a result is shown, a Download PDF button triggers the `/api/v1/pdf` endpoint.
 
-**What-If Analyzer (GET /what-if)**
+**What-If Analyzer ([/what-if](https://creditwise-ai-production.up.railway.app/what-if))**
 
 An interactive sensitivity analysis page. The user fills in the same application form and the page calls `/api/v1/whatif_sweep` to return and render six probability-vs-feature line charts (one per swept feature). Each chart marks the applicant's current value with a vertical indicator. For rejected applicants, a flip point marker shows the exact value at which the feature alone would move the prediction to approved.
 
-**Fairness and Bias Audit (GET /fairness)**
+**Fairness and Bias Audit ([/fairness](https://creditwise-ai-production.up.railway.app/fairness))**
 
 A monitoring dashboard that loads data from `/api/v1/fairness` and displays:
 - Summary statistics (total applicants, predicted approvals, overall approval rate, ROC-AUC)
@@ -225,9 +251,7 @@ A monitoring dashboard that loads data from `/api/v1/fairness` and displays:
 
 An alternative Streamlit-based UI is available in `app/streamlit_app.py`. It is a dark-theme dashboard styled after the GitHub Dark palette using Inter and JetBrains Mono typography. It provides the same prediction and explanation workflow as the HTML frontend and can operate either by calling the FastAPI API or by loading model artifacts locally through `app/utils.py`.
 
-To run the Streamlit dashboard:
-
-```
+```bash
 streamlit run app/streamlit_app.py
 ```
 
@@ -235,11 +259,11 @@ streamlit run app/streamlit_app.py
 
 ## Explainability
 
-The project uses two layers of explainability:
+The project uses two layers of explainability.
 
 **SHAP (SHapley Additive exPlanations).** A `shap.TreeExplainer` is built on a background sample of the training data and persisted as `shap_explainer.pkl`. At inference time, per-instance SHAP values are computed for all 27 features and returned with every prediction. Positive SHAP values indicate factors that push toward approval; negative values indicate factors that push toward rejection. Global SHAP summary plots (beeswarm and bar) are generated and saved to `saved_models/plots/` during training.
 
-**Claude AI (LLM explanation).** The `/api/v1/explain` endpoint sends a structured prompt to the Anthropic Claude API that includes the full application details, the prediction outcome, and the top 8 SHAP contributors. The prompt instructs Claude to respond as a senior loan officer and write a 2-3 sentence plain-English explanation, identify the single most impactful factor, and provide exactly 3 improvement tips (or 2 maintenance tips if approved). The response is parsed as JSON. If the API key is absent or the call fails for any reason, a deterministic rule-based fallback explanation is returned instead.
+**Claude AI (LLM explanation).** The `/api/v1/explain` endpoint sends a structured prompt to the Anthropic Claude API that includes the full application details, the prediction outcome, and the top 8 SHAP contributors. The prompt instructs Claude to respond as a senior loan officer and write a 2–3 sentence plain-English explanation, identify the single most impactful factor, and provide exactly 3 improvement tips (or 2 maintenance tips if approved). The response is parsed as JSON. If the API key is absent or the call fails for any reason, a deterministic rule-based fallback explanation is returned instead.
 
 ---
 
@@ -292,7 +316,7 @@ All training runs are logged to MLflow. The `src/mlops/mlflow_logger.py` module 
 
 Runs are stored in the `mlruns/` directory under the experiment name `CreditWise-Loan-Approval`. The MLflow tracking UI can be launched with:
 
-```
+```bash
 mlflow ui --port 5001 --backend-store-uri mlruns
 ```
 
@@ -306,32 +330,32 @@ A Docker Compose service for MLflow is also included and will serve the UI on po
 creditwise-ai/
 ├── src/
 │   ├── api/
-│   │   ├── main.py          # FastAPI application factory
-│   │   ├── routes.py        # All API endpoint definitions
-│   │   └── schemas.py       # Pydantic v2 request and response models
+│   │   ├── main.py             # FastAPI application factory
+│   │   ├── routes.py           # All API endpoint definitions
+│   │   └── schemas.py          # Pydantic v2 request and response models
 │   ├── data/
-│   │   └── preprocessing.py # LoanPreprocessor class and feature engineering
+│   │   └── preprocessing.py    # LoanPreprocessor class and feature engineering
 │   ├── models/
-│   │   ├── train.py         # Full training pipeline (runs standalone)
-│   │   └── evaluate.py      # SHAP evaluation and plot generation
+│   │   ├── train.py            # Full training pipeline (runs standalone)
+│   │   └── evaluate.py         # SHAP evaluation and plot generation
 │   ├── explain/
 │   │   ├── shap_explainer.py   # Per-instance SHAP value computation
 │   │   └── llm_explainer.py    # Claude AI explanation generation
 │   └── mlops/
 │       └── mlflow_logger.py    # MLflow run logging
 ├── app/
-│   ├── streamlit_app.py     # Streamlit dashboard UI
-│   ├── pdf_report.py        # PDF report generation with fpdf2
-│   ├── utils.py             # Standalone predict/explain utilities
-│   └── pages/               # Streamlit multi-page components
+│   ├── streamlit_app.py        # Streamlit dashboard UI
+│   ├── pdf_report.py           # PDF report generation with fpdf2
+│   ├── utils.py                # Standalone predict/explain utilities
+│   └── pages/                  # Streamlit multi-page components
 ├── frontend/
-│   ├── index.html           # Loan Assessment page
-│   ├── what-if.html         # What-If Analyzer page
-│   ├── fairness.html        # Fairness and Bias Audit page
-│   └── favicon.svg          # Application icon
+│   ├── index.html              # Loan Assessment page
+│   ├── what-if.html            # What-If Analyzer page
+│   ├── fairness.html           # Fairness and Bias Audit page
+│   └── favicon.svg             # Application icon
 ├── data/
-│   └── loanData.csv         # Training dataset
-├── saved_models/            # Generated after training
+│   └── loanData.csv            # Training dataset
+├── saved_models/               # Generated after training
 │   ├── model.pkl
 │   ├── preprocessor.pkl
 │   ├── model_info.json
@@ -345,8 +369,8 @@ creditwise-ai/
 │   ├── test_api.py
 │   ├── test_models.py
 │   └── test_preprocessing.py
-├── mlruns/                  # MLflow experiment data
-├── notebooks/               # Jupyter exploration notebooks
+├── mlruns/                     # MLflow experiment data
+├── notebooks/                  # Jupyter exploration notebooks
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
@@ -366,7 +390,7 @@ creditwise-ai/
 **Clone and install**
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/guradeshdhillon/creditwise-ai.git
 cd creditwise-ai
 python -m venv venv
 venv\Scripts\activate          # Windows
@@ -377,12 +401,13 @@ pip install -r requirements.txt
 **Configure environment variables**
 
 ```bash
-copy .env.example .env
+copy .env.example .env          # Windows
+# cp .env.example .env          # macOS / Linux
 ```
 
 Open `.env` and set your Anthropic API key. The key is optional; the system falls back to a rule-based explanation if it is absent.
 
-```
+```env
 ANTHROPIC_API_KEY=your_api_key_here
 ```
 
@@ -390,7 +415,11 @@ ANTHROPIC_API_KEY=your_api_key_here
 
 ## Running the Application
 
-**Step 1: Train the model**
+> **Just want to try it?** The application is already live at [creditwise-ai-production.up.railway.app](https://creditwise-ai-production.up.railway.app/) — no setup required.
+
+To run locally:
+
+**Step 1 — Train the model**
 
 This step only needs to be run once. It will produce all artifacts in `saved_models/`.
 
@@ -400,7 +429,7 @@ python src/models/train.py
 
 The training pipeline takes approximately a few minutes depending on hardware. Optuna will run 50 hyperparameter search trials.
 
-**Step 2: Start the API server**
+**Step 2 — Start the API server**
 
 ```bash
 uvicorn src.api.main:app --reload --port 8000
@@ -408,25 +437,24 @@ uvicorn src.api.main:app --reload --port 8000
 
 The server loads all model artifacts at startup before accepting any requests. The three frontend pages become available at:
 
-- `http://localhost:8000/` - Loan Assessment
-- `http://localhost:8000/what-if` - What-If Analyzer
-- `http://localhost:8000/fairness` - Fairness Audit
+- `http://localhost:8000/` — Loan Assessment
+- `http://localhost:8000/what-if` — What-If Analyzer
+- `http://localhost:8000/fairness` — Fairness Audit
+- `http://localhost:8000/docs` — Swagger API Documentation
 
-The Swagger API documentation is available at `http://localhost:8000/docs`.
-
-**Optional: Start the Streamlit dashboard**
+**Optional — Start the Streamlit dashboard**
 
 ```bash
 streamlit run app/streamlit_app.py
 ```
 
-**Optional: Regenerate SHAP evaluation plots**
+**Optional — Regenerate SHAP evaluation plots**
 
 ```bash
 python src/models/evaluate.py
 ```
 
-**Optional: Launch the MLflow tracking UI**
+**Optional — Launch the MLflow tracking UI**
 
 ```bash
 mlflow ui --port 5001 --backend-store-uri mlruns
@@ -452,11 +480,9 @@ The API container includes a health check that polls `GET /api/v1/health` every 
 
 The project has three test modules under `tests/`:
 
-- `test_api.py` - Tests for FastAPI endpoint behavior and response schemas
-- `test_models.py` - Tests for the training pipeline and model artifacts
-- `test_preprocessing.py` - Tests for the `LoanPreprocessor` class
-
-To run the full test suite:
+- `test_api.py` — Tests for FastAPI endpoint behavior and response schemas
+- `test_models.py` — Tests for the training pipeline and model artifacts
+- `test_preprocessing.py` — Tests for the `LoanPreprocessor` class
 
 ```bash
 pytest
@@ -496,13 +522,17 @@ All configuration is managed through the `.env` file. Refer to `.env.example` fo
 | Visualization | Matplotlib, Seaborn | 3.11.0, 0.13.2 |
 | Frontend Styling | Tailwind CSS (CDN) | latest |
 | Frontend Charts | Chart.js (CDN) | latest |
-| Containerization | Docker, Docker Compose | - |
+| Containerization | Docker, Docker Compose | — |
 | Testing | Pytest | 8.4.2 |
 | Linting / Formatting | Ruff | 0.15.18 |
 | Serialization | Joblib | 1.5.3 |
+| Deployment | Railway | — |
 
 ---
 
 ## Author
 
-Guradesh Dhillon - Computer Engineering, AI and Data Science specialization.
+**Guradesh Dhillon** — Computer Engineering, AI and Data Science specialization.
+
+[![GitHub](https://img.shields.io/badge/GitHub-guradeshdhillon-181717?style=flat-square&logo=github)](https://github.com/guradeshdhillon)
+[![Portfolio](https://img.shields.io/badge/Portfolio-guradeshdhillon.is--a.dev-0EA5E9?style=flat-square&logo=internetexplorer&logoColor=white)](https://guradeshdhillon.is-a.dev)
